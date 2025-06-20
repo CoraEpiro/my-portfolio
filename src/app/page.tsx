@@ -7,10 +7,11 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
       <section className="container flex flex-col items-center justify-center text-center pt-16 pb-10">
-        <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-white/10 mb-6">
-          <img
-            src="/profile.jpg"
-            alt="Ali Guliyev profile photo"
+        <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg">
+          <Image
+            src="/assets/profile.jpg"
+            alt="Ali Guliyev"
+            layout="fill"
             className="object-cover w-full h-full object-top scale-110"
             style={{ objectPosition: 'center 5%' }}
           />
@@ -149,7 +150,7 @@ export default function Home() {
           {[
             {
               title: "B.Sc. Data Science",
-              logo: "/ku_logo.png",
+              logo: "/assets/ku_logo.png",
               institution: "Catholic University of Eichstätt-Ingolstadt",
               institutionUrl: "https://www.ku.de/en",
               location: "Ingolstadt, Germany",
@@ -162,7 +163,7 @@ export default function Home() {
             },
             {
               title: "B.Sc. Mathematics",
-              logo: "/bsu_logo.png",
+              logo: "/assets/bsu_logo.png",
               institution: "Baku State University",
               institutionUrl: "https://bsu.edu.az/en/",
               location: "Baku, Azerbaijan",
@@ -175,7 +176,7 @@ export default function Home() {
             },
             {
               title: "Software Development Diploma",
-              logo: "/step_logo.png",
+              logo: "/assets/step_logo.png",
               institution: "STEP IT Academy",
               institutionUrl: "https://itstep.az/",
               location: "Baku, Azerbaijan",
@@ -188,7 +189,7 @@ export default function Home() {
             },
             {
               title: "Junior Programming Academy",
-              logo: "/step_logo.png",
+              logo: "/assets/step_logo.png",
               institution: "STEP IT Academy",
               institutionUrl: "https://itstep.az/",
               location: "Baku, Azerbaijan",
