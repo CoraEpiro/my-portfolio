@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2025-06-20T10:54:52.158704Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2025-06-20T10:54:50.952402Z",
+      "mimetype": null,
+      "name": "Rain in Australia.ipynb",
+      "path": "Rain in Australia.ipynb",
+      "size": 23857172,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2025-06-20T10:54:52.202693Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2025-06-20T10:54:50.967239Z",
+      "mimetype": "text/csv",
+      "name": "weatherAUS.csv",
+      "path": "weatherAUS.csv",
+      "size": 14239516,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2025-06-20T10:54:52.198946Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2025-06-20T10:54:52.198946Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

@@ -1,0 +1,80 @@
+html {
+    background-color: #1e1e1e !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0 !important; /* Override default padding */
+    overflow-x: hidden; /* Prevent horizontal scrollbar issues */
+}
+
+body {
+    background-color: #1e1e1e !important;
+    color: #d4d4d4;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 100% !important; /* Override default max-width */
+}
+
+/* Force the main notebook container to have a dark background */
+div.jp-Notebook, div.notebook-container, #notebook, #notebook-container {
+    background-color: #1e1e1e !important;
+    padding: 1rem; /* Add some padding back */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #569cd6;
+}
+
+pre {
+    background-color: #252526;
+    border: 1px solid #333;
+    padding: 1em;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.rendered_html table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rendered_html th, .rendered_html td {
+    border: 1px solid #444;
+    padding: 8px;
+    text-align: left;
+}
+
+.rendered_html th {
+    background-color: #333;
+}
+
+/* A simple, clean button for the iframe */
+.expand-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #569cd6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expand-btn:hover {
+    background-color: #6a8ac0;
+    transform: scale(1.1);
+} 
