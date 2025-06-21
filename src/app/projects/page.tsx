@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Define the Collaborator type
 type Collaborator = {
@@ -103,12 +103,28 @@ export default function ProjectsPage() {
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [isHtmlZoomed, setIsHtmlZoomed] = useState(false);
   const [htmlTheme, setHtmlTheme] = useState<'white' | 'black'>('white');
+  const [isVisible, setIsVisible] = useState(false);
+  const [visibleProjects, setVisibleProjects] = useState<Set<number>>(new Set());
+
+  useEffect(() => {
+    // Initial fade-in
+    setIsVisible(true);
+    
+    // Staggered project card animations
+    projects.forEach((_, idx) => {
+      setTimeout(() => {
+        setVisibleProjects(prev => new Set(prev).add(idx));
+      }, 200 + idx * 150);
+    });
+  }, []);
 
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 py-20">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+        }`}>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             My Projects
           </h1>
@@ -119,10 +135,14 @@ export default function ProjectsPage() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects.map((project, idx) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 cursor-pointer"
+              className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl cursor-pointer group ${
+                visibleProjects.has(idx) 
+                  ? 'opacity-100 translate-y-0 rotate-0' 
+                  : 'opacity-0 translate-y-12 rotate-1'
+              }`}
               onClick={() => {
                 if (project.title === 'ChatVocate: Azerbaijani Legal AI') {
                   setShowLegalModal(true);
@@ -137,15 +157,34 @@ export default function ProjectsPage() {
                 }
               }}
             >
-              <div className="relative h-48 w-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900">
-                <img src={project.image} alt={project.title} className="object-contain h-32" />
+              <div className="relative h-48 w-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="object-contain h-32 transition-transform duration-500 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
               </div>
               <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">{project.title}</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-2">{project.description}</p>
-                {project.tags.map(tag => (
-                  <span key={tag} className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded dark:bg-blue-900 dark:text-blue-200 mr-2">{tag}</span>
-                ))}
+                <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  {project.title}
+                </h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1">
+                  {project.tags.map((tag, tagIdx) => (
+                    <span 
+                      key={tag} 
+                      className={`inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded dark:bg-blue-900 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-all duration-300 ${
+                        visibleProjects.has(idx) ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-2'
+                      }`}
+                      style={{ transitionDelay: `${400 + idx * 150 + tagIdx * 50}ms` }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -153,8 +192,8 @@ export default function ProjectsPage() {
 
         {/* ChatVocate Legal AI Modal */}
         {showLegalModal && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowLegalModal(false)}>
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowLegalModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
               <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowLegalModal(false)}>&times;</button>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
@@ -290,8 +329,8 @@ export default function ProjectsPage() {
 
         {/* Rain in Australia Modal */}
         {showRainModal && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowRainModal(false)}>
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowRainModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
               <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowRainModal(false)}>&times;</button>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
@@ -365,6 +404,26 @@ export default function ProjectsPage() {
                     </div>
                   </div>
                   
+                  {/* PowerPoint Presentation Section */}
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-lg font-semibold text-white">PowerPoint Presentation</h4>
+                    <a
+                      href="https://kude-my.sharepoint.com/:p:/g/personal/ali_guliyev_stud_ku_de/EfCfWPZhgTpGo-svG7enMvoBrsg2OhPVhcyPrirNq3oyGg?e=GB6saq"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
+                    >
+                      <img
+                        src="/projects/rain-in-australia/rain-in-australia-cover.jpg"
+                        alt="PowerPoint Presentation Preview"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                      </div>
+                    </a>
+                  </div>
+
                   {/* Interactive Binder Link */}
                   <div className="text-center pt-4">
                     <a
@@ -382,6 +441,7 @@ export default function ProjectsPage() {
                     <h4 className="font-bold text-white mb-2">Download Files</h4>
                     <ul className="list-disc list-inside space-y-2">
                       <li><a href="/projects/rain-in-australia/RainInAustralia.html" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">HTML Report (.html)</a></li>
+                      <li><a href="/projects/rain-in-australia/rain-in-australia.pptx" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">PowerPoint Presentation (.pptx)</a></li>
                       <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/Rain%20in%20Australia.ipynb" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Jupyter Notebook (.ipynb)</a></li>
                       <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/weatherAUS.csv" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Dataset (.csv)</a></li>
                     </ul>
@@ -394,8 +454,8 @@ export default function ProjectsPage() {
 
         {/* ConsulCon25 Modal */}
         {showConsulConModal && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowConsulConModal(false)}>
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowConsulConModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
               <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowConsulConModal(false)}>&times;</button>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
@@ -502,8 +562,8 @@ export default function ProjectsPage() {
 
         {/* VGI Challenge Modal */}
         {showVgiModal && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowVgiModal(false)}>
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowVgiModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
               <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowVgiModal(false)}>&times;</button>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
@@ -573,8 +633,8 @@ export default function ProjectsPage() {
 
         {/* Holocaust Remembrance Modal */}
         {showHolocaustModal && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => setShowHolocaustModal(false)}>
-            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowHolocaustModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
               <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowHolocaustModal(false)}>&times;</button>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">

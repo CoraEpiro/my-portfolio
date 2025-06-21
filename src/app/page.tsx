@@ -1,77 +1,144 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from 'next/link';
 import ExperienceTimeline from "./components/ExperienceTimeline";
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    
+    // Simple scroll-triggered animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe scroll-fade-in elements after component mounts
+    setTimeout(() => {
+      const scrollElements = document.querySelectorAll('.scroll-fade-in');
+      scrollElements.forEach((el) => observer.observe(el));
+    }, 100);
+
+    return () => observer.disconnect();
+  }, []);
+
+  if (!mounted) {
+    return null; // Prevent hydration mismatch
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
-      <section className="container flex flex-col items-center justify-center text-center pt-16 pb-10">
-        <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg">
+      <section className="container flex flex-col items-center justify-center text-center pt-16 pb-10 animate-fade-in">
+        <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg transition-all duration-500 ease-out hover:scale-110 hover:border-blue-400 animate-scale-in">
           <Image
             src="/assets/profile.jpg"
             alt="Ali Guliyev"
-            layout="fill"
-            className="object-cover w-full h-full object-top scale-110"
+            fill
+            className="object-cover object-top scale-110"
             style={{ objectPosition: 'center 5%' }}
+            priority
           />
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-2" style={{ fontFamily: 'Montserrat, Inter, sans-serif' }}>Ali Guliyev</h1>
-        {/* Tier 1 */}
-        <p className="text-2xl text-blue-400 font-semibold mb-1">Data-Driven Problem Solver</p>
-        {/* Tier 2 */}
-        <p className="text-base text-gray-300 mb-4">Python • Machine Learning • React • Hackathon Winner</p>
-        <p className="text-base text-gray-400 mb-2">Ingolstadt, Germany</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 animate-slide-up" 
+            style={{ fontFamily: 'Montserrat, Inter, sans-serif', animationDelay: '0.2s', animationFillMode: 'both' }}>
+          Ali Guliyev
+        </h1>
+        <p className="text-2xl text-blue-400 font-semibold mb-1 animate-slide-up" 
+           style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+          Data-Driven Problem Solver
+        </p>
+        <p className="text-base text-gray-300 mb-4 animate-slide-up" 
+           style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
+          Python • Machine Learning • React • Hackathon Winner
+        </p>
+        <p className="text-base text-gray-400 mb-2 animate-slide-up" 
+           style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
+          Ingolstadt, Germany
+        </p>
       </section>
+      
       <hr className="divider" />
+      
       {/* About Section */}
-      <section className="container text-center">
+      <section className="container text-center scroll-fade-in">
         <h2 className="text-2xl font-bold mb-3">About Me</h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
           Data Science professional with 2+ years of experience in IT infrastructure support, data analysis, and visualization. Expert in Python, SQL, and Power BI. Recognized for optimizing reporting efficiency, winning hackathons, and delivering impactful analytics solutions. Seeking to leverage my skills in catastrophe modeling and risk analytics to support organizations in making data-driven decisions.
         </p>
-        <a href="/contact" className="button mt-2">Contact Me</a>
+        <a href="/contact" className="button mt-2 hover-lift">Contact Me</a>
       </section>
+      
       <hr className="divider" />
-      {/* Skills Section - visually improved */}
-      <section className="container">
+      
+      {/* Skills Section */}
+      <section className="container scroll-fade-in">
         <h2 className="text-2xl font-bold text-center mb-8">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="card flex flex-col items-center">
-            <span className="text-3xl mb-2">💻</span>
-            <h3 className="text-lg font-semibold mb-2">Programming & Data</h3>
-            <ul className="text-gray-300 text-sm list-disc list-inside text-center">
-              <li>Python (Expert), SQL, Java, C/C++</li>
-              <li>Pandas, Numpy, Scikit-Learn, TensorFlow, PyTorch</li>
-              <li>Docker, Git, GitHub</li>
-            </ul>
-          </div>
-          <div className="card flex flex-col items-center">
-            <span className="text-3xl mb-2">📊</span>
-            <h3 className="text-lg font-semibold mb-2">Data Science & Visualization</h3>
-            <ul className="text-gray-300 text-sm list-disc list-inside text-center">
-              <li>Power BI, Tableau, Matplotlib, Seaborn</li>
-              <li>Data Mining, EDA, ETL, Machine Learning</li>
-              <li>Web Scraping, Selenium</li>
-            </ul>
-          </div>
-          <div className="card flex flex-col items-center">
-            <span className="text-3xl mb-2">🌍</span>
-            <h3 className="text-lg font-semibold mb-2">Other & Languages</h3>
-            <ul className="text-gray-300 text-sm list-disc list-inside text-center">
-              <li>Agile, JIRA, Confluence, Microsoft Office</li>
-              <li>Azerbaijani, Turkish (Native)</li>
-              <li>English (Proficient), German (Intermediate)</li>
-            </ul>
-          </div>
+          {[
+            {
+              icon: "💻",
+              title: "Programming & Data",
+              skills: [
+                "Python (Expert), SQL, Java, C/C++",
+                "Pandas, Numpy, Scikit-Learn, TensorFlow, PyTorch",
+                "Docker, Git, GitHub"
+              ]
+            },
+            {
+              icon: "📊",
+              title: "Data Science & Visualization",
+              skills: [
+                "Power BI, Tableau, Matplotlib, Seaborn",
+                "Data Mining, EDA, ETL, Machine Learning",
+                "Web Scraping, Selenium"
+              ]
+            },
+            {
+              icon: "🌍",
+              title: "Other & Languages",
+              skills: [
+                "Agile, JIRA, Confluence, Microsoft Office",
+                "Azerbaijani, Turkish (Native)",
+                "English (Proficient), German (Intermediate)"
+              ]
+            }
+          ].map((skillGroup, idx) => (
+            <div 
+              key={idx}
+              className="card flex flex-col items-center hover-lift hover-glow"
+              style={{ animationDelay: `${idx * 0.2}s` }}
+            >
+              <span className="text-3xl mb-2 animate-float">{skillGroup.icon}</span>
+              <h3 className="text-lg font-semibold mb-2">{skillGroup.title}</h3>
+              <ul className="text-gray-300 text-sm list-disc list-inside text-center">
+                {skillGroup.skills.map((skill, skillIdx) => (
+                  <li key={skillIdx}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
+      
       <hr className="divider" />
-      {/* My Journey Section - now after Skills */}
-      <section className="container">
+      
+      {/* My Journey Section */}
+      <section className="container scroll-fade-in">
         <h2 className="text-2xl font-bold text-center mb-8">My Journey</h2>
         <div className="relative w-full max-w-3xl mx-auto py-8">
-          {/* Central vertical line (always visible on desktop, hidden on mobile) */}
+          {/* Central vertical line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-blue-400 via-purple-400 via-pink-400 via-orange-400 via-yellow-400 via-red-400 via-teal-400 to-slate-400 z-0" style={{ transform: 'translateX(-50%)' }} />
           <div className="flex flex-col gap-16 relative z-10">
             {[
@@ -106,27 +173,30 @@ export default function Home() {
               } as const;
               const flexDir = idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
               return (
-                <div key={idx} className={`relative flex flex-col ${flexDir} items-center justify-between w-full`}>
-                  {/* Date circle - mobile: above card, desktop: overlay */}
+                <div 
+                  key={idx} 
+                  className={`relative flex flex-col ${flexDir} items-center justify-between w-full hover-lift`}
+                >
+                  {/* Date circle - mobile */}
                   <div className="flex md:hidden mb-4 w-full justify-center">
-                    <div className={`w-14 h-14 rounded-full flex flex-col items-center justify-center border-4 bg-gray-900 font-bold text-base ${dateCircle[event.color]}`}>
+                    <div className={`w-14 h-14 rounded-full flex flex-col items-center justify-center border-4 bg-gray-900 font-bold text-base ${dateCircle[event.color]} hover:scale-110 transition-transform duration-300`}>
                       <span className="text-center">{event.date}</span>
                     </div>
                   </div>
                   {/* Card */}
                   <div className={`w-full md:w-1/2 px-0 md:px-8 flex flex-col items-${idx % 2 === 0 ? 'end' : 'start'}`}>
-                    <div className={`rounded-xl shadow-lg p-6 max-w-md w-full border-l-4 md:border-l-4 md:border-r-0 ${idx % 2 === 0 ? colorMap[event.color] : ''} ${idx % 2 !== 0 ? 'md:border-l-0 md:border-r-4 ' + colorMap[event.color] : ''} bg-white/10 transition-transform hover:scale-105`}>
+                    <div className={`rounded-xl shadow-lg p-6 max-w-md w-full border-l-4 md:border-l-4 md:border-r-0 ${idx % 2 === 0 ? colorMap[event.color] : ''} ${idx % 2 !== 0 ? 'md:border-l-0 md:border-r-4 ' + colorMap[event.color] : ''} bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer`}>
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-2xl">{event.icon}</span>
+                        <span className="text-2xl hover:animate-pulse">{event.icon}</span>
                         <h3 className={`text-lg font-bold ${colorMap[event.color]}`}>{event.title}</h3>
                       </div>
                       <div className="text-gray-300 text-sm mb-1 font-semibold">{event.subtitle}</div>
                       <div className="text-gray-400 text-sm">{event.desc}</div>
                     </div>
                   </div>
-                  {/* Date circle - desktop: overlay */}
+                  {/* Date circle - desktop */}
                   <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center z-20">
-                    <div className={`w-14 h-14 rounded-full flex flex-col items-center justify-center border-4 bg-gray-900 font-bold text-base ${dateCircle[event.color]}`}>
+                    <div className={`w-14 h-14 rounded-full flex flex-col items-center justify-center border-4 bg-gray-900 font-bold text-base ${dateCircle[event.color]} hover:scale-110 transition-transform duration-300`}>
                       <span className="text-center">{event.date}</span>
                     </div>
                   </div>
@@ -136,15 +206,19 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
       <hr className="divider" />
+      
       {/* Experience Section */}
-      <section className="container">
+      <section className="container scroll-fade-in">
         <h2 className="text-2xl font-bold text-center mb-8">Experience</h2>
         <ExperienceTimeline />
       </section>
+      
       <hr className="divider" />
-      {/* Education Section - polished, responsive cards */}
-      <section className="container py-12">
+      
+      {/* Education Section */}
+      <section className="container py-12 scroll-fade-in">
         <h2 className="text-2xl font-bold text-center mb-8">Education</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
@@ -202,14 +276,14 @@ export default function Home() {
           ].map((edu, idx) => (
             <div
               key={idx}
-              className="rounded-lg bg-slate-800/60 p-6 shadow hover:shadow-md transition max-w-full md:max-w-[480px] mx-auto"
+              className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow max-w-full md:max-w-[480px] mx-auto cursor-pointer"
             >
               <div className="flex items-start gap-4">
                 {edu.logo && (
                   <img
                     src={edu.logo}
                     alt={edu.institution + ' logo'}
-                    className="w-12 h-12 object-contain rounded"
+                    className="w-12 h-12 object-contain rounded hover:scale-110 transition-transform duration-300"
                   />
                 )}
                 <div className="flex-1 space-y-1 pl-1 md:pl-0">
@@ -217,7 +291,7 @@ export default function Home() {
                     <span className="text-lg md:text-xl font-bold text-white mr-2">{edu.title}</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline font-semibold">
+                    <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline font-semibold hover:text-blue-300 transition-colors">
                       {edu.institution}
                     </a>
                     <span className="text-gray-400 text-sm">— {edu.location}</span>
@@ -234,9 +308,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+      
       <hr className="divider" />
+      
       {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 py-2">
+      <section className="container mx-auto px-4 py-2 scroll-fade-in">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
           Get in Touch
         </h2>
@@ -245,28 +321,21 @@ export default function Home() {
             I'm always open to new opportunities and collaborations.
           </p>
           <div className="flex justify-center gap-6">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="mailto:your.email@example.com"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-            >
-              Email
-            </a>
+            {[
+              { name: "GitHub", url: "https://github.com" },
+              { name: "LinkedIn", url: "https://linkedin.com" },
+              { name: "Email", url: "mailto:your.email@example.com" }
+            ].map((link, idx) => (
+              <a
+                key={idx}
+                href={link.url}
+                target={link.name !== "Email" ? "_blank" : undefined}
+                rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:scale-110 transition-all duration-300"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
         </div>
       </section>
