@@ -14,8 +14,64 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Welcome to my portfolio website",
+  title: "Ali Guliyev - Data Science & Machine Learning Portfolio",
+  description: "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling, data visualization, and AI solutions.",
+  keywords: [
+    "Ali Guliyev",
+    "Data Science",
+    "Machine Learning",
+    "Python Developer",
+    "Data Analyst",
+    "Hackathon Winner",
+    "AI Developer",
+    "Power BI",
+    "Predictive Modeling",
+    "Data Visualization",
+    "Germany",
+    "Ingolstadt",
+    "Catholic University",
+    "Portfolio"
+  ],
+  authors: [{ name: "Ali Guliyev" }],
+  creator: "Ali Guliyev",
+  publisher: "Ali Guliyev",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://your-portfolio-domain.com",
+    title: "Ali Guliyev - Data Science & Machine Learning Portfolio",
+    description: "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling and AI solutions.",
+    siteName: "Ali Guliyev Portfolio",
+    images: [
+      {
+        url: "/assets/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ali Guliyev - Data Science Professional",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ali Guliyev - Data Science & Machine Learning Portfolio",
+    description: "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling and AI solutions.",
+    images: ["/assets/profile.jpg"],
+  },
+  verification: {
+    google: "your-google-verification-code", // Replace with actual verification code
+  },
+  category: "Technology",
 };
 
 export default function RootLayout({

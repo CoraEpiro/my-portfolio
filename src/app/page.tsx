@@ -38,7 +38,65 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    <>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Ali Guliyev",
+            "jobTitle": "Data Science Professional",
+            "description": "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling, data visualization, and AI solutions.",
+            "url": "https://your-portfolio-domain.com",
+            "image": "https://your-portfolio-domain.com/assets/profile.jpg",
+            "sameAs": [
+              "https://www.linkedin.com/in/ali-guliyev-389837238/",
+              "https://github.com/CoraEpiro",
+              "https://www.youtube.com/channel/UCFSPcgnkuyQnIKObIMhiqqA"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Ingolstadt",
+              "addressCountry": "Germany"
+            },
+            "alumniOf": [
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Catholic University of Eichstätt-Ingolstadt",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Ingolstadt",
+                  "addressCountry": "Germany"
+                }
+              },
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Baku State University",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Baku",
+                  "addressCountry": "Azerbaijan"
+                }
+              }
+            ],
+            "knowsAbout": [
+              "Data Science",
+              "Machine Learning",
+              "Python Programming",
+              "Power BI",
+              "Data Analytics",
+              "Predictive Modeling",
+              "Data Visualization",
+              "SQL",
+              "Artificial Intelligence"
+            ],
+            "email": "Ali.Guliyev@stud.ku.de"
+          })
+        }}
+      />
+      <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       {/* Hero Section */}
       <section className="container flex flex-col items-center justify-center text-center pt-16 pb-10 animate-fade-in">
         <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg transition-all duration-500 ease-out hover:scale-110 hover:border-blue-400 animate-scale-in">
@@ -340,5 +398,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }
