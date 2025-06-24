@@ -94,12 +94,38 @@ const projects: Project[] = [
   },
 ];
 
+// Academic presentations data
+const presentations: Project[] = [
+  {
+    id: 6,
+    title: 'Differential Equations l: Newton\'s Law of Cooling (+experiment)',
+    description: 'An in-depth mathematical exploration of Newton\'s Law of Cooling through theoretical analysis and practical experimentation, demonstrating how differential equations model real-world temperature phenomena.',
+    image: '/university/first-presentation-slide-cover.png',
+    technologies: ['Mathematics', 'Differential Equations', 'Experimental Physics'],
+    tags: ['Mathematics', 'Physics', 'Experiments', 'Education'],
+    liveUrl: 'https://www.youtube.com/watch?v=6Sp1Di67pTI',
+    collaborators: [],
+  },
+  {
+    id: 7,
+    title: 'Differential Equations l: 1-D Presentation of 3-Body Problem',
+    description: 'A comprehensive mathematical presentation exploring the classical three-body problem through one-dimensional analysis, showcasing the complexity and beauty of celestial mechanics using differential equations.',
+    image: '/university/second-presentation-slide-cover.png',
+    technologies: ['Mathematics', 'Celestial Mechanics', 'Differential Equations'],
+    tags: ['Mathematics', 'Physics', 'Astronomy', 'Presentation'],
+    liveUrl: 'https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc',
+    collaborators: [],
+  },
+];
+
 export default function ProjectsPage() {
   const [showLegalModal, setShowLegalModal] = useState(false);
   const [showRainModal, setShowRainModal] = useState(false);
   const [showConsulConModal, setShowConsulConModal] = useState(false);
   const [showVgiModal, setShowVgiModal] = useState(false);
   const [showHolocaustModal, setShowHolocaustModal] = useState(false);
+  const [showNewtonsCoolingModal, setShowNewtonsCoolingModal] = useState(false);
+  const [showThreeBodyModal, setShowThreeBodyModal] = useState(false);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [isHtmlZoomed, setIsHtmlZoomed] = useState(false);
   const [htmlTheme, setHtmlTheme] = useState<'white' | 'black'>('white');
@@ -111,7 +137,7 @@ export default function ProjectsPage() {
     setIsVisible(true);
     
     // Staggered project card animations
-    projects.forEach((_, idx) => {
+    [...projects, ...presentations].forEach((_, idx) => {
       setTimeout(() => {
         setVisibleProjects(prev => new Set(prev).add(idx));
       }, 200 + idx * 150);
@@ -188,6 +214,71 @@ export default function ProjectsPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Academic Presentations Section */}
+        <div className="mt-20">
+          <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+          }`}>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Academic Presentations
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Mathematical explorations and academic presentations showcasing theoretical knowledge and practical applications.
+            </p>
+          </div>
+
+          {/* Presentations Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {presentations.map((presentation, idx) => (
+              <div
+                key={presentation.id}
+                className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl cursor-pointer group ${
+                  visibleProjects.has(idx + projects.length) 
+                    ? 'opacity-100 translate-y-0 rotate-0' 
+                    : 'opacity-0 translate-y-12 rotate-1'
+                }`}
+                onClick={() => {
+                  if (presentation.title === 'Differential Equations l: Newton\'s Law of Cooling (+experiment)') {
+                    setShowNewtonsCoolingModal(true);
+                  } else if (presentation.title === 'Differential Equations l: 1-D Presentation of 3-Body Problem') {
+                    setShowThreeBodyModal(true);
+                  }
+                }}
+              >
+                <div className="relative h-48 w-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 overflow-hidden">
+                  <img 
+                    src={presentation.image} 
+                    alt={presentation.title} 
+                    className="object-contain h-32 transition-transform duration-500 group-hover:scale-110" 
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                </div>
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                    {presentation.title}
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-300 mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                    {presentation.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    {presentation.tags.map((tag, tagIdx) => (
+                      <span 
+                        key={tag} 
+                        className={`inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded dark:bg-blue-900 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-all duration-300 ${
+                          visibleProjects.has(idx + projects.length) ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-2'
+                        }`}
+                        style={{ transitionDelay: `${400 + (idx + projects.length) * 150 + tagIdx * 50}ms` }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* ChatVocate Legal AI Modal */}
@@ -696,6 +787,267 @@ export default function ProjectsPage() {
                     <a href="https://github.com/denishotii/Data4Good25" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
                       View on GitHub
                     </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Newton's Law of Cooling Modal */}
+        {showNewtonsCoolingModal && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowNewtonsCoolingModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowNewtonsCoolingModal(false)}>&times;</button>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                {/* Left Column: Image & Details */}
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-3xl font-bold text-white">Newton's Law of Cooling (+experiment)</h2>
+                  
+                  {/* Presentation Slide Preview */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <div className="relative group">
+                      <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <img 
+                          src={projects.find(p => p.id === 6)?.image || "/university/first-presentation-slide-cover.png"} 
+                          alt="Newton's Law of Cooling Presentation Cover" 
+                          className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Embedded YouTube Video */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📺 Experiment Video</h4>
+                    <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-lg border border-gray-600">
+                      <iframe
+                        src="https://www.youtube.com/embed/6Sp1Di67pTI"
+                        title="Newton's Law of Cooling Experiment"
+                        className="absolute top-0 left-0 w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-300">An in-depth mathematical exploration of Newton's Law of Cooling through theoretical analysis and practical experimentation. This project demonstrates how differential equations model real-world temperature phenomena.</p>
+                    <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                      <li><strong>Mathematical Theory:</strong> Derivation and analysis of the cooling differential equation</li>
+                      <li><strong>Experimental Design:</strong> Temperature measurement setup and data collection</li>
+                      <li><strong>Data Analysis:</strong> Curve fitting and parameter estimation</li>
+                      <li><strong>Real-world Applications:</strong> Forensic science, food safety, and engineering</li>
+                      <li><strong>Educational Value:</strong> Bridge between theory and practical application</li>
+                    </ul>
+                  </div>
+
+                  <div className="pt-4 flex gap-4">
+                    <a href={projects.find(p => p.id === 6)?.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow hover:bg-red-700 transition-colors text-center flex-1">
+                      🔗 Open in YouTube
+                    </a>
+                    <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">
+                      📄 View Presentation
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right Column: Mathematical Details */}
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+                  
+                  {/* Differential Equation */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Core Equation</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-center">
+                        <div className="text-2xl text-blue-400 mb-3 font-serif flex items-center justify-center" style={{fontFamily: 'Times, serif'}}>
+                          <div className="flex flex-col items-center mr-3">
+                            <span className="italic text-2xl border-b-2 border-blue-400 px-2 pb-1">dT</span>
+                            <span className="italic text-2xl pt-1">dt</span>
+                          </div>
+                          <span className="mx-3 text-3xl">=</span>
+                          <span className="text-2xl">−<span className="italic">k</span>(<span className="italic">T</span> − <span className="italic">T</span><sub className="text-lg">env</sub>)</span>
+                        </div>
+                        <p className="text-sm text-gray-400">
+                          where <span className="italic text-blue-300">T</span> is temperature, <span className="italic text-blue-300">t</span> is time, <span className="italic text-blue-300">k</span> is cooling constant, <span className="italic text-blue-300">T<sub>env</sub></span> is environmental temperature
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Experimental Setup */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Experimental Components</h4>
+                    <div className="grid grid-cols-1 gap-3">
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-blue-400 font-semibold mb-2">🌡️ Temperature Measurement</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• Digital thermometer setup</li>
+                          <li>• Time-series data collection</li>
+                          <li>• Environmental control</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-green-400 font-semibold mb-2">📊 Data Analysis</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• Exponential curve fitting</li>
+                          <li>• Parameter estimation</li>
+                          <li>• Error analysis</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-purple-400 font-semibold mb-2">🔬 Applications</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• Forensic time of death</li>
+                          <li>• Food safety protocols</li>
+                          <li>• Engineering heat transfer</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Solution & Results */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Analytical Solution</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-center">
+                        <div className="text-xl text-green-400 mb-3 font-serif" style={{fontFamily: 'Times, serif'}}>
+                          <span className="italic">T</span>(<span className="italic">t</span>) = <span className="italic">T</span><sub className="text-sm">env</sub> + (<span className="italic">T</span><sub className="text-sm">₀</sub> − <span className="italic">T</span><sub className="text-sm">env</sub>)<span className="italic">e</span><sup className="text-sm">−<span className="italic">kt</span></sup>
+                        </div>
+                        <p className="text-sm text-gray-400">
+                          Exponential decay solution with initial condition <span className="italic text-green-300">T<sub>₀</sub></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Three-Body Problem Modal */}
+        {showThreeBodyModal && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowThreeBodyModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowThreeBodyModal(false)}>&times;</button>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                {/* Left Column: Image & Details */}
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-3xl font-bold text-white">1-D Presentation of 3-Body Problem</h2>
+                  {/* Presentation Slide Preview */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <div className="relative group">
+                      <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer">
+                        <img 
+                          src={presentations.find(p => p.id === 7)?.image || "/university/second-presentation-slide-cover.png"} 
+                          alt="Three-Body Problem Presentation Cover" 
+                          className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  {/* Embedded YouTube Video */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📺 Presentation Video</h4>
+                    <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-lg border border-gray-600">
+                      <iframe
+                        src="https://www.youtube.com/embed/j_LV2-FKD8I"
+                        title="Three-Body Problem Presentation Video"
+                        className="absolute top-0 left-0 w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-300">A comprehensive mathematical presentation exploring the classical three-body problem through one-dimensional analysis. This work showcases the complexity and beauty of celestial mechanics using differential equations.</p>
+                    <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                      <li><strong>Classical Mechanics:</strong> Newton's laws applied to gravitational systems</li>
+                      <li><strong>Differential Equations:</strong> Second-order nonlinear system analysis</li>
+                      <li><strong>Mathematical Complexity:</strong> Chaos theory and sensitive dependence</li>
+                      <li><strong>Historical Context:</strong> Poincaré's contributions and modern developments</li>
+                      <li><strong>Astronomical Applications:</strong> Planetary motion and orbital mechanics</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Right Column: Mathematical Details */}
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+                  
+                  {/* Core Equations */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">System of Equations</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-center space-y-3" style={{fontFamily: 'Times, serif'}}>
+                        <div className="text-xl text-blue-400">
+                          <span className="italic">m</span><sub className="text-sm">₁</sub><span className="italic">r̈</span><sub className="text-sm">₁</sub> = Σ <span className="italic">F</span><sub className="text-sm">₁ⱼ</sub>
+                        </div>
+                        <div className="text-xl text-blue-400">
+                          <span className="italic">m</span><sub className="text-sm">₂</sub><span className="italic">r̈</span><sub className="text-sm">₂</sub> = Σ <span className="italic">F</span><sub className="text-sm">₂ⱼ</sub>
+                        </div>
+                        <div className="text-xl text-blue-400">
+                          <span className="italic">m</span><sub className="text-sm">₃</sub><span className="italic">r̈</span><sub className="text-sm">₃</sub> = Σ <span className="italic">F</span><sub className="text-sm">₃ⱼ</sub>
+                        </div>
+                        <p className="text-sm text-gray-400 pt-2">
+                          Coupled second-order differential equations for three gravitating bodies
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Problem Characteristics */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Problem Characteristics</h4>
+                    <div className="grid grid-cols-1 gap-3">
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-purple-400 font-semibold mb-2">🌌 Gravitational Forces</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• Inverse square law interactions</li>
+                          <li>• Conservation of energy</li>
+                          <li>• Conservation of momentum</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-orange-400 font-semibold mb-2">🔄 Dynamical Behavior</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• Chaotic trajectories</li>
+                          <li>• Sensitive initial conditions</li>
+                          <li>• No general analytical solution</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-green-400 font-semibold mb-2">🧮 Numerical Methods</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• Runge-Kutta integration</li>
+                          <li>• Symplectic algorithms</li>
+                          <li>• Phase space analysis</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Historical Context */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Historical Significance</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="space-y-2">
+                        <p className="text-gray-300 text-sm"><strong>Henri Poincaré (1889):</strong> Proved no general solution exists</p>
+                        <p className="text-gray-300 text-sm"><strong>Modern Era:</strong> Computer simulations reveal chaotic nature</p>
+                        <p className="text-gray-300 text-sm"><strong>Applications:</strong> Spacecraft trajectories, asteroid dynamics</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
