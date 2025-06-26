@@ -100,7 +100,7 @@ const presentations: Project[] = [
     id: 6,
     title: 'Differential Equations l: Newton\'s Law of Cooling (+experiment)',
     description: 'An in-depth mathematical exploration of Newton\'s Law of Cooling through theoretical analysis and practical experimentation, demonstrating how differential equations model real-world temperature phenomena.',
-    image: '/university/first-presentation-slide-cover.png',
+    image: '/projects/university/first-presentation-slide-cover.png',
     technologies: ['Mathematics', 'Differential Equations', 'Experimental Physics'],
     tags: ['Mathematics', 'Physics', 'Experiments', 'Education'],
     liveUrl: 'https://www.youtube.com/watch?v=6Sp1Di67pTI',
@@ -110,7 +110,7 @@ const presentations: Project[] = [
     id: 7,
     title: 'Differential Equations l: 1-D Presentation of 3-Body Problem',
     description: 'A comprehensive mathematical presentation exploring the classical three-body problem through one-dimensional analysis, showcasing the complexity and beauty of celestial mechanics using differential equations.',
-    image: '/university/second-presentation-slide-cover.png',
+    image: '/projects/university/second-presentation-slide-cover.png',
     technologies: ['Mathematics', 'Celestial Mechanics', 'Differential Equations'],
     tags: ['Mathematics', 'Physics', 'Astronomy', 'Presentation'],
     liveUrl: 'https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc',
@@ -811,7 +811,7 @@ export default function ProjectsPage() {
                     <div className="relative group">
                       <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <img 
-                          src={projects.find(p => p.id === 6)?.image || "/university/first-presentation-slide-cover.png"} 
+                          src={projects.find(p => p.id === 6)?.image || "/projects/university/first-presentation-slide-cover.png"} 
                           alt="Newton's Law of Cooling Presentation Cover" 
                           className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
@@ -947,7 +947,7 @@ export default function ProjectsPage() {
                     <div className="relative group">
                       <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer">
                         <img 
-                          src={presentations.find(p => p.id === 7)?.image || "/university/second-presentation-slide-cover.png"} 
+                          src={presentations.find(p => p.id === 7)?.image || "/projects/university/second-presentation-slide-cover.png"} 
                           alt="Three-Body Problem Presentation Cover" 
                           className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
