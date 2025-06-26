@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { usePathname } from 'next/navigation';
+import Head from 'next/head';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -79,8 +81,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Dynamically get the current path for canonical URL
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+  const canonicalUrl = `https://aliguliyev.com${pathname}`;
+
   return (
     <html lang="en">
+      <Head>
+        <link rel="canonical" href={canonicalUrl} />
+      </Head>
       <body className="bg-gray-900 text-white min-h-screen">
         <Navbar />
         {children}

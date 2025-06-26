@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from 'next/link';
 import ExperienceTimeline from "./components/ExperienceTimeline";
+import Head from 'next/head';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -39,6 +40,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link rel="canonical" href="https://aliguliyev.com/" />
+      </Head>
       {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
