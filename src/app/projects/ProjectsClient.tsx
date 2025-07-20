@@ -66,7 +66,7 @@ const projects: Project[] = [
     id: 4,
     title: 'VGI-Flexi: Rural Transport Analytics',
     description: 'An analytics platform for optimizing rural public transportation by predicting passenger no-shows.',
-    image: '/projects/vgi-challenge/vgi-cover.png',
+    image: '/projects/consulcon25/consulcon25-cover.png', // Using existing image as placeholder
     technologies: ['Data Analytics', 'Logistic Regression', 'Web Platform'],
     tags: ['Data Science', 'Transportation', 'Prediction Model'],
     liveUrl: 'https://8nxly8ub2.dora.run',
@@ -545,7 +545,6 @@ export default function ProjectsClient() {
                     <h4 className="font-bold text-white mb-2">Download Files</h4>
                     <ul className="list-disc list-inside space-y-2">
                       <li><a href="/projects/rain-in-australia/RainInAustralia.html" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">HTML Report (.html)</a></li>
-                      <li><a href="/projects/rain-in-australia/rain-in-australia.pptx" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">PowerPoint Presentation (.pptx)</a></li>
                       <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/Rain%20in%20Australia.ipynb" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Jupyter Notebook (.ipynb)</a></li>
                       <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/weatherAUS.csv" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Dataset (.csv)</a></li>
                     </ul>
@@ -676,12 +675,12 @@ export default function ProjectsClient() {
                   <h2 className="text-3xl font-bold text-white">VGI-Flexi: Rural Transport Analytics</h2>
                   <div className="relative group">
                     <img 
-                      src="/projects/vgi-challenge/vgi-cover.png" 
+                      src="/projects/consulcon25/consulcon25-cover.png" 
                       alt="VGI Challenge Project Cover" 
                       className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
-                      onClick={() => setZoomedImage("/projects/vgi-challenge/vgi-cover.png")}
+                      onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}
                     />
-                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/vgi-challenge/vgi-cover.png")}>
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}>
                       <span className="text-white text-2xl">🔍</span>
                     </div>
                   </div>
@@ -718,7 +717,7 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
                     <a href="https://8nxly8ub2.dora.run" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
-                      <img src="/projects/vgi-challenge/vgi-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                      <img src="/projects/consulcon25/consulcon25-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
                       </div>
