@@ -92,12 +92,22 @@ const projects: Project[] = [
       { name: 'Olga Ivanova' }
     ],
   },
+  {
+    id: 6,
+    title: 'coRELation: Religion, Diversity & Social Cohesion',
+    description: 'A Data4Good26 hackathon project transforming survey data into insights on religious diversity, trust, and social cohesion. Explore how knowledge and contact shape perceptions across European societies.',
+    image: '/projects/corel/corel-cover.jpg',
+    technologies: ['Data Visualization', 'React', 'Survey Data', 'ReligionMonitor'],
+    tags: ['Data4Good26', 'Hackathon', 'Social Cohesion', 'Data Science'],
+    liveUrl: 'https://corel.denishoti.dev',
+    collaborators: [],
+  },
 ];
 
 // Academic presentations data
 const presentations: Project[] = [
   {
-    id: 6,
+    id: 7,
     title: 'Differential Equations l: Newton\'s Law of Cooling (+experiment)',
     description: 'An in-depth mathematical exploration of Newton\'s Law of Cooling through theoretical analysis and practical experimentation, demonstrating how differential equations model real-world temperature phenomena.',
     image: '/projects/university/first-presentation-slide-cover.png',
@@ -107,7 +117,7 @@ const presentations: Project[] = [
     collaborators: [],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Differential Equations l: 1-D Presentation of 3-Body Problem',
     description: 'A comprehensive mathematical presentation exploring the classical three-body problem through one-dimensional analysis, showcasing the complexity and beauty of celestial mechanics using differential equations.',
     image: '/projects/university/second-presentation-slide-cover.png',
@@ -117,7 +127,7 @@ const presentations: Project[] = [
     collaborators: [],
   },
   {
-    id: 8,
+    id: 9,
     title: 'Differential Equations III: Advanced Mathematical Analysis',
     description: 'Advanced mathematical analysis and differential equations presentation exploring complex mathematical concepts and their applications.',
     image: '/projects/university/third-presentation-slide-cover.png',
@@ -134,6 +144,7 @@ export default function ProjectsClient() {
   const [showConsulConModal, setShowConsulConModal] = useState(false);
   const [showVgiModal, setShowVgiModal] = useState(false);
   const [showHolocaustModal, setShowHolocaustModal] = useState(false);
+  const [showCorelModal, setShowCorelModal] = useState(false);
   const [showNewtonsCoolingModal, setShowNewtonsCoolingModal] = useState(false);
   const [showThreeBodyModal, setShowThreeBodyModal] = useState(false);
   const [showThirdPresentationModal, setShowThirdPresentationModal] = useState(false);
@@ -191,6 +202,8 @@ export default function ProjectsClient() {
                   setShowVgiModal(true);
                 } else if (project.title === 'Silent Routes: Holocaust Remembrance') {
                   setShowHolocaustModal(true);
+                } else if (project.title === 'coRELation: Religion, Diversity & Social Cohesion') {
+                  setShowCorelModal(true);
                 }
               }}
             >
@@ -806,6 +819,89 @@ export default function ProjectsClient() {
           </div>
         )}
 
+        {/* coRELation Data4Good26 Modal */}
+        {showCorelModal && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowCorelModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowCorelModal(false)}>&times;</button>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                {/* Left Column: Image & Details */}
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-3xl font-bold text-white">coRELation: Religion, Diversity & Social Cohesion</h2>
+                  <div className="relative group">
+                    <img 
+                      src="/projects/corel/corel-cover.jpg" 
+                      alt="coRELation Data4Good26 Project Cover" 
+                      className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
+                      onClick={() => setZoomedImage("/projects/corel/corel-cover.jpg")}
+                    />
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/corel/corel-cover.jpg")}>
+                      <span className="text-white text-2xl">🔍</span>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-300">A Data4Good26 hackathon project that transforms complex survey data into meaningful insights on religious diversity, trust, and social cohesion. Discover how religious coexistence shapes solidarity and the future of pluralistic societies.</p>
+                    <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                      <li><strong>Data-driven:</strong> ReligionMonitor survey data visualized for policymakers, educators, and civil society.</li>
+                      <li><strong>Key themes:</strong> Fear and knowledge gaps, solidarity in crisis, and how contact improves perception.</li>
+                      <li><strong>Live platform:</strong> Explore insights, read stories, and compare diversity metrics across countries.</li>
+                    </ul>
+                  </div>
+                  <div className="pt-4 flex gap-4">
+                    <a href="https://corel.denishoti.dev" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">
+                      Visit Live Site
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right Column: Website & Canva */}
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-xl font-semibold text-white">Project Resources</h3>
+                  
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
+                    <a
+                      href="https://corel.denishoti.dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
+                    >
+                      <img
+                        src="/projects/corel/corel-cover.jpg"
+                        alt="coRELation Website Preview"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Canva Presentation</h4>
+                    <a
+                      href="https://www.canva.com/design/DAG_V3nTRwg/LqzjoeOI0dX_0IokSNwIDQ/view?utm_content=DAG_V3nTRwg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he5c1a8d7a3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
+                    >
+                      <img
+                        src="/projects/corel/corel-cover.jpg"
+                        alt="coRELation Canva Presentation Preview"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Newton's Law of Cooling Modal */}
         {showNewtonsCoolingModal && (
           <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowNewtonsCoolingModal(false)}>
@@ -823,7 +919,7 @@ export default function ProjectsClient() {
                     <div className="relative group">
                       <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                         <img 
-                          src={projects.find(p => p.id === 6)?.image || "/projects/university/first-presentation-slide-cover.png"} 
+                          src={presentations.find(p => p.id === 7)?.image || "/projects/university/first-presentation-slide-cover.png"} 
                           alt="Newton's Law of Cooling Presentation Cover" 
                           className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
@@ -859,7 +955,7 @@ export default function ProjectsClient() {
                   </div>
 
                   <div className="pt-4 flex gap-4">
-                    <a href={projects.find(p => p.id === 6)?.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow hover:bg-red-700 transition-colors text-center flex-1">
+                    <a href={presentations.find(p => p.id === 7)?.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow hover:bg-red-700 transition-colors text-center flex-1">
                       🔗 Open in YouTube
                     </a>
                     <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">
@@ -959,7 +1055,7 @@ export default function ProjectsClient() {
                     <div className="relative group">
                       <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer">
                         <img 
-                          src={presentations.find(p => p.id === 7)?.image || "/projects/university/second-presentation-slide-cover.png"} 
+                          src={presentations.find(p => p.id === 8)?.image || "/projects/university/second-presentation-slide-cover.png"} 
                           alt="Three-Body Problem Presentation Cover" 
                           className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
