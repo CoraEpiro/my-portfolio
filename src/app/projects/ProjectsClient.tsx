@@ -89,7 +89,7 @@ const projects: Project[] = [
       { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
       { name: 'Veronika Rybak', linkedInUrl: 'https://www.linkedin.com/in/veronika-rybak-55379a337/' },
       { name: 'Ruslan Tsibirov', linkedInUrl: 'https://www.linkedin.com/in/ruslantsibirov/' },
-      { name: 'Olga Ivanova' }
+      { name: 'Olga Ivanova', linkedInUrl: 'https://www.linkedin.com/in/olga-ivanova-datascientist/' }
     ],
   },
   {
@@ -100,7 +100,14 @@ const projects: Project[] = [
     technologies: ['Data Visualization', 'React', 'Survey Data', 'ReligionMonitor'],
     tags: ['Data4Good26', 'Hackathon', 'Social Cohesion', 'Data Science'],
     liveUrl: 'https://corel.denishoti.dev',
-    collaborators: [],
+    githubUrl: 'https://github.com/denishotii/Data4Good26',
+    collaborators: [
+      { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
+      { name: 'Veronika Rybak', linkedInUrl: 'https://www.linkedin.com/in/veronika-rybak-55379a337/' },
+      { name: 'Ruslan Tsibirov', linkedInUrl: 'https://www.linkedin.com/in/ruslantsibirov/' },
+      { name: 'Olga Ivanova', linkedInUrl: 'https://www.linkedin.com/in/olga-ivanova-datascientist/' },
+      { name: 'Aleksandra Karabutova', linkedInUrl: 'https://www.linkedin.com/in/aleksandra-karabutova/' }
+    ],
   },
 ];
 
@@ -777,7 +784,7 @@ export default function ProjectsClient() {
                           { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
                           { name: 'Veronika Rybak', linkedInUrl: 'https://www.linkedin.com/in/veronika-rybak-55379a337/' },
                           { name: 'Ruslan Tsibirov', linkedInUrl: 'https://www.linkedin.com/in/ruslantsibirov/' },
-                          { name: 'Olga Ivanova' }
+                          { name: 'Olga Ivanova', linkedInUrl: 'https://www.linkedin.com/in/olga-ivanova-datascientist/' }
                         ].map(c => (
                           <div key={c.name} className="flex items-center justify-between p-2 rounded-lg bg-gray-800 border border-gray-600">
                             <span className="font-medium text-white">{c.name}</span>
@@ -848,54 +855,63 @@ export default function ProjectsClient() {
                       <li><strong>Live platform:</strong> Explore insights, read stories, and compare diversity metrics across countries.</li>
                     </ul>
                   </div>
-                  <div className="pt-4 flex gap-4">
-                    <a href="https://corel.denishoti.dev" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">
-                      Visit Live Site
-                    </a>
+                  <div className="space-y-3 pt-4 border-t border-gray-700">
+                    <h4 className="text-lg font-semibold text-white">Collaborators</h4>
+                    <div className="flex flex-col gap-3">
+                      {[
+                        { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
+                        { name: 'Veronika Rybak', linkedInUrl: 'https://www.linkedin.com/in/veronika-rybak-55379a337/' },
+                        { name: 'Ruslan Tsibirov', linkedInUrl: 'https://www.linkedin.com/in/ruslantsibirov/' },
+                        { name: 'Olga Ivanova', linkedInUrl: 'https://www.linkedin.com/in/olga-ivanova-datascientist/' },
+                        { name: 'Aleksandra Karabutova', linkedInUrl: 'https://www.linkedin.com/in/aleksandra-karabutova/' }
+                      ].map(c => (
+                        <div key={c.name} className="flex items-center justify-between p-2 rounded-lg bg-gray-800 border border-gray-600">
+                          <span className="font-medium text-white">{c.name}</span>
+                          <div className="flex items-center gap-3">
+                            {c.linkedInUrl && <a href={c.linkedInUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>}
+                            {c.websiteUrl && <a href={c.websiteUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg>
+                            </a>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                {/* Right Column: Website & Canva */}
+                {/* Right Column: single preview with hover links for Website & Canva */}
                 <div className="flex flex-col gap-6">
                   <h3 className="text-xl font-semibold text-white">Project Resources</h3>
-                  
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
-                    <a
-                      href="https://corel.denishoti.dev"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
-                    >
-                      <img
-                        src="/projects/corel/corel-cover.jpg"
-                        alt="coRELation Website Preview"
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
-                      </div>
-                    </a>
+                  <div className="relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
+                    <img
+                      src="/projects/corel/corel-cover.jpg"
+                      alt="coRELation Project"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-4">
+                      <a
+                        href="https://corel.denishoti.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors"
+                      >
+                        Visit Website
+                      </a>
+                      <a
+                        href="https://www.canva.com/design/DAG_V3nTRwg/LqzjoeOI0dX_0IokSNwIDQ/view?utm_content=DAG_V3nTRwg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he5c1a8d7a3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors"
+                      >
+                        View Canva
+                      </a>
+                    </div>
                   </div>
-
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Canva Presentation</h4>
-                    <a
-                      href="https://www.canva.com/design/DAG_V3nTRwg/LqzjoeOI0dX_0IokSNwIDQ/view?utm_content=DAG_V3nTRwg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he5c1a8d7a3"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
-                    >
-                      <img
-                        src="/projects/corel/corel-cover.jpg"
-                        alt="coRELation Canva Presentation Preview"
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
-                      </div>
-                    </a>
-                  </div>
+                  <a href="https://github.com/denishotii/Data4Good26" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
+                    View on GitHub
+                  </a>
                 </div>
               </div>
             </div>
