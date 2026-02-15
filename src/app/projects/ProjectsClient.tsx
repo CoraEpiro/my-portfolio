@@ -884,7 +884,9 @@ export default function ProjectsClient() {
                 {/* Right Column: single preview with hover links for Website & Canva */}
                 <div className="flex flex-col gap-6">
                   <h3 className="text-xl font-semibold text-white">Project Resources</h3>
-                  <div className="relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Website & Canva</h4>
+                    <div className="relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
                     <img
                       src="/projects/corel/corel-cover.jpg"
                       alt="coRELation Project"
@@ -908,6 +910,7 @@ export default function ProjectsClient() {
                         View Canva
                       </a>
                     </div>
+                  </div>
                   </div>
                   <a href="https://github.com/denishotii/Data4Good26" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
                     View on GitHub
