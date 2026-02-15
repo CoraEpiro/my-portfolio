@@ -324,11 +324,11 @@ export default function ProjectsClient() {
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">ChatVocate: Azerbaijani Legal AI Assistant</h2>
-                  <div className="relative group">
+                  <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
                       src="/legal-project/legal-project-cover.png" 
                       alt="ChatVocate Legal AI Project Cover" 
-                      className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
+                      className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
                       onClick={() => setZoomedImage("/legal-project/legal-project-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/legal-project/legal-project-cover.png")}>
@@ -461,11 +461,11 @@ export default function ProjectsClient() {
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">Rain in Australia: A Predictive Analysis</h2>
-                  <div className="relative group">
+                  <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
                       src="/projects/rain-in-australia/rain-in-australia-cover.jpg" 
                       alt="Rain in Australia Project Cover" 
-                      className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
+                      className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
                       onClick={() => setZoomedImage("/projects/rain-in-australia/rain-in-australia-cover.jpg")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/rain-in-australia/rain-in-australia-cover.jpg")}>
@@ -585,11 +585,11 @@ export default function ProjectsClient() {
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">ConsulCon25: From Würzburg to Gran Canaria</h2>
-                  <div className="relative group">
+                  <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
                       src="/projects/consulcon25/consulcon25-cover.png" 
                       alt="ConsulCon25 Project Cover" 
-                      className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
+                      className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
                       onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}>
@@ -693,11 +693,11 @@ export default function ProjectsClient() {
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">VGI-Flexi: Rural Transport Analytics</h2>
-                  <div className="relative group">
+                  <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
                       src="/projects/consulcon25/consulcon25-cover.png" 
                       alt="VGI Challenge Project Cover" 
-                      className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
+                      className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
                       onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}>
@@ -764,11 +764,11 @@ export default function ProjectsClient() {
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">Silent Routes: Holocaust Remembrance</h2>
-                  <div className="relative group">
+                  <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
                       src="/projects/holocaust-remembrance/data4good-cover.png" 
                       alt="Holocaust Remembrance Project Cover" 
-                      className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
+                      className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
                       onClick={() => setZoomedImage("/projects/holocaust-remembrance/data4good-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/holocaust-remembrance/data4good-cover.png")}>
@@ -836,11 +836,11 @@ export default function ProjectsClient() {
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">coRELation: Religion, Diversity & Social Cohesion</h2>
-                  <div className="relative group">
+                  <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
                       src="/projects/corel/corel-cover.jpg" 
                       alt="coRELation Data4Good26 Project Cover" 
-                      className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer"
+                      className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
                       onClick={() => setZoomedImage("/projects/corel/corel-cover.jpg")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/corel/corel-cover.jpg")}>
@@ -932,12 +932,12 @@ export default function ProjectsClient() {
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
-                    <div className="relative group">
-                      <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
+                      <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img 
                           src={presentations.find(p => p.id === 7)?.image || "/projects/university/first-presentation-slide-cover.png"} 
                           alt="Newton's Law of Cooling Presentation Cover" 
-                          className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                           <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
@@ -1068,12 +1068,12 @@ export default function ProjectsClient() {
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
-                    <div className="relative group">
-                      <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer">
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
+                      <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img 
                           src={presentations.find(p => p.id === 8)?.image || "/projects/university/second-presentation-slide-cover.png"} 
                           alt="Three-Body Problem Presentation Cover" 
-                          className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                           <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
@@ -1192,12 +1192,12 @@ export default function ProjectsClient() {
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
-                    <div className="relative group">
-                      <a href="https://gamma.app/docs/pe8f0u9xf8gh5ls?following_id=lvwkfuullwkcsoq&follow_on_start=true" target="_blank" rel="noopener noreferrer">
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
+                      <a href="https://gamma.app/docs/pe8f0u9xf8gh5ls?following_id=lvwkfuullwkcsoq&follow_on_start=true" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img 
                           src="/projects/university/third-presentation-slide-cover.png" 
                           alt="Advanced Mathematical Analysis Presentation Cover" 
-                          className="w-full h-auto object-cover rounded-lg shadow-lg border border-gray-600 cursor-pointer hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                           <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
