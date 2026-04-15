@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import { usePathname } from 'next/navigation';
 import Head from 'next/head';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import RouteChangeListener from '@/components/RouteChangeListener';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -91,6 +92,10 @@ export default function RootLayout({
         <link rel="canonical" href={canonicalUrl} />
       </Head>
       <body className="bg-gray-900 text-white min-h-screen">
+        {/* Initialize GA4 analytics */}
+        <GoogleAnalytics />
+        {/* Track route changes automatically */}
+        <RouteChangeListener />
         <Navbar />
         {children}
       </body>
