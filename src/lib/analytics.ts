@@ -7,7 +7,7 @@
 // Declare gtag function type for TypeScript
 declare global {
   interface Window {
-    gtag?: (command: string, action: string, config?: Record<string, any>) => void;
+    gtag?: (command: string, action?: string | Date, config?: Record<string, any>) => void;
   }
 }
 
