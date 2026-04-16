@@ -3,6 +3,14 @@ import React from "react";
 
 const events = [
   {
+    title: "Data4Good Berlin",
+    color: "text-blue-400 border-blue-400 bg-blue-900/40",
+    date: "Jan 2026",
+    icon: "🏆",
+    subtitle: "1st Place, €500",
+    description: "Hertle School hackathon; took 1st place in our category.",
+  },
+  {
     title: "ConsulCon25",
     color: "text-teal-400 border-teal-400 bg-teal-900/40",
     date: "Apr 2025",
