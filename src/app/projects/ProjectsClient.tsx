@@ -143,6 +143,16 @@ const presentations: Project[] = [
     liveUrl: 'https://gamma.app/docs/pe8f0u9xf8gh5ls?following_id=lvwkfuullwkcsoq&follow_on_start=true',
     collaborators: [],
   },
+  {
+    id: 10,
+    title: 'Locusts vs. Crops: A Predator-Prey Model',
+    description: 'A comprehensive mathematical exploration of the dynamic interaction between locust populations and crop growth using predator-prey modeling with human intervention strategies.',
+    image: '/projects/university/fourht-presentation-slide-cover.png',
+    technologies: ['Mathematics', 'Differential Equations', 'Population Dynamics', 'Agricultural Modeling'],
+    tags: ['Academic', 'Mathematics', 'Applied Modeling', 'Population Dynamics'],
+    liveUrl: 'https://gamma.app/docs/Locusts-vs-Crops-A-Predator-Prey-Model-jexdfy88gxn63jt',
+    collaborators: [],
+  },
 ];
 
 export default function ProjectsClient() {
@@ -155,6 +165,7 @@ export default function ProjectsClient() {
   const [showNewtonsCoolingModal, setShowNewtonsCoolingModal] = useState(false);
   const [showThreeBodyModal, setShowThreeBodyModal] = useState(false);
   const [showThirdPresentationModal, setShowThirdPresentationModal] = useState(false);
+  const [showFourthPresentationModal, setShowFourthPresentationModal] = useState(false);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [isHtmlZoomed, setIsHtmlZoomed] = useState(false);
   const [htmlTheme, setHtmlTheme] = useState<'white' | 'black'>('white');
@@ -277,6 +288,8 @@ export default function ProjectsClient() {
                     setShowThreeBodyModal(true);
                   } else if (presentation.title === 'Differential Equations III: Advanced Mathematical Analysis') {
                     setShowThirdPresentationModal(true);
+                  } else if (presentation.title === 'Locusts vs. Crops: A Predator-Prey Model') {
+                    setShowFourthPresentationModal(true);
                   }
                 }}
               >
@@ -1283,6 +1296,120 @@ export default function ProjectsClient() {
                         <p className="text-gray-300 text-sm"><strong>Advanced Mathematics:</strong> Complex differential equation analysis</p>
                         <p className="text-gray-300 text-sm"><strong>Academic Research:</strong> Cutting-edge mathematical concepts</p>
                         <p className="text-gray-300 text-sm"><strong>Applications:</strong> Real-world mathematical applications</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Locusts vs. Crops Modal */}
+        {showFourthPresentationModal && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowFourthPresentationModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowFourthPresentationModal(false)}>&times;</button>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                {/* Left Column: Image & Details */}
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-3xl font-bold text-white">Locusts vs. Crops: A Predator-Prey Model</h2>
+                  {/* Presentation Slide Preview */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
+                      <a href="https://gamma.app/docs/Locusts-vs-Crops-A-Predator-Prey-Model-jexdfy88gxn63jt" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                        <img
+                          src="/projects/university/fourht-presentation-slide-cover.png"
+                          alt="Locusts vs. Crops Presentation Cover"
+                          className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-300">A comprehensive mathematical exploration of the dynamic interaction between locust populations and crop growth. This presentation models predator-prey relationships with realistic human intervention strategies for agricultural pest management.</p>
+                    <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                      <li><strong>Basic Dynamics:</strong> Exponential and logistic growth models for crops and locust populations</li>
+                      <li><strong>Predator-Prey Interaction:</strong> Modeling crop consumption and locust reproduction based on food availability</li>
+                      <li><strong>Human Intervention:</strong> Threshold-based spraying function with cost-benefit analysis</li>
+                      <li><strong>Optimization:</strong> Finding optimal intervention strategies for sustainable agriculture</li>
+                      <li><strong>Real-world Applications:</strong> Agricultural pest management and biological control strategies</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Right Column: Mathematical Details */}
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+
+                  {/* Core Equations */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Dynamic Model Equations</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-center space-y-2" style={{fontFamily: 'Times, serif'}}>
+                        <div className="text-sm text-gray-400 mb-2"><strong>Initial Model (without interaction):</strong></div>
+                        <div className="text-sm text-blue-400 mb-4">
+                          C'(t) = <span className="italic">r</span>C (Exponential)<br/>
+                          L'(t) = −<span className="italic">d</span>L (Decay without crops)
+                        </div>
+                        <div className="text-sm text-gray-400 mb-2"><strong>With Interaction:</strong></div>
+                        <div className="text-sm text-green-400 mb-4">
+                          C'(t) = <span className="italic">r</span>C(1 − C/K) − <span className="italic">aCL</span><br/>
+                          L'(t) = −<span className="italic">d</span>L + <span className="italic">bCL</span>
+                        </div>
+                        <div className="text-sm text-gray-400 mb-2"><strong>With Spraying Intervention:</strong></div>
+                        <div className="text-sm text-purple-400">
+                          C'(t) = <span className="italic">r</span>C(1 − C/K) − <span className="italic">aCL</span><br/>
+                          L'(t) = <span className="italic">b</span>CL − (<span className="italic">d</span> + u(t))L
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Model Components */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Key Parameters</h4>
+                    <div className="grid grid-cols-1 gap-3">
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-green-400 font-semibold mb-2">🌾 Crop Dynamics</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• <span className="italic">r</span>: Growth rate</li>
+                          <li>• <span className="italic">K</span>: Carrying capacity</li>
+                          <li>• <span className="italic">a</span>: Consumption rate</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-yellow-400 font-semibold mb-2">🦗 Locust Dynamics</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• <span className="italic">d</span>: Natural death rate</li>
+                          <li>• <span className="italic">b</span>: Conversion efficiency</li>
+                          <li>• <span className="italic">u(t)</span>: Control intervention</li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <h5 className="text-blue-400 font-semibold mb-2">✈️ Intervention Strategy</h5>
+                        <ul className="text-sm text-gray-400 space-y-1">
+                          <li>• Threshold-based spraying</li>
+                          <li>• Cost-benefit optimization</li>
+                          <li>• Equilibrium analysis</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Applications */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Real-World Applications</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="space-y-2">
+                        <p className="text-gray-300 text-sm"><strong>🌍 Agricultural Pest Management:</strong> Predicting locust swarms and optimizing spray schedules</p>
+                        <p className="text-gray-300 text-sm"><strong>💰 Economic Optimization:</strong> Balancing spray costs against crop damage losses</p>
+                        <p className="text-gray-300 text-sm"><strong>♻️ Sustainable Solutions:</strong> Minimizing pesticide use while protecting crops</p>
                       </div>
                     </div>
                   </div>
