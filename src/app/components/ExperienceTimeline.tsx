@@ -4,6 +4,18 @@ import React from "react";
 const experiences = [
   {
     icon: "💼",
+    title: "Marketing Analytics & Insights Working Student",
+    company: { name: "MediaMarktSaturn", url: "https://www.mediamarktsaturn.com" },
+    date: "02/2026 – Present",
+    location: "Germany",
+    bullets: [
+      "Analyze marketing data and provide insights to drive strategy optimization.",
+      "Support cross-functional teams with data-driven marketing analytics.",
+      "Contribute to marketing performance tracking and reporting."
+    ]
+  },
+  {
+    icon: "💼",
     title: "IT Infrastructure Support Intern",
     company: { name: "Flix", url: "https://flixbus.com" },
     date: "03/2025 – Present",
