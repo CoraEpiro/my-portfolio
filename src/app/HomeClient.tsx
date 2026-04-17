@@ -187,7 +187,6 @@ export default function HomeClient() {
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-blue-400 via-purple-400 via-pink-400 via-orange-400 via-yellow-400 via-red-400 via-teal-400 to-slate-400 z-0" style={{ transform: 'translateX(-50%)' }} />
           <div className="flex flex-col gap-16 relative z-10">
             {[
-              { title: "Data4Good Berlin", icon: "🏆", subtitle: "1st Place, €500", desc: "Hertle School hackathon; took 1st in our category", date: "Jan 2026", color: "green" as const },
               { title: "Salzburg Hackathon", icon: "🏆", subtitle: "€1 000 Prize", desc: "Smart tourism recommendation system (open-source)", date: "Nov 2024", color: "blue" as const },
               { title: "VGI Challenge", icon: "🏆", subtitle: "2nd Place, €3 000", desc: "Transport optimization project in Ingolstadt", date: "Nov 2024", color: "purple" as const },
               { title: "Würzburg Hackathon", icon: "🏆", subtitle: "1st Place", desc: "Qualified for ConsulCon25", date: "Nov 2024", color: "pink" as const },
@@ -196,6 +195,7 @@ export default function HomeClient() {
               { title: "ConsulCon25", icon: "🎤", subtitle: "International Conference", desc: "Presented Consul Democracy Analytics Tool", date: "Feb 2025", color: "teal" as const },
               { title: "European Healthcare Hackathon", icon: "🩺", subtitle: "Participant", desc: "Competed in Prague; gained experience", date: "Mar 2025", color: "red" as const },
               { title: "Berlin Blockchain Hackathons", icon: "🔗", subtitle: "Two 24h Web3 Hacks", desc: "Participated in two blockchain/Web3 hackathons; no final wins", date: "Jun 2025", color: "slate" as const },
+              { title: "Data4Good Berlin", icon: "🏆", subtitle: "1st Place, €500", desc: "Hertle School hackathon; took 1st in our category", date: "Jan 2026", color: "green" as const },
             ].map((event, idx) => {
               const colorMap = {
                 blue: "text-blue-400 border-blue-400 bg-blue-900/40",
