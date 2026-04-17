@@ -29,30 +29,6 @@ const services: Service[] = [
     category: 'mathematics',
     availability: 'available',
   },
-  {
-    id: 3,
-    title: 'Hackathon Mentoring',
-    description: 'Share my experience and expertise in hackathon competitions. Help teams prepare, strategize, and develop winning solutions.',
-    icon: '🏆',
-    category: 'consulting',
-    availability: 'limited',
-  },
-  {
-    id: 4,
-    title: 'Data Analysis Workshops',
-    description: 'Interactive workshops on data analysis techniques, tools, and best practices. Perfect for teams looking to enhance their data literacy.',
-    icon: '📈',
-    category: 'data-science',
-    availability: 'limited',
-  },
-  {
-    id: 5,
-    title: 'Research Collaboration',
-    description: 'Collaborate on research projects combining mathematics and data science. Open to academic and industry partnerships.',
-    icon: '🔬',
-    category: 'mathematics',
-    availability: 'limited',
-  },
 ];
 
 const additionalServices = [
