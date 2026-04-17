@@ -60,8 +60,8 @@ export default function CVDownloadButton() {
     trackCVDownload();
     // Trigger download
     const link = document.createElement('a');
-    link.href = '/files/ali-guliyev-cv.pdf';
-    link.download = 'ali-guliyev-cv.pdf';
+    link.href = '/resume/Ali_Guliyev_Resume_April_2026.pdf';
+    link.download = 'Ali_Guliyev_Resume_April_2026.pdf';
     link.click();
   };
 

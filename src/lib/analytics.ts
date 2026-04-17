@@ -118,7 +118,7 @@ export function trackCVDownload(): void {
   window.gtag('event', 'download', {
     event_category: 'cv',
     event_label: 'Resume Download',
-    file_name: 'ali-guliyev-cv.pdf',
+    file_name: 'Ali_Guliyev_Resume_April_2026.pdf',
   });
 }
 
