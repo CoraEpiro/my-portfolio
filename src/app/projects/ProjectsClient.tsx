@@ -153,6 +153,26 @@ const presentations: Project[] = [
     liveUrl: 'https://gamma.app/docs/Locusts-vs-Crops-A-Predator-Prey-Model-jexdfy88gxn63jt',
     collaborators: [],
   },
+  {
+    id: 11,
+    title: 'Lagrangian Modeling: Falling Rope & Mass',
+    description: 'A comprehensive exploration of Lagrangian mechanics applied to a rope with an attached object falling into a deep hole. Using energy conservation and the Euler-Lagrange equation to infer falling depth from measured fall time in a conservative system.',
+    image: '/projects/university/lagrangian-presentation-slide-cover.png',
+    technologies: ['Mathematics', 'Lagrangian Mechanics', 'Differential Equations', 'Physics'],
+    tags: ['Academic', 'Mathematics', 'Physics', 'Mechanics'],
+    liveUrl: 'https://gamma.app/docs/Lagrangian-Modeling-Falling-Rope-Mass-4bxdkfv0wgyghk9',
+    collaborators: [],
+  },
+  {
+    id: 12,
+    title: 'Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics',
+    description: 'An exploration of how seemingly simple changes in chemical reaction structures lead to complex, nonlinear dynamics. Examining both deterministic (ODE-based) and stochastic (particle-based) modeling approaches to understand autocatalytic reactions and their emergent behaviors.',
+    image: '/projects/university/autocatalytic-presentation-slide-cover.png',
+    technologies: ['Chemistry', 'Mathematics', 'Differential Equations', 'Stochastic Modeling', 'Simulation'],
+    tags: ['Academic', 'Chemistry', 'Mathematics', 'Nonlinear Dynamics'],
+    liveUrl: 'https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3',
+    collaborators: [],
+  },
 ];
 
 export default function ProjectsClient() {
@@ -166,6 +186,8 @@ export default function ProjectsClient() {
   const [showThreeBodyModal, setShowThreeBodyModal] = useState(false);
   const [showThirdPresentationModal, setShowThirdPresentationModal] = useState(false);
   const [showFourthPresentationModal, setShowFourthPresentationModal] = useState(false);
+  const [showFifthPresentationModal, setShowFifthPresentationModal] = useState(false);
+  const [showSixthPresentationModal, setShowSixthPresentationModal] = useState(false);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [isHtmlZoomed, setIsHtmlZoomed] = useState(false);
   const [htmlTheme, setHtmlTheme] = useState<'white' | 'black'>('white');
@@ -290,6 +312,10 @@ export default function ProjectsClient() {
                     setShowThirdPresentationModal(true);
                   } else if (presentation.title === 'Locusts vs. Crops: A Predator-Prey Model') {
                     setShowFourthPresentationModal(true);
+                  } else if (presentation.title === 'Lagrangian Modeling: Falling Rope & Mass') {
+                    setShowFifthPresentationModal(true);
+                  } else if (presentation.title === 'Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics') {
+                    setShowSixthPresentationModal(true);
                   }
                 }}
               >
@@ -1410,6 +1436,311 @@ export default function ProjectsClient() {
                         <p className="text-gray-300 text-sm"><strong>🌍 Agricultural Pest Management:</strong> Predicting locust swarms and optimizing spray schedules</p>
                         <p className="text-gray-300 text-sm"><strong>💰 Economic Optimization:</strong> Balancing spray costs against crop damage losses</p>
                         <p className="text-gray-300 text-sm"><strong>♻️ Sustainable Solutions:</strong> Minimizing pesticide use while protecting crops</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Lagrangian Modeling Modal */}
+        {showFifthPresentationModal && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowFifthPresentationModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowFifthPresentationModal(false)}>&times;</button>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                {/* Left Column: Image & Details */}
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-3xl font-bold text-white">Lagrangian Modeling: Falling Rope & Mass</h2>
+                  {/* Presentation Slide Preview */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
+                      <a href="https://gamma.app/docs/Lagrangian-Modeling-Falling-Rope-Mass-4bxdkfv0wgyghk9" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                        <img
+                          src="/projects/university/lagrangian-presentation-slide-cover.png"
+                          alt="Lagrangian Modeling Presentation Cover"
+                          className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-300">A comprehensive exploration of Lagrangian mechanics applied to a rope with an attached object falling into a deep hole. Using energy conservation and the Euler-Lagrange equation, the presentation demonstrates how to infer falling depth from measured fall time in a conservative system.</p>
+                    <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                      <li><strong>Problem Setup:</strong> Rope with linear mass density falling with attached object</li>
+                      <li><strong>System Variables:</strong> Total rope mass M, object mass m, rope length ℓ, and fallen distance x(t)</li>
+                      <li><strong>Energy Analysis:</strong> Kinetic and potential energy of rope and mass system</li>
+                      <li><strong>Lagrangian Mechanics:</strong> Constructing L = T - V and applying Euler-Lagrange equation</li>
+                      <li><strong>Energy Conservation:</strong> Using conserved energy to derive velocity relations</li>
+                      <li><strong>Solution by Quadrature:</strong> Numerical integration to solve the inverse problem</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Right Column: Mathematical Details */}
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+
+                  {/* System Description */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">System Variables & Masses</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 space-y-2 font-mono">
+                        <div><strong>M:</strong> Total rope mass</div>
+                        <div><strong>m:</strong> Attached object mass</div>
+                        <div><strong>ℓ:</strong> Total rope length</div>
+                        <div><strong>λ:</strong> Linear mass density = M/ℓ</div>
+                        <div><strong>x(t):</strong> Fallen rope length at time t</div>
+                        <div><strong>g:</strong> Gravitational acceleration</div>
+                        <div className="pt-2 border-t border-gray-600 mt-2"><strong>Effective mass:</strong> m_eff(t) = m + λx(t)</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Kinetic Energy */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Kinetic Energy (T)</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-center space-y-2" style={{fontFamily: 'Times, serif'}}>
+                        <div className="text-sm text-blue-400">
+                          All moving parts share velocity ẋ(t)
+                        </div>
+                        <div className="text-lg text-green-400 mt-3">
+                          T = ½(m + λx)ẋ²
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Potential Energy */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Potential Energy (V)</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 space-y-2 mb-3">
+                        <div><strong>Object:</strong> V_obj = -mgx</div>
+                        <div><strong>Rope:</strong> V_rope = -½λgx²</div>
+                      </div>
+                      <div className="text-center text-green-400" style={{fontFamily: 'Times, serif'}}>
+                        V = -mgx - ½λgx²
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Lagrangian */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Lagrangian (L = T - V)</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-center" style={{fontFamily: 'Times, serif'}}>
+                        <div className="text-yellow-400 text-lg">
+                          L = ½(m + λx)ẋ² + mgx + ½λgx²
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Equation of Motion */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Equation of Motion</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 mb-3">
+                        From Euler-Lagrange equation:
+                      </div>
+                      <div className="text-center text-purple-400" style={{fontFamily: 'Times, serif'}}>
+                        ẍ = g - (½λẋ²)/(m + λx)
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Energy Conservation */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Solution via Energy Conservation</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 space-y-2">
+                        <div>Total energy E = T + V is conserved</div>
+                        <div className="pt-2 border-t border-gray-600">Initial condition: x(0) = 0, E = 0</div>
+                        <div className="text-center text-green-400 mt-3" style={{fontFamily: 'Times, serif'}}>
+                          ẋ = √(2gx(m + ½λx)/(m + λx))
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Quadrature Solution */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Solution by Quadrature</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 mb-3">
+                        Separating variables and integrating:
+                      </div>
+                      <div className="text-center text-blue-400 text-sm" style={{fontFamily: 'Times, serif'}}>
+                        t(x) = ∫₀ˣ √[(m + λx')/(2gx'(m + ½λx'))] dx'
+                      </div>
+                      <div className="text-gray-400 text-sm mt-3">
+                        This integral provides an implicit solution, solvable numerically
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Inverse Problem */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Inverse Problem</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-gray-300 text-sm space-y-2">
+                        <p>The function t(x) creates a one-to-one mapping between falling depth and time. By measuring fall time experimentally, the hole depth can be determined through numerical inversion.</p>
+                        <p className="italic text-gray-400">This demonstrates how Lagrangian mechanics and energy conservation solve realistic inverse problems.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Autocatalytic Chemical Reactions Modal */}
+        {showSixthPresentationModal && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowSixthPresentationModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowSixthPresentationModal(false)}>&times;</button>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                {/* Left Column: Image & Details */}
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-3xl font-bold text-white">Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics</h2>
+                  {/* Presentation Slide Preview */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
+                      <a href="https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                        <img
+                          src="/projects/university/autocatalytic-presentation-slide-cover.png"
+                          alt="Autocatalytic Chemical Reactions Presentation Cover"
+                          className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-300">This presentation explores how seemingly simple changes in chemical reaction structures can lead to complex, nonlinear dynamics. It delves into autocatalytic reactions, examining both deterministic (ODE-based) and stochastic (particle-based) modeling approaches to understand their emergent behaviors and real-world implications.</p>
+                    <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                      <li><strong>Foundational Concepts:</strong> Chemical chain reactions, biological growth, and spread of phenomena</li>
+                      <li><strong>Classical Mass Action:</strong> Stoichiometry, reaction rates, and predictable linear dynamics</li>
+                      <li><strong>Autocatalytic Twist:</strong> Self-promoting reactions with positive feedback loops</li>
+                      <li><strong>Deterministic Model:</strong> Deriving the logistic equation from reaction kinetics</li>
+                      <li><strong>Stochastic Simulation:</strong> Particle-based models with collision-based reactions</li>
+                      <li><strong>Reversible Reactions:</strong> Dynamic equilibrium and complex system behaviors</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Right Column: Mathematical Details */}
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+
+                  {/* Reaction Scheme */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Chemical Reaction Structure</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 space-y-3 font-mono">
+                        <div className="text-center">
+                          <div className="text-green-400 mb-2"><strong>Forward Reaction (Autocatalytic):</strong></div>
+                          <div className="text-lg text-blue-400">A + B → 2B</div>
+                        </div>
+                        <div className="border-t border-gray-600 pt-3">
+                          <div className="text-yellow-400"><strong>Key Feature:</strong></div>
+                          <div className="text-gray-300 mt-1">Molecule B acts as a catalyst, accelerating its own formation</div>
+                          <div className="text-gray-300">Creates positive feedback: more B → faster B production</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Deterministic Model */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Deterministic Model (ODEs)</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 space-y-2 mb-3">
+                        <div>Mass Action equations:</div>
+                      </div>
+                      <div className="text-center space-y-2 font-mono mb-3">
+                        <div className="text-blue-400">ȧ = -kab</div>
+                        <div className="text-green-400">ḃ = kab</div>
+                      </div>
+                      <div className="border-t border-gray-600 pt-3 text-sm text-gray-300">
+                        <div className="mb-2"><strong>Conservation Law:</strong> a(t) + b(t) = C</div>
+                        <div className="text-yellow-400 text-center mt-2">In terms of b:</div>
+                        <div className="text-center text-green-400 mt-1">ḃ = kb(C - b)</div>
+                        <div className="text-gray-400 text-center mt-2 text-xs italic">The Logistic Equation</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* S-Shaped Growth */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">S-Shaped Growth Pattern</h4>
+                    <div className="grid grid-cols-1 gap-2">
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <div className="text-purple-400 font-semibold mb-1">① Slow Start</div>
+                        <div className="text-sm text-gray-300">B is rare, reaction rate is low</div>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <div className="text-green-400 font-semibold mb-1">② Rapid Acceleration</div>
+                        <div className="text-sm text-gray-300">Positive feedback intensifies exponential growth</div>
+                      </div>
+                      <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                        <div className="text-blue-400 font-semibold mb-1">③ Saturation</div>
+                        <div className="text-sm text-gray-300">A depletes, growth slows to equilibrium</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stochastic Model */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Stochastic Modeling</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 space-y-2">
+                        <div className="font-semibold text-cyan-400 mb-2">Particle-Based Simulation:</div>
+                        <div><strong>1. Random Movement:</strong> Individual A & B particles move in space</div>
+                        <div><strong>2. Collision-Based:</strong> A + B collision → 2B with probability p</div>
+                        <div><strong>3. Discrete & Spatial:</strong> Individual particles, true molecular realism</div>
+                        <div className="border-t border-gray-600 mt-3 pt-3 text-gray-400">
+                          Key insight: macroscopic S-shaped growth emerges from microscopic collision rules
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Extensions */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Advanced Considerations</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="text-sm text-gray-300 space-y-2">
+                        <div><strong>Reversible Reactions:</strong></div>
+                        <div className="text-gray-400 ml-2">A + B → 2B (forward, rate k)</div>
+                        <div className="text-gray-400 ml-2">B → A (reverse, rate p<sub>back</sub>)</div>
+                        <div className="text-gray-400 mt-2">Leads to dynamic equilibrium instead of full conversion</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Applications */}
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">Real-World Applications</h4>
+                    <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
+                      <div className="space-y-2 text-sm">
+                        <p className="text-gray-300"><strong>🔥 Chemical Systems:</strong> Combustion, chain reactions, polymerization</p>
+                        <p className="text-gray-300"><strong>🧬 Biological Systems:</strong> Population growth, microbial dynamics, epidemiology</p>
+                        <p className="text-gray-300"><strong>📡 Information Spread:</strong> Ideas, innovations, disease transmission networks</p>
                       </div>
                     </div>
                   </div>
