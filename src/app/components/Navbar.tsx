@@ -1,14 +1,8 @@
 "use client";
 import { useState } from "react";
-import { trackCVDownload } from "@/lib/analytics";
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
-
-  const handleCvDownload = () => {
-    trackCVDownload();
-    setNavOpen(false);
-  };
 
   return (
     <nav className="w-full bg-gray-950/80 backdrop-blur sticky top-0 z-50 shadow-md animate-fade-in">
@@ -44,11 +38,14 @@ export default function Navbar() {
             { href: '/', label: 'Home' },
             { href: '/projects', label: 'Projects' },
             { href: '/services', label: 'Services' },
-            { href: '/contact', label: 'Contact' }
+            { href: '/contact', label: 'Contact' },
+            { href: '/cv', label: 'CV' }
           ].map((link, idx) => (
             <a 
               key={link.href}
               href={link.href} 
+              target={link.href === '/cv' ? '_blank' : undefined}
+              rel={link.href === '/cv' ? 'noopener noreferrer' : undefined}
               className="hover:text-blue-400 hover:scale-105 transition-all duration-300 px-4 py-2 md:p-0 relative group animate-slide-right"
               style={{ animationDelay: `${0.3 + idx * 0.1}s`, animationFillMode: 'both' }}
             >
@@ -56,15 +53,6 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
             </a>
           ))}
-          <a
-            href="/resume/Ali_Guliyev_Resume_April_2026.pdf"
-            download="Ali_Guliyev_Resume_April_2026.pdf"
-            onClick={handleCvDownload}
-            className="px-4 py-2 rounded-full border border-blue-400/60 text-blue-300 hover:text-white hover:bg-blue-500/20 hover:border-blue-300 transition-all duration-300 animate-slide-right"
-            style={{ animationDelay: '0.7s', animationFillMode: 'both' }}
-          >
-            CV
-          </a>
         </div>
       </div>
     </nav>
