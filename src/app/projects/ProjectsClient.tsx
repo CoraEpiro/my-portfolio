@@ -157,7 +157,7 @@ const presentations: Project[] = [
     id: 11,
     title: 'Lagrangian Modeling: Falling Rope & Mass',
     description: 'A comprehensive exploration of Lagrangian mechanics applied to a rope with an attached object falling into a deep hole. Using energy conservation and the Euler-Lagrange equation to infer falling depth from measured fall time in a conservative system.',
-    image: '/projects/university/lagrangian-presentation-slide-cover.png',
+    image: '/projects/university/fifth-presentation-slide-cover.png',
     technologies: ['Mathematics', 'Lagrangian Mechanics', 'Differential Equations', 'Physics'],
     tags: ['Academic', 'Mathematics', 'Physics', 'Mechanics'],
     liveUrl: 'https://gamma.app/docs/Lagrangian-Modeling-Falling-Rope-Mass-4bxdkfv0wgyghk9',
@@ -167,7 +167,7 @@ const presentations: Project[] = [
     id: 12,
     title: 'Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics',
     description: 'An exploration of how seemingly simple changes in chemical reaction structures lead to complex, nonlinear dynamics. Examining both deterministic (ODE-based) and stochastic (particle-based) modeling approaches to understand autocatalytic reactions and their emergent behaviors.',
-    image: '/projects/university/autocatalytic-presentation-slide-cover.png',
+    image: '/projects/university/sixth-presentation-slide-cover.png',
     technologies: ['Chemistry', 'Mathematics', 'Differential Equations', 'Stochastic Modeling', 'Simulation'],
     tags: ['Academic', 'Chemistry', 'Mathematics', 'Nonlinear Dynamics'],
     liveUrl: 'https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3',
@@ -1461,7 +1461,7 @@ export default function ProjectsClient() {
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Lagrangian-Modeling-Falling-Rope-Mass-4bxdkfv0wgyghk9" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img
-                          src="/projects/university/lagrangian-presentation-slide-cover.png"
+                          src="/projects/university/fifth-presentation-slide-cover.png"
                           alt="Lagrangian Modeling Presentation Cover"
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
@@ -1620,7 +1620,7 @@ export default function ProjectsClient() {
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img
-                          src="/projects/university/autocatalytic-presentation-slide-cover.png"
+                          src="/projects/university/sixth-presentation-slide-cover.png"
                           alt="Autocatalytic Chemical Reactions Presentation Cover"
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
