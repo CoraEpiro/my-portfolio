@@ -28,6 +28,7 @@ function getPageTitle(pathname: string): string {
   const titleMap: Record<string, string> = {
     '/': 'Home',
     '/projects': 'Projects',
+    '/certificates': 'Certificates',
     '/services': 'Services',
     '/gallery': 'Gallery',
     '/contact': 'Contact',

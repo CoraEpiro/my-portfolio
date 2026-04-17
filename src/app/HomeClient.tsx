@@ -355,11 +355,16 @@ export default function HomeClient() {
       <hr className="divider" />
       {/* Certifications Section */}
       <section className="container py-12 scroll-fade-in">
-        <h2 className="text-2xl font-bold text-center mb-8">Certifications</h2>
+        <h2 className="text-2xl font-bold text-center mb-3">Certifications</h2>
+        <p className="text-center text-gray-300 mb-8">
+          A dedicated certificates archive is available here:
+          <a href="/certificates" className="ml-2 text-blue-400 hover:underline font-semibold">View All Certificates</a>
+        </p>
         <div className="max-w-3xl mx-auto">
           <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow cursor-pointer">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="space-y-2">
+                <p className="text-xs uppercase tracking-[0.18em] text-green-300">Featured</p>
                 <p className="text-xs uppercase tracking-[0.18em] text-blue-300">Professional Certificate</p>
                 <h3 className="text-xl md:text-2xl font-bold text-white">Google Advanced Data Analytics</h3>
                 <p className="text-gray-300">Issued by Coursera</p>

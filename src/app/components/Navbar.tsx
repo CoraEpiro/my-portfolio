@@ -37,6 +37,7 @@ export default function Navbar() {
           {[
             { href: '/', label: 'Home' },
             { href: '/projects', label: 'Projects' },
+            { href: '/certificates', label: 'Certificates' },
             { href: '/services', label: 'Services' },
             { href: '/contact', label: 'Contact' },
             { href: '/cv', label: 'CV' }
