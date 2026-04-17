@@ -362,6 +362,18 @@ export default function HomeClient() {
         </p>
         <div className="max-w-3xl mx-auto">
           <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow cursor-pointer">
+            <a
+              href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mb-5 overflow-hidden rounded-lg border border-slate-600/60"
+            >
+              <img
+                src="/certificates/google-advanced-data-analytics-coursera.jpg"
+                alt="Google Advanced Data Analytics certificate preview"
+                className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
+              />
+            </a>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="space-y-2">
                 <p className="text-xs uppercase tracking-[0.18em] text-green-300">Featured</p>

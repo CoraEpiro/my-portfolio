@@ -9,6 +9,7 @@ type Certificate = {
   credentialId?: string;
   verifyUrl?: string;
   notes?: string;
+  previewImage?: string;
 };
 
 const certificates: Certificate[] = [
@@ -21,6 +22,7 @@ const certificates: Certificate[] = [
     credentialId: 'LGR9L7X7L5RL',
     verifyUrl: 'https://coursera.org/verify/professional-cert/LGR9L7X7L5RL',
     notes: 'Advanced analytics, statistical methods, Python workflows, and practical business analysis.',
+    previewImage: '/certificates/google-advanced-data-analytics-coursera.jpg',
   },
 ];
 
@@ -43,6 +45,20 @@ export default function CertificatesClient() {
               key={certificate.id}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200/70 dark:border-gray-700/70 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
             >
+              {certificate.previewImage && (
+                <a
+                  href={certificate.verifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mb-5 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+                >
+                  <img
+                    src={certificate.previewImage}
+                    alt={`${certificate.title} certificate preview`}
+                    className="w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
+                  />
+                </a>
+              )}
               <div className="flex items-center justify-between gap-3 mb-3">
                 <span className="inline-flex rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-200 px-3 py-1 text-xs font-semibold">
                   {certificate.category}
