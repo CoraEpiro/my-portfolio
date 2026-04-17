@@ -19,7 +19,7 @@ const experiences = [
     title: "IT Infrastructure Support Intern",
     company: { name: "Flix", url: "https://flixbus.com" },
     date: "03/2025 – Present",
-    location: "Berlin, Germany",
+    location: "Munich, Germany",
     bullets: [
       "Contributed to cross-functional projects as the subject-matter expert in IT infrastructure support services.",
       "Supported business growth by efficiently scaling IT infrastructure.",
