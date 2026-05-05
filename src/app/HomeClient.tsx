@@ -394,6 +394,34 @@ export default function HomeClient() {
               </div>
             </div>
           </div>
+          <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow cursor-pointer mt-6">
+            <div className="mb-5 overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80 px-5 py-8 text-center">
+              <p className="text-xs uppercase tracking-[0.18em] text-blue-300 mb-3">Coursera Specialization</p>
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                IBM Deep Learning with PyTorch, Keras and Tensorflow
+              </h3>
+              <p className="mt-2 text-sm text-gray-300">Issued on 4 May 2026</p>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="space-y-2">
+                <p className="text-xs uppercase tracking-[0.18em] text-green-300">Featured</p>
+                <p className="text-xs uppercase tracking-[0.18em] text-blue-300">Specialization Certificate</p>
+                <h3 className="text-xl md:text-2xl font-bold text-white">IBM Deep Learning with PyTorch, Keras and Tensorflow</h3>
+                <p className="text-gray-300">Issued by Coursera</p>
+                <p className="text-sm text-gray-400">Credential ID: 23WN50BTKV7Z</p>
+              </div>
+              <div className="flex md:justify-end md:pt-1">
+                <a
+                  href="https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
+                >
+                  Verify Certificate
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <hr className="divider" />

@@ -4,7 +4,7 @@ type Certificate = {
   id: number;
   title: string;
   issuer: string;
-  category: 'Professional Certificate' | 'Diploma' | 'Course Certificate';
+  category: 'Professional Certificate' | 'Specialization Certificate' | 'Diploma' | 'Course Certificate';
   issueDate: string;
   credentialId?: string;
   verifyUrl?: string;
@@ -13,6 +13,16 @@ type Certificate = {
 };
 
 const certificates: Certificate[] = [
+  {
+    id: 2,
+    title: 'IBM Deep Learning with PyTorch, Keras and Tensorflow',
+    issuer: 'Coursera',
+    category: 'Specialization Certificate',
+    issueDate: '4 May 2026',
+    credentialId: '23WN50BTKV7Z',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z',
+    notes: 'Deep learning fundamentals, PyTorch, Keras, and TensorFlow workflows.',
+  },
   {
     id: 1,
     title: 'Google Advanced Data Analytics',
