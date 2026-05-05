@@ -20,7 +20,7 @@ const certificates: Certificate[] = [
     category: 'Specialization Certificate',
     issueDate: '4 May 2026',
     credentialId: '23WN50BTKV7Z',
-    verifyUrl: 'https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z',
+    verifyUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z',
     notes: 'Deep learning fundamentals, PyTorch, Keras, and TensorFlow workflows.',
     previewImage: '/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png',
   },
