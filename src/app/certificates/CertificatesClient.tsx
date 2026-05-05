@@ -54,23 +54,23 @@ export default function CertificatesClient() {
           {certificates.map((certificate) => (
             <article
               key={certificate.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200/70 dark:border-gray-700/70 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="flex h-full flex-col bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200/70 dark:border-gray-700/70 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
             >
               {certificate.previewImage && (
                 <a
                   href={certificate.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block mb-5 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700"
+                  className="mb-5 block aspect-[4/3] overflow-hidden rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900"
                 >
                   <img
                     src={certificate.previewImage}
                     alt={`${certificate.title} certificate preview`}
-                    className="w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
+                    className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.02]"
                   />
                 </a>
               )}
-              <div className="flex items-center justify-between gap-3 mb-3">
+              <div className="mb-3 flex items-center justify-between gap-3">
                 <span className="inline-flex rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-200 px-3 py-1 text-xs font-semibold">
                   {certificate.category}
                 </span>
@@ -86,7 +86,7 @@ export default function CertificatesClient() {
                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{certificate.notes}</p>
               )}
 
-              <div className="flex flex-wrap gap-3">
+              <div className="mt-auto flex flex-wrap gap-3">
                 {certificate.verifyUrl && (
                   <a
                     href={certificate.verifyUrl}

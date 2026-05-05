@@ -367,24 +367,24 @@ export default function HomeClient() {
                 href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block overflow-hidden rounded-lg border border-slate-600/60"
+                className="block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
               >
                 <img
                   src="/certificates/google-advanced-data-analytics-coursera.jpg"
                   alt="Google Advanced Data Analytics certificate preview"
-                  className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
+                  className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
                 />
               </a>
               <a
                 href="https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block overflow-hidden rounded-lg border border-slate-600/60"
+                className="block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
               >
                 <img
                   src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
                   alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
-                  className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
+                  className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
                 />
               </a>
             </div>
@@ -414,12 +414,12 @@ export default function HomeClient() {
               href="https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z"
               target="_blank"
               rel="noopener noreferrer"
-              className="block mb-5 overflow-hidden rounded-lg border border-slate-600/60"
+              className="block mb-5 aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
             >
               <img
                 src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
                 alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
-                className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
+                className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
               />
             </a>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
