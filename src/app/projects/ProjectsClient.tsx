@@ -19,7 +19,7 @@ type Project = {
   githubUrl?: string;
   tags: string[];
   collaborators?: Collaborator[];
-};
+  image?: string;
 
 // Sample projects data
 const projects: Project[] = [
@@ -38,26 +38,51 @@ const projects: Project[] = [
     id: 2,
     title: 'Rain in Australia',
     description: 'A comprehensive data science project analyzing and predicting rainfall patterns across Australia using advanced machine learning algorithms and statistical modeling techniques.',
+  {
+    id: 13,
+    title: 'Autonomous Guided Vehicle (AGV)',
+    description: 'A university digital project exploring how autonomous guided vehicles can be designed to move safely and efficiently through a controlled environment using routing, navigation, and automation concepts.',
+    technologies: ['Robotics', 'Automation', 'Systems Design', 'Presentation'],
+    tags: ['University', 'Robotics', 'Automation', 'SS 2025'],
+    liveUrl: 'https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620',
+    collaborators: [],
+  },
     image: '/projects/rain-in-australia/rain-in-australia-cover.jpg',
     technologies: ['Python', 'Jupyter', 'ML'],
     tags: ['Python', 'Jupyter', 'ML'],
     liveUrl: '#',
+  const [showAgvModal, setShowAgvModal] = useState(false);
     githubUrl: 'https://github.com/CoraEpiro/rain-in-australia-binder',
     collaborators: [
       { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' }
     ],
   },
+                } else if (presentation.title === 'Autonomous Guided Vehicle (AGV)') {
+                  setShowAgvModal(true);
   {
     id: 3,
     title: 'ConsulCon25 Presentation',
-    description: 'A comprehensive presentation project developed in Würzburg and presented in Gran Canaria, Spain.',
-    image: '/projects/consulcon25/consulcon25-cover.png',
-    technologies: ['Presentation', 'Video', 'Web Development'],
-    tags: ['Presentation', 'Video', 'Web Development'],
-    liveUrl: 'https://consulanalytics.denishoti.dev',
-    githubUrl: 'https://github.com/denishotii/ConsulAnalytics',
-    collaborators: [
-      { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
+                {presentation.image ? (
+                  <div className="relative h-48 w-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 overflow-hidden">
+                    <img 
+                      src={presentation.image} 
+                      alt={presentation.title} 
+                      className="object-contain h-32 transition-transform duration-500 group-hover:scale-110" 
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                  </div>
+                ) : (
+                  <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 text-white">
+                    <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.55),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.35),transparent_28%)]"></div>
+                    <div className="relative flex h-full flex-col items-start justify-between p-5">
+                      <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-100">SS 2025</span>
+                      <div>
+                        <p className="text-sm uppercase tracking-[0.28em] text-blue-200/80">University Project</p>
+                        <h3 className="mt-2 max-w-[12rem] text-2xl font-bold leading-tight">Autonomous Guided Vehicle</h3>
+                      </div>
+                    </div>
+                  </div>
+                )}
       { name: 'Veronika Rybak', linkedInUrl: 'https://www.linkedin.com/in/veronika-rybak-55379a337/' },
       { name: 'Ruslan Tsibirov', linkedInUrl: 'https://www.linkedin.com/in/ruslantsibirov/' }
     ],
@@ -278,6 +303,56 @@ export default function ProjectsClient() {
               </div>
             </div>
           ))}
+
+          {/* AGV University Project Modal */}
+          {showAgvModal && (
+            <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowAgvModal(false)}>
+              <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-5xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+                <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowAgvModal(false)}>&times;</button>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                  <div className="flex flex-col gap-6">
+                    <h2 className="text-3xl font-bold text-white">Autonomous Guided Vehicle (AGV)</h2>
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600 bg-slate-950">
+                      <div className="flex h-full flex-col justify-between p-6 text-white bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.5),transparent_30%),linear-gradient(135deg,#0f172a,#111827_50%,#172554)]">
+                        <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-blue-200/80">
+                          <span>Digital Project</span>
+                          <span>SS 2025</span>
+                        </div>
+                        <div>
+                          <p className="text-sm text-blue-100/80 mb-2">Autonomous transport systems</p>
+                          <div className="max-w-sm text-3xl font-black leading-tight">AGV concept for controlled navigation and automation</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <p className="text-gray-300">This university project explores the idea of an autonomous guided vehicle and how it can be structured to move safely and efficiently in a controlled environment.</p>
+                      <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                        <li><strong>Navigation:</strong> route planning and movement logic for a guided vehicle</li>
+                        <li><strong>Automation:</strong> concepts for autonomous control and system behavior</li>
+                        <li><strong>Presentation:</strong> packaged as a digital class project for SS 2025</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-6">
+                    <h3 className="text-xl font-semibold text-white">Project Resources</h3>
+                    <div className="space-y-3">
+                      <h4 className="text-lg font-semibold text-white">Canva Presentation</h4>
+                      <a
+                        href="https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
+                      >
+                        View Presentation
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Academic Presentations Section */}
