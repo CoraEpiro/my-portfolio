@@ -29,7 +29,7 @@ const certificates: Certificate[] = [
     title: 'Google Advanced Data Analytics',
     issuer: 'Coursera',
     category: 'Professional Certificate',
-    issueDate: '2026',
+    issueDate: '13 March 2026',
     credentialId: 'LGR9L7X7L5RL',
     verifyUrl: 'https://coursera.org/verify/professional-cert/LGR9L7X7L5RL',
     notes: 'Advanced analytics, statistical methods, Python workflows, and practical business analysis.',

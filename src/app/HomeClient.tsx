@@ -394,6 +394,7 @@ export default function HomeClient() {
                 <p className="text-xs uppercase tracking-[0.18em] text-blue-300">Professional Certificate</p>
                 <h3 className="text-xl md:text-2xl font-bold text-white">Google Advanced Data Analytics</h3>
                 <p className="text-gray-300">Issued by Coursera</p>
+                <p className="text-sm text-gray-400">Issued on 13 March 2026</p>
                 <p className="text-sm text-gray-400">Credential ID: LGR9L7X7L5RL</p>
               </div>
               <div className="flex md:justify-end md:pt-1">
