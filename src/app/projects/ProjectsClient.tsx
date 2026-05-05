@@ -40,8 +40,8 @@ const projects: Project[] = [
     description: 'A comprehensive data science project analyzing and predicting rainfall patterns across Australia using advanced machine learning algorithms and statistical modeling techniques.',
   {
     id: 13,
-    title: 'Autonomous Guided Vehicle (AGV)',
-    description: 'A university digital project exploring how autonomous guided vehicles can be designed to move safely and efficiently through a controlled environment using routing, navigation, and automation concepts.',
+    title: 'Intelligent Multilingual AGV',
+    description: 'A digital university project that combines RoboPro control, Python services, MQTT communication, multilingual voice commands, grid navigation, OCR-based parking, and obstacle avoidance in a smart logistics prototype.',
     technologies: ['Robotics', 'Automation', 'Systems Design', 'Presentation'],
     tags: ['University', 'Robotics', 'Automation', 'SS 2025'],
     liveUrl: 'https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620',
@@ -57,7 +57,7 @@ const projects: Project[] = [
       { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' }
     ],
   },
-                } else if (presentation.title === 'Autonomous Guided Vehicle (AGV)') {
+                } else if (presentation.title === 'Intelligent Multilingual AGV') {
                   setShowAgvModal(true);
   {
     id: 3,
@@ -78,7 +78,7 @@ const projects: Project[] = [
                       <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-100">SS 2025</span>
                       <div>
                         <p className="text-sm uppercase tracking-[0.28em] text-blue-200/80">University Project</p>
-                        <h3 className="mt-2 max-w-[12rem] text-2xl font-bold leading-tight">Autonomous Guided Vehicle</h3>
+                        <h3 className="mt-2 max-w-[12rem] text-2xl font-bold leading-tight">Intelligent Multilingual AGV</h3>
                       </div>
                     </div>
                   </div>
@@ -312,7 +312,7 @@ export default function ProjectsClient() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                   <div className="flex flex-col gap-6">
-                    <h2 className="text-3xl font-bold text-white">Autonomous Guided Vehicle (AGV)</h2>
+                    <h2 className="text-3xl font-bold text-white">Intelligent Multilingual AGV for Grid Navigation and Parking via OCR</h2>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600 bg-slate-950">
                       <div className="flex h-full flex-col justify-between p-6 text-white bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.5),transparent_30%),linear-gradient(135deg,#0f172a,#111827_50%,#172554)]">
                         <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-blue-200/80">
@@ -321,16 +321,17 @@ export default function ProjectsClient() {
                         </div>
                         <div>
                           <p className="text-sm text-blue-100/80 mb-2">Autonomous transport systems</p>
-                          <div className="max-w-sm text-3xl font-black leading-tight">AGV concept for controlled navigation and automation</div>
+                          <div className="max-w-sm text-3xl font-black leading-tight">Multilingual voice control, OCR parking, and grid navigation</div>
                         </div>
                       </div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-300">This university project explores the idea of an autonomous guided vehicle and how it can be structured to move safely and efficiently in a controlled environment.</p>
+                      <p className="text-gray-300">This university project builds a smart AGV prototype for logistics use cases. The system follows a color-coded grid, responds to multilingual voice commands, and switches between real-time navigation, parking, and obstacle handling through a hybrid RoboPro and Python architecture.</p>
                       <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                        <li><strong>Navigation:</strong> route planning and movement logic for a guided vehicle</li>
-                        <li><strong>Automation:</strong> concepts for autonomous control and system behavior</li>
-                        <li><strong>Presentation:</strong> packaged as a digital class project for SS 2025</li>
+                        <li><strong>Voice control:</strong> multilingual speech input interpreted with GPT and converted into structured actions</li>
+                        <li><strong>Parking:</strong> OCR detects the letter “P” to locate and align with parking spots</li>
+                        <li><strong>Control loop:</strong> RoboPro manages line following and state switching while Python handles higher-level logic over MQTT</li>
+                        <li><strong>Testing:</strong> integrated and validated across line following, parking, obstacle avoidance, and rapid command switching</li>
                       </ul>
                     </div>
                   </div>
