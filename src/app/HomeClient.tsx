@@ -362,18 +362,32 @@ export default function HomeClient() {
         </p>
         <div className="max-w-3xl mx-auto">
           <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow cursor-pointer">
-            <a
-              href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block mb-5 overflow-hidden rounded-lg border border-slate-600/60"
-            >
-              <img
-                src="/certificates/google-advanced-data-analytics-coursera.jpg"
-                alt="Google Advanced Data Analytics certificate preview"
-                className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
-              />
-            </a>
+            <div className="grid gap-6 lg:grid-cols-2 mb-5">
+              <a
+                href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden rounded-lg border border-slate-600/60"
+              >
+                <img
+                  src="/certificates/google-advanced-data-analytics-coursera.jpg"
+                  alt="Google Advanced Data Analytics certificate preview"
+                  className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
+                />
+              </a>
+              <a
+                href="https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden rounded-lg border border-slate-600/60"
+              >
+                <img
+                  src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
+                  alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
+                  className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
+                />
+              </a>
+            </div>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="space-y-2">
                 <p className="text-xs uppercase tracking-[0.18em] text-green-300">Featured</p>
@@ -395,13 +409,18 @@ export default function HomeClient() {
             </div>
           </div>
           <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow cursor-pointer mt-6">
-            <div className="mb-5 overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80 px-5 py-8 text-center">
-              <p className="text-xs uppercase tracking-[0.18em] text-blue-300 mb-3">Coursera Specialization</p>
-              <h3 className="text-xl md:text-2xl font-bold text-white">
-                IBM Deep Learning with PyTorch, Keras and Tensorflow
-              </h3>
-              <p className="mt-2 text-sm text-gray-300">Issued on 4 May 2026</p>
-            </div>
+            <a
+              href="https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mb-5 overflow-hidden rounded-lg border border-slate-600/60"
+            >
+              <img
+                src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
+                alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
+                className="w-full h-auto transition-transform duration-300 hover:scale-[1.01]"
+              />
+            </a>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
               <div className="space-y-2">
                 <p className="text-xs uppercase tracking-[0.18em] text-green-300">Featured</p>

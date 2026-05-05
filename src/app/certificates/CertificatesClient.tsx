@@ -22,6 +22,7 @@ const certificates: Certificate[] = [
     credentialId: '23WN50BTKV7Z',
     verifyUrl: 'https://www.coursera.org/account/accomplishments/specialization/certificate/23WN50BTKV7Z',
     notes: 'Deep learning fundamentals, PyTorch, Keras, and TensorFlow workflows.',
+    previewImage: '/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png',
   },
   {
     id: 1,
