@@ -33,7 +33,7 @@ const certificates: Certificate[] = [
     credentialId: 'LGR9L7X7L5RL',
     verifyUrl: 'https://coursera.org/verify/professional-cert/LGR9L7X7L5RL',
     notes: 'Advanced analytics, statistical methods, Python workflows, and practical business analysis.',
-    previewImage: '/certificates/google-advanced-data-analytics-coursera.jpg',
+    previewImage: '/certificates/google_advanced_data_analytics.png',
   },
 ];
 

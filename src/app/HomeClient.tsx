@@ -370,7 +370,7 @@ export default function HomeClient() {
                 className="block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
               >
                 <img
-                  src="/certificates/google-advanced-data-analytics-coursera.jpg"
+                  src="/certificates/google_advanced_data_analytics.png"
                   alt="Google Advanced Data Analytics certificate preview"
                   className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
                 />
