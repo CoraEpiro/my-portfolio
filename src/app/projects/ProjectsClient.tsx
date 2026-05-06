@@ -295,9 +295,10 @@ export default function ProjectsClient() {
               <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-5xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
                 <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowAgvModal(false)}>&times;</button>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                <h2 className="text-3xl font-bold text-white mb-6 px-8 pt-8">Intelligent Multilingual AGV for Grid Navigation and Parking via OCR</h2>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-8 pb-8">
                   <div className="flex flex-col gap-6">
-                    <h2 className="text-3xl font-bold text-white">Intelligent Multilingual AGV for Grid Navigation and Parking via OCR</h2>
                     <div className="relative aspect-video w-full rounded-lg overflow-hidden border border-gray-700 bg-slate-950">
                       <img
                         src="/projects/university/agv-project/digital-project-presentation-slide-cover.png"
@@ -317,9 +318,8 @@ export default function ProjectsClient() {
                   </div>
 
                   <div className="flex flex-col gap-6">
-                    <h3 className="text-xl font-semibold text-white">Project Resources</h3>
                     <div className="space-y-3">
-                      <h4 className="text-lg font-semibold text-white">Canva Presentation</h4>
+                      <h3 className="text-lg font-semibold text-white">Canva Presentation</h3>
                       <a
                         href="https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620"
                         target="_blank"
