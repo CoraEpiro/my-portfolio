@@ -91,7 +91,7 @@ const projects: Project[] = [
     id: 4,
     title: 'VGI-Flexi: Rural Transport Analytics',
     description: 'An analytics platform for optimizing rural public transportation by predicting passenger no-shows.',
-    image: '/projects/consulcon25/consulcon25-cover.png', // Using existing image as placeholder
+    image: '/projects/university/vgi-challenge/vgi-cover.png', // Use project-specific cover
     technologies: ['Data Analytics', 'Logistic Regression', 'Web Platform'],
     tags: ['Data Science', 'Transportation', 'Prediction Model'],
     liveUrl: 'https://8nxly8ub2.dora.run',
