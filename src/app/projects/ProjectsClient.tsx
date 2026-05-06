@@ -792,10 +792,11 @@ export default function ProjectsClient() {
             <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
               <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowVgiModal(false)}>&times;</button>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+              <h2 className="text-3xl font-bold text-white mb-6 px-8 pt-8">VGI-Flexi: Rural Transport Analytics</h2>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-8 pb-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">VGI-Flexi: Rural Transport Analytics</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
                       src="/projects/university/vgi-challenge/vgi-cover.png" 
