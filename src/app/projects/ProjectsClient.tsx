@@ -299,16 +299,11 @@ export default function ProjectsClient() {
                   <div className="flex flex-col gap-6">
                     <h2 className="text-3xl font-bold text-white">Intelligent Multilingual AGV for Grid Navigation and Parking via OCR</h2>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600 bg-slate-950">
-                      <div className="flex h-full flex-col justify-between p-6 text-white bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.5),transparent_30%),linear-gradient(135deg,#0f172a,#111827_50%,#172554)]">
-                        <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-blue-200/80">
-                          <span>Digital Project</span>
-                          <span>SS 2025</span>
-                        </div>
-                        <div>
-                          <p className="text-sm text-blue-100/80 mb-2">Autonomous transport systems</p>
-                          <div className="max-w-sm text-3xl font-black leading-tight">Multilingual voice control, OCR parking, and grid navigation</div>
-                        </div>
-                      </div>
+                      <img
+                        src="/projects/university/agv-project/digital-project-presentation-slide-cover.png"
+                        alt="Intelligent Multilingual AGV cover"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-3">
                       <p className="text-gray-300">This university project builds a smart AGV prototype for logistics use cases. The system follows a color-coded grid, responds to multilingual voice commands, and switches between real-time navigation, parking, and obstacle handling through a hybrid RoboPro and Python architecture.</p>
