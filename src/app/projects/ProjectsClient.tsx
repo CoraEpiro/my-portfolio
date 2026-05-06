@@ -835,17 +835,13 @@ export default function ProjectsClient() {
                 </div>
 
                 {/* Right Column: Website */}
-                <div className="flex flex-col gap-3">
-                  <h3 className="text-xl font-semibold text-white -mt-6">Project Resources</h3>
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
-                    <a href="https://8nxly8ub2.dora.run" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
-                      <img src="/projects/university/vgi-challenge/vgi-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
-                      </div>
-                    </a>
-                  </div>
+                <div className="flex flex-col gap-6">
+                  <a href="https://8nxly8ub2.dora.run" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
+                    <img src="/projects/university/vgi-challenge/vgi-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
+                    </div>
+                  </a>
                   <div className="pt-4 flex gap-4">
                     <a href="https://github.com/denishotii/ConsulAnalytics" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
                       View on GitHub
