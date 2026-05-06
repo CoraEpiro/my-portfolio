@@ -45,6 +45,8 @@ const projects: Project[] = [
     technologies: ['Robotics', 'Automation', 'Systems Design', 'Presentation'],
     tags: ['University', 'Robotics', 'Automation', 'SS 2025'],
     liveUrl: 'https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620',
+    // PDF report added in the new agv-project folder
+    githubUrl: '/projects/university/agv-project/Digital Project Report SS2025.pdf',
     collaborators: [],
   },
     image: '/projects/rain-in-australia/rain-in-australia-cover.jpg',
