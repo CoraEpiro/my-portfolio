@@ -805,12 +805,12 @@ export default function ProjectsClient() {
                   <h2 className="text-3xl font-bold text-white">VGI-Flexi: Rural Transport Analytics</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img 
-                      src="/projects/consulcon25/consulcon25-cover.png" 
+                      src="/projects/university/vgi-challenge/vgi-cover.png" 
                       alt="VGI Challenge Project Cover" 
                       className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
-                      onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}
+                      onClick={() => setZoomedImage("/projects/university/vgi-challenge/vgi-cover.png")}
                     />
-                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}>
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/university/vgi-challenge/vgi-cover.png")}>
                       <span className="text-white text-2xl">🔍</span>
                     </div>
                   </div>
@@ -847,7 +847,7 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
                     <a href="https://8nxly8ub2.dora.run" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
-                      <img src="/projects/consulcon25/consulcon25-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                      <img src="/projects/university/vgi-challenge/vgi-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
                       </div>
