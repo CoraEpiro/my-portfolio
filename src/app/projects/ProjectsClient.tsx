@@ -109,7 +109,7 @@ const projects: Project[] = [
     id: 13,
     title: 'Intelligent Multilingual AGV',
     description: 'A university project combining RoboPro, Python services, MQTT, multilingual voice control, OCR-based parking, and grid navigation.',
-    image: '/projects/university/first-presentation-slide-cover.png',
+    image: '/projects/university/agv-project/digital-project-presentation-slide-cover.png',
     technologies: ['Robotics', 'Automation', 'Systems Design'],
     tags: ['Robotics', 'Automation'],
     liveUrl: 'https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view',
