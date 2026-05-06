@@ -111,7 +111,7 @@ const projects: Project[] = [
     description: 'A university project combining RoboPro, Python services, MQTT, multilingual voice control, OCR-based parking, and grid navigation.',
     image: '/projects/university/first-presentation-slide-cover.png',
     technologies: ['Robotics', 'Automation', 'Systems Design'],
-    tags: ['University', 'Robotics', 'Automation', 'SS 2025'],
+    tags: ['Robotics', 'Automation'],
     liveUrl: 'https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view',
     githubUrl: '/projects/university/agv-project/Digital Project Report SS2025.pdf',
     collaborators: [],
@@ -246,6 +246,8 @@ export default function ProjectsClient() {
                   setShowRainModal(true);
                 } else if (project.title === 'ConsulCon25 Presentation') {
                   setShowConsulConModal(true);
+                } else if (project.title === 'Intelligent Multilingual AGV') {
+                  setShowAgvModal(true);
                 } else if (project.title === 'VGI-Flexi: Rural Transport Analytics') {
                   setShowVgiModal(true);
                 } else if (project.title === 'Silent Routes: Holocaust Remembrance') {
