@@ -298,13 +298,21 @@ export default function ProjectsClient() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                   <div className="flex flex-col gap-6">
                     <h2 className="text-3xl font-bold text-white">Intelligent Multilingual AGV for Grid Navigation and Parking via OCR</h2>
-                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600 bg-slate-950">
+                    <a
+                      href="https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
+                    >
                       <img
                         src="/projects/university/agv-project/digital-project-presentation-slide-cover.png"
                         alt="Intelligent Multilingual AGV cover"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
-                    </div>
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                      </div>
+                    </a>
                     <div className="space-y-3">
                       <p className="text-gray-300">This university project builds a smart AGV prototype for logistics use cases. The system follows a color-coded grid, responds to multilingual voice commands, and switches between real-time navigation, parking, and obstacle handling through a hybrid RoboPro and Python architecture.</p>
                       <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
