@@ -19,7 +19,7 @@ type Project = {
   githubUrl?: string;
   tags: string[];
   collaborators?: Collaborator[];
-  image?: string;
+};
 
 // Sample projects data
 const projects: Project[] = [
@@ -38,62 +38,30 @@ const projects: Project[] = [
     id: 2,
     title: 'Rain in Australia',
     description: 'A comprehensive data science project analyzing and predicting rainfall patterns across Australia using advanced machine learning algorithms and statistical modeling techniques.',
-  {
-    id: 13,
-    title: 'Intelligent Multilingual AGV',
-    description: 'A digital university project that combines RoboPro control, Python services, MQTT communication, multilingual voice commands, grid navigation, OCR-based parking, and obstacle avoidance in a smart logistics prototype.',
-    technologies: ['Robotics', 'Automation', 'Systems Design', 'Presentation'],
-    tags: ['University', 'Robotics', 'Automation', 'SS 2025'],
-    liveUrl: 'https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620',
-    // PDF report added in the new agv-project folder
-    githubUrl: '/projects/university/agv-project/Digital Project Report SS2025.pdf',
-    collaborators: [],
-  },
     image: '/projects/rain-in-australia/rain-in-australia-cover.jpg',
     technologies: ['Python', 'Jupyter', 'ML'],
     tags: ['Python', 'Jupyter', 'ML'],
     liveUrl: '#',
-  const [showAgvModal, setShowAgvModal] = useState(false);
     githubUrl: 'https://github.com/CoraEpiro/rain-in-australia-binder',
     collaborators: [
       { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' }
     ],
   },
-                } else if (presentation.title === 'Intelligent Multilingual AGV') {
-                  setShowAgvModal(true);
   {
     id: 3,
     title: 'ConsulCon25 Presentation',
-                {presentation.image ? (
-                  <div className="relative h-48 w-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 overflow-hidden">
-                    <img 
-                      src={presentation.image} 
-                      alt={presentation.title} 
-                      className="object-contain h-32 transition-transform duration-500 group-hover:scale-110" 
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
-                  </div>
-                ) : (
-                  <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 text-white">
-                    <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.55),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(34,197,94,0.35),transparent_28%)]"></div>
-                    <div className="relative flex h-full flex-col items-start justify-between p-5">
-                      <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-100">SS 2025</span>
-                      <div>
-                        <p className="text-sm uppercase tracking-[0.28em] text-blue-200/80">University Project</p>
-                        <h3 className="mt-2 max-w-[12rem] text-2xl font-bold leading-tight">Intelligent Multilingual AGV</h3>
-                      </div>
-                    </div>
-                  </div>
-                )}
-      { name: 'Veronika Rybak', linkedInUrl: 'https://www.linkedin.com/in/veronika-rybak-55379a337/' },
-      { name: 'Ruslan Tsibirov', linkedInUrl: 'https://www.linkedin.com/in/ruslantsibirov/' }
-    ],
+    description: 'Presentation slides and materials for the ConsulCon25 event.',
+    image: '/projects/consulcon25/consulcon25-cover.png',
+    technologies: ['Presentation', 'Visualization'],
+    tags: ['Presentation', 'Conference'],
+    liveUrl: '#',
+    collaborators: [],
   },
   {
     id: 4,
     title: 'VGI-Flexi: Rural Transport Analytics',
     description: 'An analytics platform for optimizing rural public transportation by predicting passenger no-shows.',
-    image: '/projects/university/vgi-challenge/vgi-cover.png', // Use project-specific cover
+    image: '/projects/university/vgi-challenge/vgi-cover.png',
     technologies: ['Data Analytics', 'Logistic Regression', 'Web Platform'],
     tags: ['Data Science', 'Transportation', 'Prediction Model'],
     liveUrl: 'https://8nxly8ub2.dora.run',
@@ -122,7 +90,7 @@ const projects: Project[] = [
   {
     id: 6,
     title: 'coRELation: Religion, Diversity & Social Cohesion',
-    description: 'A Data4Good26 hackathon project transforming survey data into insights on religious diversity, trust, and social cohesion. Explore how knowledge and contact shape perceptions across European societies.',
+    description: 'A Data4Good26 hackathon project transforming survey data into insights on religious diversity, trust, and social cohesion.',
     image: '/projects/corel/corel-cover.jpg',
     technologies: ['Data Visualization', 'React', 'Survey Data', 'ReligionMonitor'],
     tags: ['Data4Good26', 'Hackathon', 'Social Cohesion', 'Data Science'],
@@ -136,6 +104,18 @@ const projects: Project[] = [
       { name: 'Aleksandra Karabutova', linkedInUrl: 'https://www.linkedin.com/in/aleksandra-karabutova/' }
     ],
   },
+  // AGV university project (kept near the end to avoid reordering indices used elsewhere)
+  {
+    id: 13,
+    title: 'Intelligent Multilingual AGV',
+    description: 'A university project combining RoboPro, Python services, MQTT, multilingual voice control, OCR-based parking, and grid navigation.',
+    image: '/projects/university/first-presentation-slide-cover.png',
+    technologies: ['Robotics', 'Automation', 'Systems Design'],
+    tags: ['University', 'Robotics', 'Automation', 'SS 2025'],
+    liveUrl: 'https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view',
+    githubUrl: '/projects/university/agv-project/Digital Project Report SS2025.pdf',
+    collaborators: [],
+  }
 ];
 
 // Academic presentations data
