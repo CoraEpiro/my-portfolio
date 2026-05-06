@@ -186,6 +186,7 @@ export default function ProjectsClient() {
   const [showLegalModal, setShowLegalModal] = useState(false);
   const [showRainModal, setShowRainModal] = useState(false);
   const [showConsulConModal, setShowConsulConModal] = useState(false);
+  const [showAgvModal, setShowAgvModal] = useState(false);
   const [showVgiModal, setShowVgiModal] = useState(false);
   const [showHolocaustModal, setShowHolocaustModal] = useState(false);
   const [showCorelModal, setShowCorelModal] = useState(false);
