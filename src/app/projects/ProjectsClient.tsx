@@ -299,12 +299,16 @@ export default function ProjectsClient() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-8 pb-8">
                   <div className="flex flex-col gap-6">
-                    <div className="relative aspect-video w-full rounded-lg overflow-hidden border border-gray-700 bg-slate-950">
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-700 bg-slate-950 cursor-pointer">
                       <img
                         src="/projects/university/agv-project/digital-project-presentation-slide-cover.png"
                         alt="Intelligent Multilingual AGV cover"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        onClick={() => setZoomedImage("/projects/university/agv-project/digital-project-presentation-slide-cover.png")}
                       />
+                      <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/university/agv-project/digital-project-presentation-slide-cover.png")}>
+                        <span className="text-white text-2xl">🔍</span>
+                      </div>
                     </div>
                     <div className="space-y-3">
                       <p className="text-gray-300">This university project builds a smart AGV prototype for logistics use cases. The system follows a color-coded grid, responds to multilingual voice commands, and switches between real-time navigation, parking, and obstacle handling through a hybrid RoboPro and Python architecture.</p>
@@ -332,16 +336,8 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-2xl">🔍</span>
                         </div>
-                      </a>
-                      <a
-                        href="https://www.canva.com/design/DAGtDdUf82M/RX1r4-KkSrDdveJs6EAxww/view?utm_content=DAGtDdUf82M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0ac547b620"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
-                      >
-                        View Presentation
                       </a>
                     </div>
                   </div>
