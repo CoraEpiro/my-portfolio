@@ -44,35 +44,34 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
         {awards.map((award) => (
           <article
             key={award.fileName}
-            className="rounded-xl border border-gray-200/70 dark:border-gray-700/70 bg-white dark:bg-gray-800 shadow-lg overflow-hidden"
+            className="group relative rounded-xl border border-gray-200/70 dark:border-gray-700/70 shadow-lg overflow-hidden"
           >
-            <button
-              type="button"
-              onClick={() => setSelectedAward(award)}
-              className="block h-48 w-full bg-gray-100 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700"
-            >
-              <iframe
-                src={`${award.href}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
-                title={`${award.title} preview`}
-                className="w-full h-full pointer-events-none"
-              />
-            </button>
-            <div className="p-5">
-              <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 line-clamp-2">
-                {award.title}
-              </h2>
-              <div className="flex flex-wrap gap-3">
+            <div className="relative aspect-[4/3] bg-gray-100 dark:bg-gray-900 overflow-hidden">
+              <button
+                type="button"
+                onClick={() => setSelectedAward(award)}
+                className="absolute inset-0 z-0 w-full h-full"
+                aria-label={`Open ${award.title}`}
+              >
+                <iframe
+                  src={`${award.href}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                  title={award.title}
+                  scrolling="no"
+                  className="w-[calc(100%+32px)] h-full border-0 pointer-events-none"
+                />
+              </button>
+              <div className="absolute inset-0 z-10 flex items-end justify-center gap-3 p-4 bg-gradient-to-t from-black/75 via-black/25 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                 <button
                   type="button"
                   onClick={() => setSelectedAward(award)}
-                  className="inline-flex items-center justify-center rounded-full bg-blue-600 text-white px-4 py-2 font-semibold hover:bg-blue-700 transition-colors"
+                  className="pointer-events-auto inline-flex items-center justify-center rounded-full bg-blue-600 text-white px-4 py-2 text-sm font-semibold hover:bg-blue-700 transition-colors shadow-lg"
                 >
                   Open In Page
                 </button>
                 <a
                   href={award.href}
                   download
-                  className="inline-flex items-center justify-center rounded-full bg-gray-700 text-white px-4 py-2 font-semibold hover:bg-gray-600 transition-colors"
+                  className="pointer-events-auto inline-flex items-center justify-center rounded-full bg-gray-800/90 text-white px-4 py-2 text-sm font-semibold hover:bg-gray-700 transition-colors shadow-lg"
                 >
                   Download
                 </a>
@@ -102,7 +101,7 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
             <iframe
               src={`${selectedAward.href}#toolbar=1&navpanes=0&view=FitH`}
               title={selectedAward.title}
-              className="w-full h-full"
+              className="w-full h-full border-0"
             />
           </div>
         </div>
