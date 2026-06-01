@@ -180,6 +180,16 @@ const presentations: Project[] = [
     liveUrl: 'https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3',
     collaborators: [],
   },
+  {
+    id: 14,
+    title: 'Universal Approximation, Transformers & Sumformers',
+    description: 'An academic seminar for data science students on universal approximation, attention layers, transformers, and sumformers — connecting classical theory to modern deep learning architectures.',
+    image: '/projects/university/seventh-presentation-slide-cover.png',
+    technologies: ['Machine Learning', 'Deep Learning', 'Transformers', 'Neural Networks'],
+    tags: ['Academic', 'Data Science', 'Transformers', 'Seminar'],
+    liveUrl: 'https://canva.link/09it528ra1p1miu',
+    collaborators: [],
+  },
 ];
 
 export default function ProjectsClient() {
@@ -196,6 +206,7 @@ export default function ProjectsClient() {
   const [showFourthPresentationModal, setShowFourthPresentationModal] = useState(false);
   const [showFifthPresentationModal, setShowFifthPresentationModal] = useState(false);
   const [showSixthPresentationModal, setShowSixthPresentationModal] = useState(false);
+  const [showSeventhPresentationModal, setShowSeventhPresentationModal] = useState(false);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [isHtmlZoomed, setIsHtmlZoomed] = useState(false);
   const [htmlTheme, setHtmlTheme] = useState<'white' | 'black'>('white');
@@ -380,6 +391,8 @@ export default function ProjectsClient() {
                     setShowFifthPresentationModal(true);
                   } else if (presentation.title === 'Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics') {
                     setShowSixthPresentationModal(true);
+                  } else if (presentation.title === 'Universal Approximation, Transformers & Sumformers') {
+                    setShowSeventhPresentationModal(true);
                   }
                 }}
               >
@@ -1657,6 +1670,77 @@ export default function ProjectsClient() {
                         <p>The function t(x) creates a one-to-one mapping between falling depth and time. By measuring fall time experimentally, the hole depth can be determined through numerical inversion.</p>
                         <p className="italic text-gray-400">This demonstrates how Lagrangian mechanics and energy conservation solve realistic inverse problems.</p>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Universal Approximation, Transformers & Sumformers Modal */}
+        {showSeventhPresentationModal && (
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setShowSeventhPresentationModal(false)}>
+            <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
+              <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowSeventhPresentationModal(false)}>&times;</button>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
+                <div className="flex flex-col gap-6">
+                  <h2 className="text-3xl font-bold text-white">Universal Approximation, Transformers & Sumformers</h2>
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
+                      <a href="https://canva.link/09it528ra1p1miu" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+                        <img
+                          src="/projects/university/seventh-presentation-slide-cover.png"
+                          alt="Universal Approximation, Transformers & Sumformers presentation cover"
+                          className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-gray-300">
+                      An academic seminar for data science students (6th semester) exploring how neural networks approximate functions, how attention mechanisms work, and how transformer-style architectures—including sumformers—build on these ideas.
+                    </p>
+                    <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
+                      <li><strong>Universal Approximation:</strong> Why neural networks can represent complex functions</li>
+                      <li><strong>Attention Layers:</strong> Query-key-value intuition and sequence modeling</li>
+                      <li><strong>Transformers:</strong> Self-attention, depth, and scalable language modeling</li>
+                      <li><strong>Sumformers:</strong> Structured alternatives and architectural trade-offs</li>
+                    </ul>
+                  </div>
+                  <a
+                    href="https://canva.link/09it528ra1p1miu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center"
+                  >
+                    Open Canva Presentation
+                  </a>
+                </div>
+
+                <div className="flex flex-col gap-6">
+                  <h3 className="text-xl font-semibold text-white">Seminar Topics</h3>
+                  <div className="grid grid-cols-1 gap-3">
+                    <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                      <h5 className="text-blue-400 font-semibold mb-2">🧠 Universal Approximation</h5>
+                      <p className="text-sm text-gray-400">Foundations of what multilayer networks can represent and why depth matters.</p>
+                    </div>
+                    <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                      <h5 className="text-purple-400 font-semibold mb-2">👁️ Attention</h5>
+                      <p className="text-sm text-gray-400">How models weigh inputs dynamically instead of using fixed windows.</p>
+                    </div>
+                    <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                      <h5 className="text-green-400 font-semibold mb-2">⚡ Transformers</h5>
+                      <p className="text-sm text-gray-400">Parallel sequence processing and the architecture behind modern LLMs.</p>
+                    </div>
+                    <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
+                      <h5 className="text-orange-400 font-semibold mb-2">➕ Sumformers</h5>
+                      <p className="text-sm text-gray-400">Alternative structured designs and when they can be more efficient.</p>
                     </div>
                   </div>
                 </div>
