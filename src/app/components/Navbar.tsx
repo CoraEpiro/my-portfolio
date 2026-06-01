@@ -37,7 +37,8 @@ export default function Navbar() {
           {[
             { href: '/', label: 'Home' },
             { href: '/projects', label: 'Projects' },
-            { href: '/honors-awards', label: 'Honors & Awards' },
+            { href: '/certificates', label: 'Certificates' },
+            { href: '/honors-awards', label: 'Honors' },
             { href: '/services', label: 'Services' },
             { href: '/contact', label: 'Contact' },
             { href: '/cv', label: 'CV' }

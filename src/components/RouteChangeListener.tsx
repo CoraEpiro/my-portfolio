@@ -29,6 +29,7 @@ function getPageTitle(pathname: string): string {
     '/': 'Home',
     '/projects': 'Projects',
     '/certificates': 'Certificates',
+    '/honors-awards': 'Honors',
     '/services': 'Services',
     '/gallery': 'Gallery',
     '/contact': 'Contact',
