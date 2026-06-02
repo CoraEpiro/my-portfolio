@@ -207,6 +207,7 @@ export default function ProjectsClient() {
   const [showFifthPresentationModal, setShowFifthPresentationModal] = useState(false);
   const [showSixthPresentationModal, setShowSixthPresentationModal] = useState(false);
   const [showSeventhPresentationModal, setShowSeventhPresentationModal] = useState(false);
+  const [showSeventhReport, setShowSeventhReport] = useState(false);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [isHtmlZoomed, setIsHtmlZoomed] = useState(false);
   const [htmlTheme, setHtmlTheme] = useState<'white' | 'black'>('white');
@@ -1713,14 +1714,41 @@ export default function ProjectsClient() {
                       <li><strong>Sumformers:</strong> Structured alternatives and architectural trade-offs</li>
                     </ul>
                   </div>
-                  <a
-                    href="https://canva.link/09it528ra1p1miu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center"
-                  >
-                    Open Canva Presentation
-                  </a>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href="https://canva.link/09it528ra1p1miu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center"
+                    >
+                      Open Canva Presentation
+                    </a>
+                    <button
+                      onClick={() => setShowSeventhReport(!showSeventhReport)}
+                      className={`inline-block px-6 py-3 font-bold rounded-lg shadow transition-colors text-center ${showSeventhReport ? 'bg-green-700 text-white hover:bg-green-800' : 'bg-green-600 text-white hover:bg-green-700'}`}
+                    >
+                      {showSeventhReport ? 'Hide Report' : 'View Seminar Report'}
+                    </button>
+                    <a
+                      href="/projects/university/universal-approximation-report.pdf"
+                      download
+                      className="inline-block px-6 py-3 bg-gray-600 text-white font-bold rounded-lg shadow hover:bg-gray-700 transition-colors text-center"
+                    >
+                      Download Report (PDF)
+                    </a>
+                  </div>
+                  {showSeventhReport && (
+                    <div className="mt-2 animate-fade-in">
+                      <h4 className="text-lg font-semibold text-white mb-3">Seminar Report</h4>
+                      <div className="rounded-lg overflow-hidden border border-gray-600" style={{ height: '500px' }}>
+                        <iframe
+                          src="/projects/university/universal-approximation-report.pdf"
+                          className="w-full h-full"
+                          title="Universal Approximation, Transformers & Sumformers - Seminar Report"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex flex-col gap-6">
