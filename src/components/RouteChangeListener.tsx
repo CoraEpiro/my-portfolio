@@ -30,7 +30,6 @@ function getPageTitle(pathname: string): string {
     '/projects': 'Projects',
     '/certificates': 'Certificates',
     '/honors-awards': 'Honors',
-    '/services': 'Services',
     '/gallery': 'Gallery',
     '/contact': 'Contact',
   };
