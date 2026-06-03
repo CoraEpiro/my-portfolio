@@ -270,7 +270,7 @@ export default function ProjectsClient() {
               }}
             >
               <div className="relative h-48 w-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 overflow-hidden">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={project.image} 
                   alt={project.title} 
                   className="object-contain h-32 transition-transform duration-500 group-hover:scale-110" 
@@ -312,7 +312,7 @@ export default function ProjectsClient() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-8 pb-8">
                   <div className="flex flex-col gap-6">
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-700 bg-slate-950 cursor-pointer">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src="/projects/university/agv-project/digital-project-presentation-slide-cover.png"
                         alt="Intelligent Multilingual AGV cover"
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -340,7 +340,7 @@ export default function ProjectsClient() {
                       rel="noopener noreferrer"
                       className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
                     >
-                      <img
+                      <img loading="lazy" decoding="async"
                         src="/projects/university/agv-project/digital-project-presentation-slide-cover.png"
                         alt="Intelligent Multilingual AGV presentation"
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -398,7 +398,7 @@ export default function ProjectsClient() {
                 }}
               >
                 <div className="relative h-48 w-full flex items-center justify-center bg-gradient-to-br from-gray-300 to-gray-500 dark:from-gray-700 dark:to-gray-900 overflow-hidden">
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={presentation.image} 
                     alt={presentation.title} 
                     className="object-contain h-32 transition-transform duration-500 group-hover:scale-110" 
@@ -442,7 +442,7 @@ export default function ProjectsClient() {
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">ChatVocate: Azerbaijani Legal AI Assistant</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src="/legal-project/legal-project-cover.png" 
                       alt="ChatVocate Legal AI Project Cover" 
                       className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
@@ -579,7 +579,7 @@ export default function ProjectsClient() {
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">Rain in Australia: A Predictive Analysis</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src="/projects/rain-in-australia/rain-in-australia-cover.jpg" 
                       alt="Rain in Australia Project Cover" 
                       className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
@@ -654,7 +654,7 @@ export default function ProjectsClient() {
                       rel="noopener noreferrer"
                       className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
                     >
-                      <img
+                      <img loading="lazy" decoding="async"
                         src="/projects/rain-in-australia/rain-in-australia-cover.jpg"
                         alt="PowerPoint Presentation Preview"
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -703,7 +703,7 @@ export default function ProjectsClient() {
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">ConsulCon25: From Würzburg to Gran Canaria</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src="/projects/consulcon25/consulcon25-cover.png" 
                       alt="ConsulCon25 Project Cover" 
                       className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
@@ -764,7 +764,7 @@ export default function ProjectsClient() {
                       rel="noopener noreferrer"
                       className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
                     >
-                      <img
+                      <img loading="lazy" decoding="async"
                         src="/projects/consulcon25/consulcon25-project-cover.png"
                         alt="Hosted Website Preview"
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -784,7 +784,7 @@ export default function ProjectsClient() {
                       rel="noopener noreferrer"
                       className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700"
                     >
-                      <img
+                      <img loading="lazy" decoding="async"
                         src="/projects/consulcon25/consulcon25-presentation-cover.png"
                         alt="Canva Presentation Preview"
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -812,7 +812,7 @@ export default function ProjectsClient() {
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src="/projects/university/vgi-challenge/vgi-cover.png" 
                       alt="VGI Challenge Project Cover" 
                       className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
@@ -852,7 +852,7 @@ export default function ProjectsClient() {
                 {/* Right Column: Website */}
                 <div className="flex flex-col gap-6">
                   <a href="https://8nxly8ub2.dora.run" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
-                    <img src="/projects/university/vgi-challenge/vgi-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <img loading="lazy" decoding="async" src="/projects/university/vgi-challenge/vgi-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
                     </div>
@@ -879,7 +879,7 @@ export default function ProjectsClient() {
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">Silent Routes: Holocaust Remembrance</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src="/projects/holocaust-remembrance/data4good-cover.png" 
                       alt="Holocaust Remembrance Project Cover" 
                       className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
@@ -923,7 +923,7 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
                     <a href="https://iwv9pz9d.dora.run/" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
-                      <img src="/projects/holocaust-remembrance/data4good-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                      <img loading="lazy" decoding="async" src="/projects/holocaust-remembrance/data4good-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
                       </div>
@@ -951,7 +951,7 @@ export default function ProjectsClient() {
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">coRELation: Religion, Diversity & Social Cohesion</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
-                    <img 
+                    <img loading="lazy" decoding="async" 
                       src="/projects/corel/corel-cover.jpg" 
                       alt="coRELation Data4Good26 Project Cover" 
                       className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer"
@@ -1001,7 +1001,7 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <h4 className="text-lg font-semibold text-white">Website & Canva</h4>
                     <div className="relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src="/projects/corel/corel-cover.jpg"
                       alt="coRELation Project"
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -1051,7 +1051,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                        <img 
+                        <img loading="lazy" decoding="async" 
                           src={presentations.find(p => p.id === 7)?.image || "/projects/university/first-presentation-slide-cover.png"} 
                           alt="Newton's Law of Cooling Presentation Cover" 
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -1187,7 +1187,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                        <img 
+                        <img loading="lazy" decoding="async" 
                           src={presentations.find(p => p.id === 8)?.image || "/projects/university/second-presentation-slide-cover.png"} 
                           alt="Three-Body Problem Presentation Cover" 
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -1311,7 +1311,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/pe8f0u9xf8gh5ls?following_id=lvwkfuullwkcsoq&follow_on_start=true" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                        <img 
+                        <img loading="lazy" decoding="async" 
                           src="/projects/university/third-presentation-slide-cover.png" 
                           alt="Advanced Mathematical Analysis Presentation Cover" 
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -1421,7 +1421,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Locusts-vs-Crops-A-Predator-Prey-Model-jexdfy88gxn63jt" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/projects/university/fourht-presentation-slide-cover.png"
                           alt="Locusts vs. Crops Presentation Cover"
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -1535,7 +1535,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Lagrangian-Modeling-Falling-Rope-Mass-4bxdkfv0wgyghk9" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/projects/university/fifth-presentation-slide-cover.png"
                           alt="Lagrangian Modeling Presentation Cover"
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -1692,7 +1692,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://canva.link/09it528ra1p1miu" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/projects/university/seventh-presentation-slide-cover.png"
                           alt="Universal Approximation, Transformers & Sumformers presentation cover"
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -1792,7 +1792,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src="/projects/university/sixth-presentation-slide-cover.png"
                           alt="Autocatalytic Chemical Reactions Presentation Cover"
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
@@ -1935,7 +1935,7 @@ export default function ProjectsClient() {
               className="max-w-[95vw] max-h-[95vh] overflow-auto rounded-lg shadow-2xl"
               onClick={e => e.stopPropagation()}
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src={zoomedImage}
                 alt="Project Cover, zoomed"
                 className="w-auto h-auto min-w-[800px] lg:min-w-[1200px]"

@@ -63,7 +63,7 @@ export default function CertificatesClient() {
                   rel="noopener noreferrer"
                   className="mb-5 block aspect-[4/3] overflow-hidden rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900"
                 >
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={certificate.previewImage}
                     alt={`${certificate.title} certificate preview`}
                     className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.02]"

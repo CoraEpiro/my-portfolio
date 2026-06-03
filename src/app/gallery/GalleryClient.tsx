@@ -98,7 +98,7 @@ export default function GalleryClient() {
               >
                 <div className="aspect-w-16 aspect-h-9">
                   {item.type === 'image' ? (
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={item.url}
                       alt={item.title}
                       className="object-cover w-full h-full"
@@ -155,7 +155,7 @@ export default function GalleryClient() {
                 <div className="bg-white/5 rounded-xl overflow-hidden">
                   <div className="aspect-w-16 aspect-h-9">
                     {selectedItem.type === 'image' ? (
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={selectedItem.url}
                         alt={selectedItem.title}
                         className="object-contain w-full h-full"

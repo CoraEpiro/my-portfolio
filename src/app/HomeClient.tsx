@@ -1,14 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from 'next/link';
 import ExperienceTimeline from "./components/ExperienceTimeline";
 
 export default function HomeClient() {
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setMounted(true);
     // Simple scroll-triggered animations
     const observerOptions = {
       threshold: 0.1,
@@ -28,8 +25,6 @@ export default function HomeClient() {
     return () => observer.disconnect();
   }, []);
 
-  if (!mounted) return null;
-
   return (
     <>
       {/* Structured Data for SEO */}
@@ -42,8 +37,8 @@ export default function HomeClient() {
             "name": "Ali Guliyev",
             "jobTitle": "Data Science Professional",
             "description": "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling, data visualization, and AI solutions.",
-            "url": "https://your-portfolio-domain.com",
-            "image": "https://your-portfolio-domain.com/assets/profile.jpg",
+            "url": "https://www.aliguliyev.com",
+            "image": "https://www.aliguliyev.com/assets/profile.jpg",
             "sameAs": [
               "https://www.linkedin.com/in/ali-guliyev-389837238/",
               "https://github.com/CoraEpiro",
@@ -324,9 +319,11 @@ export default function HomeClient() {
             >
               <div className="flex items-start gap-4">
                 {edu.logo && (
-                  <img
+                  <Image
                     src={edu.logo}
                     alt={edu.institution + ' logo'}
+                    width={48}
+                    height={48}
                     className="w-12 h-12 object-contain rounded hover:scale-110 transition-transform duration-300"
                   />
                 )}
@@ -367,24 +364,28 @@ export default function HomeClient() {
                 href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
+                className="relative block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
               >
-                <img
+                <Image
                   src="/certificates/google_advanced_data_analytics.png"
                   alt="Google Advanced Data Analytics certificate preview"
-                  className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 480px"
+                  className="object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
                 />
               </a>
               <a
                 href="https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
+                className="relative block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
               >
-                <img
+                <Image
                   src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
                   alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
-                  className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 480px"
+                  className="object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
                 />
               </a>
             </div>
@@ -414,12 +415,14 @@ export default function HomeClient() {
               href="https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z"
               target="_blank"
               rel="noopener noreferrer"
-              className="block mb-5 aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
+              className="relative block mb-5 aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
             >
-              <img
+              <Image
                 src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
                 alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
-                className="h-full w-full object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
+                fill
+                sizes="(max-width: 768px) 100vw, 700px"
+                className="object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
               />
             </a>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">

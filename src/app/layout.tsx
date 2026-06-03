@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Head from 'next/head';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import RouteChangeListener from '@/components/RouteChangeListener';
 
@@ -17,8 +16,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ali Guliyev - Data Science & Machine Learning Portfolio",
+  metadataBase: new URL("https://www.aliguliyev.com"),
+  title: {
+    default: "Ali Guliyev - Data Science & Machine Learning Portfolio",
+    template: "%s | Ali Guliyev",
+  },
   description: "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling, data visualization, and AI solutions.",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Ali Guliyev",
     "Data Science",
@@ -52,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-portfolio-domain.com",
+    url: "https://www.aliguliyev.com",
     title: "Ali Guliyev - Data Science & Machine Learning Portfolio",
     description: "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling and AI solutions.",
     siteName: "Ali Guliyev Portfolio",
@@ -71,26 +77,18 @@ export const metadata: Metadata = {
     description: "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling and AI solutions.",
     images: ["/assets/profile.jpg"],
   },
-  verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
-  },
   category: "Technology",
 };
+// To verify ownership in Google Search Console, add your code:
+// verification: { google: "<your-search-console-token>" },
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Dynamically get the current path for canonical URL
-  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
-  const canonicalUrl = `https://aliguliyev.com${pathname}`;
-
   return (
     <html lang="en">
-      <Head>
-        <link rel="canonical" href={canonicalUrl} />
-      </Head>
       <body className="bg-gray-900 text-white min-h-screen">
         {/* Initialize GA4 analytics */}
         <GoogleAnalytics />
