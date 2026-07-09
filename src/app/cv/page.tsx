@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'CV | Ali Guliyev',
   description: 'View and download the CV of Ali Guliyev in a polished PDF preview page.',
   alternates: {
-    canonical: 'https://aliguliyev.com/cv',
+    canonical: '/cv',
   },
 };
 
@@ -22,10 +22,10 @@ export default function CvPage() {
               Curriculum Vitae
             </span>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Ali Guliyev Resume
+              Ali Guliyev — CV
             </h1>
             <p className="text-lg md:text-xl text-slate-300 max-w-2xl">
-              Open the CV in a clean browser view, then download it only when you want to keep a copy.
+              Preview my CV below, or download a copy for your records.
             </p>
             <CvActions />
           </div>
@@ -33,39 +33,18 @@ export default function CvPage() {
       </section>
 
       <section className="container mx-auto px-4 py-10">
-        <div className="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] items-start">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/20 backdrop-blur">
-            <div className="flex items-center justify-between px-4 py-3 text-sm text-slate-300">
-              <span>PDF preview</span>
-              <span>{cvHref.split('/').pop()}</span>
-            </div>
-            <div className="overflow-hidden rounded-2xl bg-black">
-              <iframe
-                src={cvHref}
-                title="Ali Guliyev CV preview"
-                className="h-[80vh] w-full"
-              />
-            </div>
+        <div className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/20 backdrop-blur">
+          <div className="flex items-center justify-between px-4 py-3 text-sm text-slate-300">
+            <span>PDF preview</span>
+            <span>{cvHref.split('/').pop()}</span>
           </div>
-
-          <aside className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-            <h2 className="text-2xl font-semibold">How to use this page</h2>
-            <p className="text-slate-300">
-              The CV opens here in a new tab from the navbar. You can preview it first, then use the download button if you want to save it.
-            </p>
-            <div className="space-y-3 text-sm text-slate-300">
-              <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-                Preview in browser without an automatic download.
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-                Download the PDF when you want a local copy.
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-black/20 p-4">
-                Open the raw PDF in a new tab for the browser viewer controls.
-              </div>
-            </div>
-            <CvActions />
-          </aside>
+          <div className="overflow-hidden rounded-2xl bg-black">
+            <iframe
+              src={cvHref}
+              title="Ali Guliyev CV preview"
+              className="h-[80vh] w-full"
+            />
+          </div>
         </div>
       </section>
     </main>

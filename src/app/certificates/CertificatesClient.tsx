@@ -39,13 +39,13 @@ const certificates: Certificate[] = [
 
 export default function CertificatesClient() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 py-20">
+    <main className="min-h-screen bg-gray-900 py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Certificates
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Verified professional certificates and academic credentials. This section is structured to grow as new achievements are added.
           </p>
         </div>
@@ -54,14 +54,14 @@ export default function CertificatesClient() {
           {certificates.map((certificate) => (
             <article
               key={certificate.id}
-              className="flex h-full flex-col bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200/70 dark:border-gray-700/70 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+              className="flex h-full flex-col bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-700/70 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
             >
               {certificate.previewImage && (
                 <a
                   href={certificate.verifyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mb-5 block aspect-[4/3] overflow-hidden rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900"
+                  className="mb-5 block aspect-[4/3] overflow-hidden rounded-lg border border-gray-700 bg-gray-900"
                 >
                   <img loading="lazy" decoding="async"
                     src={certificate.previewImage}
@@ -71,19 +71,19 @@ export default function CertificatesClient() {
                 </a>
               )}
               <div className="mb-3 flex items-center justify-between gap-3">
-                <span className="inline-flex rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-200 px-3 py-1 text-xs font-semibold">
+                <span className="inline-flex rounded-full bg-blue-900/50 text-blue-200 px-3 py-1 text-xs font-semibold">
                   {certificate.category}
                 </span>
-                <span className="text-sm text-gray-500 dark:text-gray-400">Issued {certificate.issueDate}</span>
+                <span className="text-sm text-gray-400">Issued {certificate.issueDate}</span>
               </div>
 
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">{certificate.title}</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-2">{certificate.issuer}</p>
+              <h2 className="text-2xl font-bold text-white mb-1">{certificate.title}</h2>
+              <p className="text-gray-300 mb-2">{certificate.issuer}</p>
               {certificate.credentialId && (
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Credential ID: {certificate.credentialId}</p>
+                <p className="text-sm text-gray-400 mb-4">Credential ID: {certificate.credentialId}</p>
               )}
               {certificate.notes && (
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{certificate.notes}</p>
+                <p className="text-sm text-gray-300 mb-6 leading-relaxed">{certificate.notes}</p>
               )}
 
               <div className="mt-auto flex flex-wrap gap-3">

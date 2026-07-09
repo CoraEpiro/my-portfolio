@@ -319,7 +319,7 @@ export default function ProjectsClient() {
                         onClick={() => setZoomedImage("/projects/university/agv-project/digital-project-presentation-slide-cover.png")}
                       />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/university/agv-project/digital-project-presentation-slide-cover.png")}>
-                        <span className="text-white text-2xl">🔍</span>
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
                       </div>
                     </div>
                     <div className="space-y-3">
@@ -449,7 +449,7 @@ export default function ProjectsClient() {
                       onClick={() => setZoomedImage("/legal-project/legal-project-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/legal-project/legal-project-cover.png")}>
-                      <span className="text-white text-2xl">🔍</span>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -524,15 +524,15 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">Target Users</h4>
                     <div className="space-y-3">
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">🏛️ Legal Professionals</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">Legal Professionals</h5>
                         <p className="text-gray-400 text-sm">Quick legal research, case law references, document drafting assistance, and regulatory compliance guidance.</p>
                       </div>
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">👥 Citizens & Businesses</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">Citizens & Businesses</h5>
                         <p className="text-gray-400 text-sm">Understanding legal rights, contract review, legal procedure explanations, and basic legal guidance.</p>
                       </div>
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">🎓 Educational Institutions</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">Educational Institutions</h5>
                         <p className="text-gray-400 text-sm">Law student research tool, legal concept explanations, practice scenarios, and multilingual legal education support.</p>
                       </div>
                     </div>
@@ -586,7 +586,7 @@ export default function ProjectsClient() {
                       onClick={() => setZoomedImage("/projects/rain-in-australia/rain-in-australia-cover.jpg")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/rain-in-australia/rain-in-australia-cover.jpg")}>
-                      <span className="text-white text-2xl">🔍</span>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -673,7 +673,7 @@ export default function ProjectsClient() {
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-lg shadow hover:bg-green-700 transition-colors"
                     >
-                      🌧️ Launch Interactive Version in Binder
+                      Launch Interactive Version in Binder
                     </a>
                   </div>
                   
@@ -710,7 +710,7 @@ export default function ProjectsClient() {
                       onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/consulcon25/consulcon25-cover.png")}>
-                      <span className="text-white text-2xl">🔍</span>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -819,7 +819,7 @@ export default function ProjectsClient() {
                       onClick={() => setZoomedImage("/projects/university/vgi-challenge/vgi-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/university/vgi-challenge/vgi-cover.png")}>
-                      <span className="text-white text-2xl">🔍</span>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -886,7 +886,7 @@ export default function ProjectsClient() {
                       onClick={() => setZoomedImage("/projects/holocaust-remembrance/data4good-cover.png")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/holocaust-remembrance/data4good-cover.png")}>
-                      <span className="text-white text-2xl">🔍</span>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -958,7 +958,7 @@ export default function ProjectsClient() {
                       onClick={() => setZoomedImage("/projects/corel/corel-cover.jpg")}
                     />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" onClick={() => setZoomedImage("/projects/corel/corel-cover.jpg")}>
-                      <span className="text-white text-2xl">🔍</span>
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
                     </div>
                   </div>
                   <div className="space-y-3">
@@ -1048,7 +1048,7 @@ export default function ProjectsClient() {
                   
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async" 
@@ -1057,7 +1057,7 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
                         </div>
                       </a>
                     </div>
@@ -1065,7 +1065,7 @@ export default function ProjectsClient() {
 
                   {/* Embedded YouTube Video */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📺 Experiment Video</h4>
+                    <h4 className="text-lg font-semibold text-white">Experiment Video</h4>
                     <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-lg border border-gray-600">
                       <iframe
                         src="https://www.youtube.com/embed/6Sp1Di67pTI"
@@ -1089,10 +1089,10 @@ export default function ProjectsClient() {
 
                   <div className="pt-4 flex gap-4">
                     <a href={presentations.find(p => p.id === 7)?.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow hover:bg-red-700 transition-colors text-center flex-1">
-                      🔗 Open in YouTube
+                      Open in YouTube
                     </a>
                     <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">
-                      📄 View Presentation
+                      View Presentation
                     </a>
                   </div>
                 </div>
@@ -1126,7 +1126,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">Experimental Components</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">🌡️ Temperature Measurement</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">Temperature Measurement</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Digital thermometer setup</li>
                           <li>• Time-series data collection</li>
@@ -1134,7 +1134,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">📊 Data Analysis</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">Data Analysis</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Exponential curve fitting</li>
                           <li>• Parameter estimation</li>
@@ -1142,7 +1142,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">🔬 Applications</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">Applications</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Forensic time of death</li>
                           <li>• Food safety protocols</li>
@@ -1184,7 +1184,7 @@ export default function ProjectsClient() {
                   <h2 className="text-3xl font-bold text-white">1-D Presentation of 3-Body Problem</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async" 
@@ -1193,14 +1193,14 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
                         </div>
                       </a>
                     </div>
                   </div>
                   {/* Embedded YouTube Video */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📺 Presentation Video</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Video</h4>
                     <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-lg border border-gray-600">
                       <iframe
                         src="https://www.youtube.com/embed/j_LV2-FKD8I"
@@ -1253,7 +1253,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">Problem Characteristics</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">🌌 Gravitational Forces</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">Gravitational Forces</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Inverse square law interactions</li>
                           <li>• Conservation of energy</li>
@@ -1261,7 +1261,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-orange-400 font-semibold mb-2">🔄 Dynamical Behavior</h5>
+                        <h5 className="text-orange-400 font-semibold mb-2">Dynamical Behavior</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Chaotic trajectories</li>
                           <li>• Sensitive initial conditions</li>
@@ -1269,7 +1269,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">🧮 Numerical Methods</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">Numerical Methods</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Runge-Kutta integration</li>
                           <li>• Symplectic algorithms</li>
@@ -1308,7 +1308,7 @@ export default function ProjectsClient() {
                   <h2 className="text-3xl font-bold text-white">Differential Equations III: Advanced Mathematical Analysis</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/pe8f0u9xf8gh5ls?following_id=lvwkfuullwkcsoq&follow_on_start=true" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async" 
@@ -1317,7 +1317,7 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
                         </div>
                       </a>
                     </div>
@@ -1363,7 +1363,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">Analysis Framework</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">🧮 Mathematical Methods</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">Mathematical Methods</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Advanced differential equations</li>
                           <li>• Complex mathematical analysis</li>
@@ -1371,7 +1371,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">📊 Analytical Techniques</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">Analytical Techniques</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Mathematical proofs</li>
                           <li>• Theoretical analysis</li>
@@ -1379,7 +1379,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">🔬 Research Applications</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">Research Applications</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Academic research</li>
                           <li>• Mathematical modeling</li>
@@ -1418,7 +1418,7 @@ export default function ProjectsClient() {
                   <h2 className="text-3xl font-bold text-white">Locusts vs. Crops: A Predator-Prey Model</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Locusts-vs-Crops-A-Predator-Prey-Model-jexdfy88gxn63jt" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
@@ -1427,7 +1427,7 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
                         </div>
                       </a>
                     </div>
@@ -1477,7 +1477,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">Key Parameters</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">🌾 Crop Dynamics</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">Crop Dynamics</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• <span className="italic">r</span>: Growth rate</li>
                           <li>• <span className="italic">K</span>: Carrying capacity</li>
@@ -1485,7 +1485,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-yellow-400 font-semibold mb-2">🦗 Locust Dynamics</h5>
+                        <h5 className="text-yellow-400 font-semibold mb-2">Locust Dynamics</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• <span className="italic">d</span>: Natural death rate</li>
                           <li>• <span className="italic">b</span>: Conversion efficiency</li>
@@ -1493,7 +1493,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">✈️ Intervention Strategy</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">Intervention Strategy</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Threshold-based spraying</li>
                           <li>• Cost-benefit optimization</li>
@@ -1508,9 +1508,9 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">Real-World Applications</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2">
-                        <p className="text-gray-300 text-sm"><strong>🌍 Agricultural Pest Management:</strong> Predicting locust swarms and optimizing spray schedules</p>
-                        <p className="text-gray-300 text-sm"><strong>💰 Economic Optimization:</strong> Balancing spray costs against crop damage losses</p>
-                        <p className="text-gray-300 text-sm"><strong>♻️ Sustainable Solutions:</strong> Minimizing pesticide use while protecting crops</p>
+                        <p className="text-gray-300 text-sm"><strong>Agricultural Pest Management:</strong> Predicting locust swarms and optimizing spray schedules</p>
+                        <p className="text-gray-300 text-sm"><strong>Economic Optimization:</strong> Balancing spray costs against crop damage losses</p>
+                        <p className="text-gray-300 text-sm"><strong>Sustainable Solutions:</strong> Minimizing pesticide use while protecting crops</p>
                       </div>
                     </div>
                   </div>
@@ -1532,7 +1532,7 @@ export default function ProjectsClient() {
                   <h2 className="text-3xl font-bold text-white">Lagrangian Modeling: Falling Rope & Mass</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Lagrangian-Modeling-Falling-Rope-Mass-4bxdkfv0wgyghk9" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
@@ -1541,7 +1541,7 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
                         </div>
                       </a>
                     </div>
@@ -1689,7 +1689,7 @@ export default function ProjectsClient() {
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-bold text-white">Universal Approximation, Transformers & Sumformers</h2>
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://canva.link/09it528ra1p1miu" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
@@ -1698,7 +1698,7 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
                         </div>
                       </a>
                     </div>
@@ -1755,19 +1755,19 @@ export default function ProjectsClient() {
                   <h3 className="text-xl font-semibold text-white">Seminar Topics</h3>
                   <div className="grid grid-cols-1 gap-3">
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-blue-400 font-semibold mb-2">🧠 Universal Approximation</h5>
+                      <h5 className="text-blue-400 font-semibold mb-2">Universal Approximation</h5>
                       <p className="text-sm text-gray-400">Foundations of what multilayer networks can represent and why depth matters.</p>
                     </div>
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-purple-400 font-semibold mb-2">👁️ Attention</h5>
+                      <h5 className="text-purple-400 font-semibold mb-2">Attention</h5>
                       <p className="text-sm text-gray-400">How models weigh inputs dynamically instead of using fixed windows.</p>
                     </div>
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-green-400 font-semibold mb-2">⚡ Transformers</h5>
+                      <h5 className="text-green-400 font-semibold mb-2">Transformers</h5>
                       <p className="text-sm text-gray-400">Parallel sequence processing and the architecture behind modern LLMs.</p>
                     </div>
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-orange-400 font-semibold mb-2">➕ Sumformers</h5>
+                      <h5 className="text-orange-400 font-semibold mb-2">Sumformers</h5>
                       <p className="text-sm text-gray-400">Alternative structured designs and when they can be more efficient.</p>
                     </div>
                   </div>
@@ -1789,7 +1789,7 @@ export default function ProjectsClient() {
                   <h2 className="text-3xl font-bold text-white">Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">📄 Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
@@ -1798,7 +1798,7 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">📄 View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
                         </div>
                       </a>
                     </div>
@@ -1911,9 +1911,9 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">Real-World Applications</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2 text-sm">
-                        <p className="text-gray-300"><strong>🔥 Chemical Systems:</strong> Combustion, chain reactions, polymerization</p>
-                        <p className="text-gray-300"><strong>🧬 Biological Systems:</strong> Population growth, microbial dynamics, epidemiology</p>
-                        <p className="text-gray-300"><strong>📡 Information Spread:</strong> Ideas, innovations, disease transmission networks</p>
+                        <p className="text-gray-300"><strong>Chemical Systems:</strong> Combustion, chain reactions, polymerization</p>
+                        <p className="text-gray-300"><strong>Biological Systems:</strong> Population growth, microbial dynamics, epidemiology</p>
+                        <p className="text-gray-300"><strong>Information Spread:</strong> Ideas, innovations, disease transmission networks</p>
                       </div>
                     </div>
                   </div>
@@ -1970,7 +1970,7 @@ export default function ProjectsClient() {
                 setHtmlTheme(htmlTheme === 'white' ? 'black' : 'white');
               }}
             >
-              {htmlTheme === 'white' ? '🌙 Dark' : '☀️ Light'}
+              {htmlTheme === 'white' ? 'Dark' : 'Light'}
             </button>
             
             <div 

@@ -28,9 +28,9 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
 
   if (awards.length === 0) {
     return (
-      <div className="max-w-2xl mx-auto rounded-xl border border-dashed border-gray-300 dark:border-gray-700 p-8 text-center bg-gray-50 dark:bg-gray-800/40">
-        <p className="text-lg text-gray-700 dark:text-gray-200 mb-2">No PDFs yet.</p>
-        <p className="text-gray-600 dark:text-gray-300">
+      <div className="max-w-2xl mx-auto rounded-xl border border-dashed border-gray-700 p-8 text-center bg-gray-800/40">
+        <p className="text-lg text-gray-200 mb-2">No PDFs yet.</p>
+        <p className="text-gray-300">
           Add files to <span className="font-semibold">public/honors-awards</span> and they will
           appear here automatically.
         </p>
@@ -44,9 +44,9 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
         {awards.map((award) => (
           <article
             key={award.fileName}
-            className="group relative rounded-xl border border-gray-200/70 dark:border-gray-700/70 shadow-lg overflow-hidden"
+            className="group relative rounded-xl border border-gray-700/70 shadow-lg overflow-hidden"
           >
-            <div className="relative aspect-[4/3] bg-gray-100 dark:bg-gray-900 overflow-hidden">
+            <div className="relative aspect-[4/3] bg-gray-900 overflow-hidden">
               <button
                 type="button"
                 onClick={() => setSelectedAward(award)}
@@ -87,7 +87,7 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
           onClick={() => setSelectedAward(null)}
         >
           <div
-            className="relative w-full max-w-6xl h-[88vh] rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-2xl overflow-hidden"
+            className="relative w-full max-w-6xl h-[88vh] rounded-xl border border-gray-700 bg-gray-900 shadow-2xl overflow-hidden"
             onClick={(event) => event.stopPropagation()}
           >
             <button

@@ -30,8 +30,8 @@ function getPageTitle(pathname: string): string {
     '/projects': 'Projects',
     '/certificates': 'Certificates',
     '/honors-awards': 'Honors',
-    '/gallery': 'Gallery',
     '/contact': 'Contact',
+    '/cv': 'CV',
   };
 
   return titleMap[pathname] || 'Portfolio';

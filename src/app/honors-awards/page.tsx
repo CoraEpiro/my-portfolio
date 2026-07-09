@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   title: "Honors & Awards | Ali Guliyev",
   description: "Honors, awards, and certificate PDFs for Ali Guliyev.",
   alternates: {
-    canonical: "https://aliguliyev.com/honors-awards",
+    canonical: "/honors-awards",
   },
 };
 
@@ -49,13 +49,13 @@ export default async function HonorsAwardsPage() {
   const awards = await getAwardPdfs();
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 py-20">
+    <main className="min-h-screen bg-gray-900 py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Honors & Awards
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A collection of my honors, awards, and certificate PDFs.
           </p>
         </div>

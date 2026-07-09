@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import GoogleAnalytics from '@/components/GoogleAnalytics';
@@ -10,9 +10,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  weight: "700",
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -88,7 +89,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="bg-gray-900 text-white min-h-screen">
         {/* Initialize GA4 analytics */}
         <GoogleAnalytics />

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Certificates | Ali Guliyev',
   description: 'Professional certificates, specializations, diplomas, and verified credentials of Ali Guliyev.',
   alternates: {
-    canonical: 'https://aliguliyev.com/certificates',
+    canonical: '/certificates',
   },
 };
 

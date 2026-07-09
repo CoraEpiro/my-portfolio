@@ -97,8 +97,8 @@ export default function HomeClient() {
             priority
           />
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-2 animate-slide-up" 
-            style={{ fontFamily: 'Montserrat, Inter, sans-serif', animationDelay: '0.2s', animationFillMode: 'both' }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 animate-slide-up"
+            style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
           Ali Guliyev
         </h1>
         <p className="text-2xl text-blue-400 font-semibold mb-1 animate-slide-up" 
@@ -130,7 +130,6 @@ export default function HomeClient() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              icon: "💻",
               title: "Programming & Data",
               skills: [
                 "Python (Expert), SQL, Java, C/C++",
@@ -139,7 +138,6 @@ export default function HomeClient() {
               ]
             },
             {
-              icon: "📊",
               title: "Data Science & Visualization",
               skills: [
                 "Power BI, Tableau, Matplotlib, Seaborn",
@@ -148,7 +146,6 @@ export default function HomeClient() {
               ]
             },
             {
-              icon: "🌍",
               title: "Other & Languages",
               skills: [
                 "Agile, JIRA, Confluence, Microsoft Office",
@@ -157,13 +154,12 @@ export default function HomeClient() {
               ]
             }
           ].map((skillGroup, idx) => (
-            <div 
+            <div
               key={idx}
-              className="card flex flex-col items-center hover-lift hover-glow"
+              className="card flex flex-col items-center hover-lift"
               style={{ animationDelay: `${idx * 0.2}s` }}
             >
-              <span className="text-3xl mb-2 animate-float">{skillGroup.icon}</span>
-              <h3 className="text-lg font-semibold mb-2">{skillGroup.title}</h3>
+              <h3 className="text-lg font-semibold mb-2 text-blue-300">{skillGroup.title}</h3>
               <ul className="text-gray-300 text-sm list-disc list-inside text-center">
                 {skillGroup.skills.map((skill, skillIdx) => (
                   <li key={skillIdx}>{skill}</li>
@@ -179,68 +175,43 @@ export default function HomeClient() {
         <h2 className="text-2xl font-bold text-center mb-8">My Journey</h2>
         <div className="relative w-full max-w-3xl mx-auto py-8">
           {/* Central vertical line */}
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-blue-400 via-purple-400 via-pink-400 via-orange-400 via-yellow-400 via-red-400 via-teal-400 to-slate-400 z-0" style={{ transform: 'translateX(-50%)' }} />
+          <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-blue-500/60 via-blue-400/30 to-transparent z-0" style={{ transform: 'translateX(-50%)' }} />
           <div className="flex flex-col gap-16 relative z-10">
             {[
-              { title: "Salzburg Hackathon", icon: "🏆", subtitle: "€1 000 Prize", desc: "Smart tourism recommendation system (open-source)", date: "Nov 2024", color: "blue" as const },
-              { title: "VGI Challenge", icon: "🏆", subtitle: "2nd Place, €3 000", desc: "Transport optimization project in Ingolstadt", date: "Nov 2024", color: "purple" as const },
-              { title: "Würzburg Hackathon", icon: "🏆", subtitle: "1st Place", desc: "Qualified for ConsulCon25", date: "Nov 2024", color: "pink" as const },
-              { title: "Data4Good Berlin", icon: "🏆", subtitle: "1st Place, €500", desc: "Hertie School hackathon; took 1st in our category", date: "Jan 2025", color: "orange" as const },
-              { title: "Hack4Good Den Haag", icon: "🏆", subtitle: "Category Winner", desc: "Won our category at Hack4Good", date: "Jan 2025", color: "yellow" as const },
-              { title: "ConsulCon25", icon: "🎤", subtitle: "International Conference", desc: "Presented Consul Democracy Analytics Tool", date: "Feb 2025", color: "teal" as const },
-              { title: "European Healthcare Hackathon", icon: "🩺", subtitle: "Participant", desc: "Competed in Prague; gained experience", date: "Mar 2025", color: "red" as const },
-              { title: "Berlin Blockchain Hackathons", icon: "🔗", subtitle: "Two 24h Web3 Hacks", desc: "Participated in two blockchain/Web3 hackathons; no final wins", date: "Jun 2025", color: "slate" as const },
-              { title: "Data4Good Berlin", icon: "🏆", subtitle: "1st Place, €500", desc: "Hertle School hackathon; took 1st in our category", date: "Jan 2026", color: "green" as const },
+              { title: "Salzburg Hackathon", subtitle: "Winner — €1,000 Prize", desc: "Smart tourism recommendation system (open-source)", date: "Nov 2024" },
+              { title: "VGI Challenge", subtitle: "2nd Place — €3,000", desc: "Transport optimization project in Ingolstadt", date: "Nov 2024" },
+              { title: "Würzburg Hackathon", subtitle: "1st Place", desc: "Qualified for the ConsulCon25 conference", date: "Nov 2024" },
+              { title: "Data4Good Berlin", subtitle: "1st Place — €500", desc: "Won our category at the Hertie School hackathon", date: "Jan 2025" },
+              { title: "Hack4Good Den Haag", subtitle: "Category Winner", desc: "Won our category at Hack4Good", date: "Jan 2025" },
+              { title: "ConsulCon25", subtitle: "Conference Speaker", desc: "Presented the Consul Democracy Analytics Tool", date: "Feb 2025" },
+              { title: "European Healthcare Hackathon", subtitle: "Participant", desc: "Competed among international teams in Prague", date: "Mar 2025" },
+              { title: "Berlin Blockchain Hackathons", subtitle: "Two 24h Web3 Sprints", desc: "Built prototypes in two 24-hour blockchain hackathons", date: "Jun 2025" },
+              { title: "Data4Good Berlin", subtitle: "1st Place — €500", desc: "Defended the title: first place for the second year running", date: "Jan 2026" },
             ].map((event, idx) => {
-              const colorMap = {
-                blue: "text-blue-400 border-blue-400 bg-blue-900/40",
-                purple: "text-purple-400 border-purple-400 bg-purple-900/40",
-                pink: "text-pink-400 border-pink-400 bg-pink-900/40",
-                orange: "text-orange-400 border-orange-400 bg-orange-900/40",
-                yellow: "text-yellow-400 border-yellow-400 bg-yellow-900/40",
-                red: "text-red-400 border-red-400 bg-red-900/40",
-                teal: "text-teal-400 border-teal-400 bg-teal-900/40",
-                slate: "text-slate-400 border-slate-400 bg-slate-900/40",
-                green: "text-green-400 border-green-400 bg-green-900/40",
-              } as const;
-              const dateCircle = {
-                blue: "border-blue-400 text-blue-400",
-                purple: "border-purple-400 text-purple-400",
-                pink: "border-pink-400 text-pink-400",
-                orange: "border-orange-400 text-orange-400",
-                yellow: "border-yellow-400 text-yellow-400",
-                red: "border-red-400 text-red-400",
-                teal: "border-teal-400 text-teal-400",
-                slate: "border-slate-400 text-slate-400",
-                green: "border-green-400 text-green-400",
-              } as const;
               const flexDir = idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
               return (
-                <div 
-                  key={idx} 
-                  className={`relative flex flex-col ${flexDir} items-center justify-between w-full hover-lift`}
+                <div
+                  key={idx}
+                  className={`relative flex flex-col ${flexDir} items-center justify-between w-full`}
                 >
-                  {/* Date circle - mobile */}
+                  {/* Date - mobile */}
                   <div className="flex md:hidden mb-4 w-full justify-center">
-                    <div className={`w-14 h-14 rounded-full flex flex-col items-center justify-center border-4 bg-gray-900 font-bold text-base ${dateCircle[event.color]} hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-center">{event.date}</span>
+                    <div className="rounded-full border border-blue-400/40 bg-gray-900 px-4 py-1 text-sm font-semibold text-blue-300">
+                      {event.date}
                     </div>
                   </div>
                   {/* Card */}
-                  <div className={`w-full md:w-1/2 px-0 md:px-8 flex flex-col items-${idx % 2 === 0 ? 'end' : 'start'}`}> 
-                    <div className={`rounded-xl shadow-lg p-6 max-w-md w-full border-l-4 md:border-l-4 md:border-r-0 ${idx % 2 === 0 ? colorMap[event.color] : ''} ${idx % 2 !== 0 ? 'md:border-l-0 md:border-r-4 ' + colorMap[event.color] : ''} bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer`}>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-2xl hover:animate-pulse">{event.icon}</span>
-                        <h3 className={`text-lg font-bold ${colorMap[event.color]}`}>{event.title}</h3>
-                      </div>
-                      <div className="text-gray-300 text-sm mb-1 font-semibold">{event.subtitle}</div>
+                  <div className={`w-full md:w-1/2 px-0 md:px-8 flex flex-col items-${idx % 2 === 0 ? 'end' : 'start'}`}>
+                    <div className="rounded-xl shadow-lg p-6 max-w-md w-full bg-white/5 border border-white/10 transition-shadow duration-300 hover:shadow-xl hover:border-blue-400/30">
+                      <h3 className="text-lg font-bold text-white mb-1">{event.title}</h3>
+                      <div className="text-blue-300 text-sm mb-1 font-semibold">{event.subtitle}</div>
                       <div className="text-gray-400 text-sm">{event.desc}</div>
                     </div>
                   </div>
-                  {/* Date circle - desktop */}
+                  {/* Date - desktop */}
                   <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center z-20">
-                    <div className={`w-14 h-14 rounded-full flex flex-col items-center justify-center border-4 bg-gray-900 font-bold text-base ${dateCircle[event.color]} hover:scale-110 transition-transform duration-300`}>
-                      <span className="text-center">{event.date}</span>
+                    <div className="rounded-full border border-blue-400/40 bg-gray-900 px-4 py-1 text-sm font-semibold text-blue-300 whitespace-nowrap">
+                      {event.date}
                     </div>
                   </div>
                 </div>
@@ -315,7 +286,7 @@ export default function HomeClient() {
           ].map((edu, idx) => (
             <div
               key={idx}
-              className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow max-w-full md:max-w-[480px] mx-auto cursor-pointer"
+              className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift max-w-full md:max-w-[480px] mx-auto"
             >
               <div className="flex items-start gap-4">
                 {edu.logo && (
@@ -358,7 +329,7 @@ export default function HomeClient() {
           <a href="/certificates" className="ml-2 text-blue-400 hover:underline font-semibold">View All Certificates</a>
         </p>
         <div className="max-w-3xl mx-auto">
-          <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow cursor-pointer">
+          <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift">
             <div className="grid gap-6 lg:grid-cols-2 mb-5">
               <a
                 href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
@@ -410,7 +381,7 @@ export default function HomeClient() {
               </div>
             </div>
           </div>
-          <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift hover-glow cursor-pointer mt-6">
+          <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift mt-6">
             <a
               href="https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z"
               target="_blank"
