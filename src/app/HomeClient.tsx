@@ -328,118 +328,75 @@ export default function HomeClient() {
           A dedicated certificates archive is available here:
           <a href="/certificates" className="ml-2 text-blue-400 hover:underline font-semibold">View All Certificates</a>
         </p>
-        <div className="max-w-3xl mx-auto">
-          <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift">
-            <div className="grid gap-6 lg:grid-cols-2 mb-5">
+        <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
+          {[
+            {
+              title: 'Google Advanced Data Analytics',
+              category: 'Professional Certificate',
+              issued: '13 March 2026',
+              image: '/certificates/google_advanced_data_analytics.png',
+              verifyUrl: 'https://coursera.org/verify/professional-cert/LGR9L7X7L5RL',
+            },
+            {
+              title: 'IBM Deep Learning with PyTorch, Keras and Tensorflow',
+              category: 'Specialization Certificate',
+              issued: '4 May 2026',
+              image: '/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png',
+              verifyUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z',
+            },
+          ].map((cert) => (
+            <div key={cert.title} className="flex flex-col rounded-lg bg-slate-800/60 p-5 shadow">
               <a
-                href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
+                href={cert.verifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
+                className="relative block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80 mb-4"
               >
                 <Image
-                  src="/certificates/google_advanced_data_analytics.png"
-                  alt="Google Advanced Data Analytics certificate preview"
+                  src={cert.image}
+                  alt={`${cert.title} certificate preview`}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 480px"
-                  className="object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
+                  sizes="(max-width: 768px) 100vw, 430px"
+                  className="object-contain object-center"
                 />
               </a>
+              <p className="text-xs uppercase tracking-[0.18em] text-blue-300 mb-1">{cert.category} · Coursera</p>
+              <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
+              <p className="text-sm text-gray-400 mb-4">Issued {cert.issued}</p>
               <a
-                href="https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z"
+                href={cert.verifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative block aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
+                className="mt-auto inline-flex w-fit items-center justify-center rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:bg-blue-400"
               >
-                <Image
-                  src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
-                  alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 480px"
-                  className="object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
-                />
+                Verify
               </a>
             </div>
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-              <div className="space-y-2">
-                <p className="text-xs uppercase tracking-[0.18em] text-green-300">Featured</p>
-                <p className="text-xs uppercase tracking-[0.18em] text-blue-300">Professional Certificate</p>
-                <h3 className="text-xl md:text-2xl font-bold text-white">Google Advanced Data Analytics</h3>
-                <p className="text-gray-300">Issued by Coursera</p>
-                <p className="text-sm text-gray-400">Issued on 13 March 2026</p>
-                <p className="text-sm text-gray-400">Credential ID: LGR9L7X7L5RL</p>
-              </div>
-              <div className="flex md:justify-end md:pt-1">
-                <a
-                  href="https://coursera.org/verify/professional-cert/LGR9L7X7L5RL"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
-                >
-                  Verify Certificate
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-lg bg-slate-800/60 p-6 shadow hover-lift mt-6">
-            <a
-              href="https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative block mb-5 aspect-[4/3] overflow-hidden rounded-lg border border-slate-600/60 bg-slate-900/80"
-            >
-              <Image
-                src="/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png"
-                alt="IBM Deep Learning with PyTorch, Keras and Tensorflow certificate preview"
-                fill
-                sizes="(max-width: 768px) 100vw, 700px"
-                className="object-contain object-center transition-transform duration-300 hover:scale-[1.01]"
-              />
-            </a>
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-              <div className="space-y-2">
-                <p className="text-xs uppercase tracking-[0.18em] text-green-300">Featured</p>
-                <p className="text-xs uppercase tracking-[0.18em] text-blue-300">Specialization Certificate</p>
-                <h3 className="text-xl md:text-2xl font-bold text-white">IBM Deep Learning with PyTorch, Keras and Tensorflow</h3>
-                <p className="text-gray-300">Issued by Coursera</p>
-                <p className="text-sm text-gray-400">Credential ID: 23WN50BTKV7Z</p>
-              </div>
-              <div className="flex md:justify-end md:pt-1">
-                <a
-                  href="https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-blue-500 px-5 py-2.5 font-semibold text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-400"
-                >
-                  Verify Certificate
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
       <hr className="divider" />
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-2 scroll-fade-in">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+        <h2 className="text-3xl font-bold text-center mb-12 text-white">
           Get in Touch
         </h2>
         <div className="max-w-2xl mx-auto">
-          <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
+          <p className="text-center text-gray-300 mb-8">
             I'm always open to new opportunities and collaborations.
           </p>
           <div className="flex justify-center gap-6">
             {[
-              { name: "GitHub", url: "https://github.com" },
-              { name: "LinkedIn", url: "https://linkedin.com" },
-              { name: "Email", url: "mailto:your.email@example.com" }
+              { name: "GitHub", url: "https://github.com/CoraEpiro" },
+              { name: "LinkedIn", url: "https://www.linkedin.com/in/ali-guliyev-389837238/" },
+              { name: "Email", url: "mailto:Ali.Guliyev@stud.ku.de" }
             ].map((link, idx) => (
               <a
                 key={idx}
                 href={link.url}
                 target={link.name !== "Email" ? "_blank" : undefined}
                 rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:scale-110 transition-all duration-300"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
               >
                 {link.name}
               </a>
