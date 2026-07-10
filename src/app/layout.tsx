@@ -65,10 +65,10 @@ export const metadata: Metadata = {
     siteName: "Ali Guliyev Portfolio",
     images: [
       {
-        url: "/assets/profile.jpg",
+        url: "/assets/og-banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Ali Guliyev - Data Science Professional",
+        alt: "Ali Guliyev - Data Science & Machine Learning",
       },
     ],
   },
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ali Guliyev - Data Science & Machine Learning Portfolio",
     description: "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling and AI solutions.",
-    images: ["/assets/profile.jpg"],
+    images: ["/assets/og-banner.jpg"],
   },
   category: "Technology",
 };
