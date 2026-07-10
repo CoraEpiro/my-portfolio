@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import CvActions from './CvActions';
 
 export const metadata: Metadata = {
-  title: 'CV | Ali Guliyev',
+  title: 'CV',
   description: 'View and download the CV of Ali Guliyev in a polished PDF preview page.',
   alternates: {
     canonical: '/cv',

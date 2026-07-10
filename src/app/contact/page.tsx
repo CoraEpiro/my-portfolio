@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Contact | Ali Guliyev',
+  title: 'Contact',
   description: 'Get in touch with Ali Guliyev for collaborations, project inquiries, or professional networking.',
   alternates: {
     canonical: '/contact',
