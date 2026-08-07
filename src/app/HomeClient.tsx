@@ -245,7 +245,7 @@ export default function HomeClient() {
               details: [
                 "GPA 1.77 / 1.0 — German scale, where 1.0 is the best possible grade",
                 "Specialization in Applied Mathematics",
-                "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science, Stochastics",
+                "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science, Probability Theory, Stochastics",
                 "Teaching Assistant for Linear Algebra I & II — ~200 hours, 120+ students"
               ]
             },
@@ -258,7 +258,7 @@ export default function HomeClient() {
               dates: "09/2021 – 06/2023",
               details: [
                 "Final grade 83 / 100 (top quintile)",
-                "Advanced coursework: Real Analysis, Abstract Algebra, Differential Equations, Probability Theory",
+                "Advanced coursework: Real Analysis, Abstract Algebra, Differential Equations",
                 "A full mathematics degree before the data science one — the reason probabilistic modelling reads as native rather than acquired",
                 "Transferred to Germany for a more research-oriented data-science track"
               ]
