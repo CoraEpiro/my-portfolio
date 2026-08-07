@@ -30,7 +30,7 @@ const experiences = [
     date: "03/2025 – Present",
     location: "Munich, Germany",
     bullets: [
-      "First-line and escalation support for internal IT infrastructure across Flix's Munich offices.",
+      "Resolved 1,100+ support tickets across Flix's internal IT infrastructure.",
       "Handled hardware provisioning, access management and network-side troubleshooting for employees across departments.",
       "Worked in English throughout, turning vague problem reports from non-technical colleagues into actionable tickets."
     ]
