@@ -24,23 +24,12 @@ type Project = {
 // Sample projects data
 const projects: Project[] = [
   {
-    id: 1,
-    title: 'ChatVocate: Azerbaijani Legal AI',
-    description: 'A sophisticated, bilingual legal assistant chatbot designed for the Azerbaijani legal system with OpenAI GPT integration.',
-    image: '/legal-project/legal-project-cover.png',
-    technologies: ['Next.js', 'TypeScript', 'OpenAI API', 'Tailwind CSS'],
-    tags: ['AI', 'Legal Tech', 'Bilingual', 'Next.js'],
-    liveUrl: 'https://www.chatvocate.info',
-    githubUrl: 'https://github.com/CoraEpiro/Legal-Project',
-    collaborators: [],
-  },
-  {
     id: 2,
     title: 'Rain in Australia',
-    description: 'A comprehensive data science project analyzing and predicting rainfall patterns across Australia using advanced machine learning algorithms and statistical modeling techniques.',
+    description: 'Binary weather prediction on ten years of Australian meteorological observations: predicting next-day rainfall from atmospheric variables. Feature engineering on missing and skewed station data, class imbalance handling, and model comparison judged on precision/recall rather than raw accuracy.',
     image: '/projects/rain-in-australia/rain-in-australia-cover.jpg',
-    technologies: ['Python', 'Jupyter', 'ML'],
-    tags: ['Python', 'Jupyter', 'ML'],
+    technologies: ['Python', 'Jupyter', 'Scikit-Learn', 'Pandas'],
+    tags: ['Weather Data', 'Predictive Modelling', 'Python', 'ML'],
     liveUrl: '#',
     githubUrl: 'https://github.com/CoraEpiro/rain-in-australia-binder',
     collaborators: [
@@ -48,19 +37,9 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 3,
-    title: 'ConsulCon25 Presentation',
-    description: 'Presentation slides and materials for the ConsulCon25 event.',
-    image: '/projects/consulcon25/consulcon25-cover.png',
-    technologies: ['Presentation', 'Visualization'],
-    tags: ['Presentation', 'Conference'],
-    liveUrl: '#',
-    collaborators: [],
-  },
-  {
     id: 4,
     title: 'VGI-Flexi: Rural Transport Analytics',
-    description: 'An analytics platform for optimizing rural public transportation by predicting passenger no-shows.',
+    description: 'Second place, VGI Challenge (€3,000). A logistic-regression model predicting passenger no-shows for on-demand rural transport, wrapped in an analytics platform the operator could actually use to reallocate capacity.',
     image: '/projects/university/vgi-challenge/vgi-cover.png',
     technologies: ['Data Analytics', 'Logistic Regression', 'Web Platform'],
     tags: ['Data Science', 'Transportation', 'Prediction Model'],
@@ -70,6 +49,17 @@ const projects: Project[] = [
       { name: 'Veronika Rybak', linkedInUrl: 'https://www.linkedin.com/in/veronika-rybak-55379a337/' },
       { name: 'Ruslan Tsibirov', linkedInUrl: 'https://www.linkedin.com/in/ruslantsibirov/' }
     ],
+  },
+  {
+    id: 1,
+    title: 'ChatVocate: Azerbaijani Legal AI',
+    description: 'A bilingual legal assistant for the Azerbaijani legal system, built on the OpenAI API — retrieval over legal texts, prompt design for two languages, and a deployed web front end.',
+    image: '/legal-project/legal-project-cover.png',
+    technologies: ['Next.js', 'TypeScript', 'OpenAI API', 'Tailwind CSS'],
+    tags: ['LLM', 'Legal Tech', 'Bilingual', 'Next.js'],
+    liveUrl: 'https://www.chatvocate.info',
+    githubUrl: 'https://github.com/CoraEpiro/Legal-Project',
+    collaborators: [],
   },
   {
     id: 5,
@@ -103,6 +93,16 @@ const projects: Project[] = [
       { name: 'Olga Ivanova', linkedInUrl: 'https://www.linkedin.com/in/olga-ivanova-datascientist/' },
       { name: 'Aleksandra Karabutova', linkedInUrl: 'https://www.linkedin.com/in/aleksandra-karabutova/' }
     ],
+  },
+  {
+    id: 3,
+    title: 'ConsulCon25 Presentation',
+    description: 'Conference talk at ConsulCon25 on the Consul Democracy Analytics Tool, following a first-place finish at the Würzburg hackathon that qualified the team to present.',
+    image: '/projects/consulcon25/consulcon25-cover.png',
+    technologies: ['Presentation', 'Visualization'],
+    tags: ['Speaking', 'Conference', 'Civic Tech'],
+    liveUrl: '#',
+    collaborators: [],
   },
   // AGV university project (kept near the end to avoid reordering indices used elsewhere)
   {

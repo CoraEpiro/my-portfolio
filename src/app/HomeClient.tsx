@@ -35,8 +35,8 @@ export default function HomeClient() {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Ali Guliyev",
-            "jobTitle": "Data Science Professional",
-            "description": "Data Science professional with 2+ years experience in Python, Machine Learning, and Analytics. Hackathon winner specializing in predictive modeling, data visualization, and AI solutions.",
+            "jobTitle": "Data Science & Risk Modelling",
+            "description": "B.Sc. Data Science and B.Sc. Mathematics, based near Munich. Probabilistic and statistical modelling in Python, five-time hackathon winner, working toward catastrophe and climate risk modelling.",
             "url": "https://www.aliguliyev.com",
             "image": "https://www.aliguliyev.com/assets/profile.jpg",
             "sameAs": [
@@ -71,14 +71,14 @@ export default function HomeClient() {
             ],
             "knowsAbout": [
               "Data Science",
+              "Mathematics",
+              "Probability Theory",
+              "Statistical Modelling",
               "Machine Learning",
               "Python Programming",
-              "Power BI",
-              "Data Analytics",
-              "Predictive Modeling",
-              "Data Visualization",
               "SQL",
-              "Artificial Intelligence"
+              "Risk Analytics",
+              "Catastrophe Modelling"
             ],
             "email": "Ali.Guliyev@stud.ku.de"
           })
@@ -101,13 +101,13 @@ export default function HomeClient() {
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
           Ali Guliyev
         </h1>
-        <p className="text-2xl text-blue-400 font-semibold mb-1 animate-slide-up" 
+        <p className="text-2xl text-blue-400 font-semibold mb-1 animate-slide-up"
            style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          Data-Driven Problem Solver
+          Data Science &amp; Risk Modelling
         </p>
-        <p className="text-base text-gray-300 mb-4 animate-slide-up" 
+        <p className="text-base text-gray-300 mb-4 animate-slide-up"
            style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-          Python • Machine Learning • React • Hackathon Winner
+          Mathematics + Data Science • Python • Probabilistic modelling
         </p>
         <p className="text-base text-gray-400 mb-2 animate-slide-up" 
            style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
@@ -119,7 +119,10 @@ export default function HomeClient() {
       <section className="container text-center scroll-fade-in">
         <h2 className="text-2xl font-bold mb-3">About Me</h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
-          Data Science professional with 2+ years of experience in IT infrastructure support, data analysis, and visualization. Expert in Python, SQL, and Power BI. Recognized for optimizing reporting efficiency, winning hackathons, and delivering impactful analytics solutions. Seeking to leverage my skills in catastrophe modeling and risk analytics to support organizations in making data-driven decisions.
+          I am finishing a B.Sc. in Data Science at the Catholic University of Eichstätt-Ingolstadt, on top of a B.Sc. in Mathematics from Baku State University. Two degrees in the quantitative core: real analysis, probability and measure theory underneath the machine learning, rather than beside it. I work in Python and SQL, teach linear algebra to 120+ first-year students, and have won five hackathons — placing second in a sixth — building working models under a deadline.
+        </p>
+        <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
+          I want to work in catastrophe and climate risk modelling — where the probability theory I was trained in is the job, not a prerequisite.
         </p>
         <a href="/contact" className="button mt-2 hover-lift">Contact Me</a>
       </section>
@@ -130,27 +133,27 @@ export default function HomeClient() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
+              title: "Modelling & Statistics",
+              skills: [
+                "Probability, stochastic processes, measure theory",
+                "Regression, classification, time-series, model validation",
+                "Scikit-Learn, TensorFlow, PyTorch, statsmodels"
+              ]
+            },
+            {
               title: "Programming & Data",
               skills: [
-                "Python (Expert), SQL, Java, C/C++",
-                "Pandas, Numpy, Scikit-Learn, TensorFlow, PyTorch",
-                "Docker, Git, GitHub"
+                "Python (advanced), SQL, Java, C/C++",
+                "Pandas, NumPy, Matplotlib, Seaborn",
+                "Docker, Git, ETL/EDA, Power BI, Tableau"
               ]
             },
             {
-              title: "Data Science & Visualization",
+              title: "Working & Languages",
               skills: [
-                "Power BI, Tableau, Matplotlib, Seaborn",
-                "Data Mining, EDA, ETL, Machine Learning",
-                "Web Scraping, Selenium"
-              ]
-            },
-            {
-              title: "Other & Languages",
-              skills: [
-                "Agile, JIRA, Confluence, Microsoft Office",
-                "Azerbaijani, Turkish (Native)",
-                "English (Proficient), German (Intermediate)"
+                "Agile, JIRA, Confluence",
+                "Azerbaijani, Turkish (native), English (proficient)",
+                "German B1 — targeting B2 by end of 2026"
               ]
             }
           ].map((skillGroup, idx) => (
@@ -240,9 +243,10 @@ export default function HomeClient() {
               location: "Ingolstadt, Germany",
               dates: "10/2023 – 09/2026 (expected)",
               details: [
-                "Specialization GPA 1.75 / 1.0 (Overall 1.79 / 1.0)",
-                "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science",
-                "Student Assistant for Linear Algebra I & II (tutoring 120+ freshmen)"
+                "GPA 1.77 / 1.0 — German scale, where 1.0 is the best possible grade",
+                "Specialization in Applied Mathematics",
+                "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science, Stochastics",
+                "Teaching Assistant for Linear Algebra I & II — ~200 hours, 120+ students"
               ]
             },
             {
@@ -254,7 +258,8 @@ export default function HomeClient() {
               dates: "09/2021 – 06/2023",
               details: [
                 "Final grade 83 / 100 (top quintile)",
-                "Advanced coursework: Real Analysis, Abstract Algebra, Differential Equations",
+                "Advanced coursework: Real Analysis, Abstract Algebra, Differential Equations, Probability Theory",
+                "A full mathematics degree before the data science one — the reason probabilistic modelling reads as native rather than acquired",
                 "Transferred to Germany for a more research-oriented data-science track"
               ]
             },
