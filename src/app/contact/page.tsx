@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Contact',
-  description: 'Get in touch with Ali Guliyev for collaborations, project inquiries, or professional networking.',
+  description: 'Get in touch with Ali Guliyev — data science and risk modelling, based near Munich. Open to graduate roles, working-student positions, and collaborations.',
   alternates: {
     canonical: '/contact',
   },

@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Projects',
-  description: 'A collection of my recent work and personal projects. Each project represents a unique challenge and learning experience.',
+  description: 'Data science and modelling projects by Ali Guliyev — next-day rainfall prediction on Australian weather data, passenger no-show modelling for rural transport, a bilingual legal LLM assistant, and hackathon-winning analytics work in Python.',
   alternates: {
     canonical: '/projects',
   },

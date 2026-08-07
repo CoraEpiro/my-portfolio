@@ -3,7 +3,7 @@ import CertificatesClient from './CertificatesClient';
 
 export const metadata: Metadata = {
   title: 'Certificates',
-  description: 'Professional certificates, specializations, diplomas, and verified credentials of Ali Guliyev.',
+  description: 'Verified credentials of Ali Guliyev, including the Google Advanced Data Analytics professional certificate and IBM Deep Learning with PyTorch, Keras and TensorFlow — each linked to its Coursera verification page.',
   alternates: {
     canonical: '/certificates',
   },

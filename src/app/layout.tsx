@@ -80,9 +80,12 @@ export const metadata: Metadata = {
     images: ["/assets/og-banner.jpg"],
   },
   category: "Technology",
+  // Set GOOGLE_SITE_VERIFICATION in the Vercel project env vars to verify
+  // ownership in Google Search Console — no code change needed.
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
-// To verify ownership in Google Search Console, add your code:
-// verification: { google: "<your-search-console-token>" },
 
 export default function RootLayout({
   children,

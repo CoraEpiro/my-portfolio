@@ -3,7 +3,7 @@ import CvActions from './CvActions';
 
 export const metadata: Metadata = {
   title: 'CV',
-  description: 'View and download the CV of Ali Guliyev in a polished PDF preview page.',
+  description: 'CV of Ali Guliyev — B.Sc. Data Science (Eichstätt-Ingolstadt) and B.Sc. Mathematics (Baku State University), working toward catastrophe and climate risk modelling in Munich. View or download as PDF.',
   alternates: {
     canonical: '/cv',
   },
