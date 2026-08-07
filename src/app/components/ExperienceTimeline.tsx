@@ -16,7 +16,7 @@ const experiences = [
   {
     title: "Teaching Assistant — Linear Algebra I & II",
     company: { name: "Catholic University of Eichstätt-Ingolstadt", url: "https://www.ku.de/en" },
-    date: "10/2024 – Present",
+    date: "10/2024 – 07/2026",
     location: "Ingolstadt, Germany",
     bullets: [
       "~200 hours across 4 semesters teaching Linear Algebra I & II to 120+ first-year students.",
