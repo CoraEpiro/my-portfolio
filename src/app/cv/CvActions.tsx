@@ -3,8 +3,8 @@
 import { trackCVDownload } from "@/lib/analytics";
 
 export default function CvActions() {
-  const cvHref = "/resume/Ali_Guliyev_Resume_April_2026.pdf";
-  const fileName = "Ali_Guliyev_Resume_April_2026.pdf";
+  const cvHref = "/resume/Ali_Guliyev_Resume_July_2026.pdf";
+  const fileName = "Ali_Guliyev_Resume_July_2026.pdf";
 
   const handleDownload = () => {
     trackCVDownload();

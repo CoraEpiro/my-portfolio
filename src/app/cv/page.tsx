@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function CvPage() {
-  const cvHref = '/resume/Ali_Guliyev_Resume_April_2026.pdf';
+  const cvHref = '/resume/Ali_Guliyev_Resume_July_2026.pdf';
 
   return (
     <main className="min-h-screen bg-[#070b14] text-white">
