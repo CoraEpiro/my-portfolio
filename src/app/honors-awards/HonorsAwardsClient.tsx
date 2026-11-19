@@ -49,10 +49,9 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
   if (count === 0) {
     return (
       <div className="max-w-2xl mx-auto rounded-xl border border-dashed border-gray-700 p-8 text-center bg-gray-800/40">
-        <p className="text-lg text-gray-200 mb-2">No documents yet.</p>
+        <p className="text-lg text-gray-200 mb-2">{de ? "Noch keine Dokumente vorhanden." : "No documents yet."}</p>
         <p className="text-gray-300">
-          Add PDF files to <span className="font-semibold">public/honors-awards</span> and they
-          will appear here automatically.
+          {de ? <>Fügen Sie PDF-Dateien zu <span className="font-semibold">public/honors-awards</span> hinzu. Sie erscheinen automatisch hier.</> : <>Add PDF files to <span className="font-semibold">public/honors-awards</span> and they will appear here automatically.</>}
         </p>
       </div>
     );
@@ -151,13 +150,13 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
                 type="button"
                 onClick={() => setOpened(true)}
                 className="absolute inset-0 flex flex-col items-center justify-center gap-4 overflow-hidden rounded-lg rounded-l-sm border border-white/10 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 shadow-xl shadow-black/50 [backface-visibility:hidden]"
-                aria-label="Open the honors and awards portfolio"
+                aria-label={de ? "Portfolio mit Auszeichnungen öffnen" : "Open the honors and awards portfolio"}
               >
                 <span className="text-xs uppercase tracking-[0.3em] text-blue-300/80">Portfolio</span>
                 <span className="px-6 text-3xl font-bold text-white">{de ? 'Auszeichnungen & Ehrungen' : 'Honors & Awards'}</span>
                 <span className="h-1 w-16 rounded-full bg-blue-400/80" aria-hidden />
                 <span className="text-base text-slate-300">Ali Guliyev</span>
-                <span className="absolute bottom-6 text-sm text-slate-400">Click to open</span>
+                <span className="absolute bottom-6 text-sm text-slate-400">{de ? "Zum Öffnen klicken" : "Click to open"}</span>
                 {/* Spine highlight */}
                 <span className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-white/10 via-white/[0.03] to-transparent" aria-hidden />
               </button>
@@ -175,9 +174,9 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
               <>
                 <div className="text-center" aria-live="polite">
                   <p className="text-lg font-semibold text-white">{current.title}</p>
-                  {current.subtitle && <p className="text-sm text-gray-400">{current.subtitle}</p>}
+                  {current.subtitle && <p className="text-sm text-gray-400">{de ? "Deutsches Stipendium für leistungsstarke Studierende" : current.subtitle}</p>}
                   <p className="mt-1 text-sm text-gray-500">
-                    Page {Math.min(idx + 1, count)} of {count}
+                    {de ? `Seite ${Math.min(idx + 1, count)} von ${count}` : `Page ${Math.min(idx + 1, count)} of ${count}`}
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-3">
@@ -187,7 +186,7 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
                     disabled={idx === 0}
                     className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
                   >
-                    ← Previous
+                    {de ? "← Zurück" : "← Previous"}
                   </button>
                   <button
                     type="button"
@@ -195,35 +194,35 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
                     disabled={idx >= count - 1}
                     className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-40"
                   >
-                    Next →
+                    {de ? "Weiter →" : "Next →"}
                   </button>
                   <button
                     type="button"
                     onClick={() => setPdfView(current)}
                     className="inline-flex items-center justify-center rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-400"
                   >
-                    Open PDF
+                    {de ? "PDF öffnen" : "Open PDF"}
                   </button>
                   <a
                     href={current.href}
                     download
                     className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                   >
-                    Download
+                    {de ? "Herunterladen" : "Download"}
                   </a>
                   <button
                     type="button"
                     onClick={closeBook}
                     className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
                   >
-                    Close
+                    {de ? "Schließen" : "Close"}
                   </button>
                 </div>
-                <p className="text-xs text-gray-500">Tip: use the arrow keys, or click the page, to flip.</p>
+                <p className="text-xs text-gray-500">{de ? "Tipp: Mit den Pfeiltasten oder einem Klick auf die Seite blättern." : "Tip: use the arrow keys, or click the page, to flip."}</p>
               </>
             ) : (
               <p className="text-sm text-gray-400">
-                {count} award document{count === 1 ? "" : "s"} inside
+                {de ? `${count} ${count === 1 ? "Auszeichnungsdokument" : "Auszeichnungsdokumente"} enthalten` : `${count} award document${count === 1 ? "" : "s"} inside`}
               </p>
             )}
           </div>

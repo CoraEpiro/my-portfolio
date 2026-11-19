@@ -54,7 +54,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'ChatVocate: Azerbaijani Legal AI',
-    description: 'A bilingual legal assistant for the Azerbaijani legal system, built on the OpenAI API — retrieval over legal texts, prompt design for two languages, and a deployed web front end.',
+    description: 'A bilingual legal assistant for the Azerbaijani legal system, built on the OpenAI API, with retrieval over legal texts, two-language prompt design, and a deployed web front end.',
     image: '/legal-project/legal-project-cover.png',
     technologies: ['Next.js', 'TypeScript', 'OpenAI API', 'Tailwind CSS'],
     tags: ['LLM', 'Legal Tech', 'Bilingual', 'Next.js'],
@@ -184,7 +184,7 @@ const presentations: Project[] = [
   {
     id: 14,
     title: 'Universal Approximation, Transformers & Sumformers',
-    description: 'An academic seminar for data science students on universal approximation, attention layers, transformers, and sumformers — connecting classical theory to modern deep learning architectures.',
+    description: 'An academic seminar for data science students on universal approximation, attention layers, transformers, and sumformers, connecting classical theory to modern deep learning architectures.',
     image: '/projects/university/seventh-presentation-slide-cover.png',
     technologies: ['Machine Learning', 'Deep Learning', 'Transformers', 'Neural Networks'],
     tags: ['Academic', 'Data Science', 'Transformers', 'Seminar'],
@@ -372,10 +372,10 @@ export default function ProjectsClient() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
           }`}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Academic Presentations
+              {de ? 'Akademische Präsentationen' : 'Academic Presentations'}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Mathematical explorations and academic presentations showcasing theoretical knowledge and practical applications.
+              {de ? 'Mathematische Themen und Präsentationen, in denen ich theoretische Inhalte mit praktischen Anwendungen verbinde.' : 'Mathematical explorations and academic presentations showcasing theoretical knowledge and practical applications.'}
             </p>
           </div>
 
@@ -417,10 +417,26 @@ export default function ProjectsClient() {
                 </div>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                    {presentation.title}
+                    {de ? ({
+                      7: "Differentialgleichungen I: Newtons Abkühlungsgesetz (mit Experiment)",
+                      8: 'Differentialgleichungen I: Das Dreikörperproblem in einer Dimension',
+                      9: 'Differentialgleichungen III: Vertiefte mathematische Analyse',
+                      10: 'Heuschrecken und Nutzpflanzen: Ein Räuber-Beute-Modell',
+                      11: 'Lagrange-Mechanik: Fallendes Seil mit Gewicht',
+                      12: 'Autokatalytische Reaktionen: Von der Reaktionsstruktur zur Dynamik',
+                      14: 'Universelle Approximation, Transformer und Sumformer',
+                    } as Record<number, string>)[presentation.id] : presentation.title}
                   </h2>
                   <p className="text-gray-600 dark:text-gray-300 mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
-                    {presentation.description}
+                    {de ? ({
+                      7: 'Eine mathematische Untersuchung des Newtonschen Abkühlungsgesetzes mit theoretischer Herleitung und praktischem Experiment. Dabei wird gezeigt, wie Differentialgleichungen Temperaturverläufe beschreiben.',
+                      8: 'Eine Präsentation zum klassischen Dreikörperproblem, untersucht in einer Dimension. Sie zeigt, wie Differentialgleichungen die Bewegung mehrerer Himmelskörper beschreiben.',
+                      9: 'Eine Präsentation zu fortgeschrittener mathematischer Analysis und Differentialgleichungen mit ausgewählten Konzepten und Anwendungen.',
+                      10: 'Ein mathematisches Modell für das Zusammenspiel von Heuschreckenpopulationen und Pflanzenwachstum, einschließlich möglicher menschlicher Eingriffe.',
+                      11: 'Eine Untersuchung der Lagrange-Mechanik anhand eines fallenden Seils mit angehängter Masse. Aus Energieerhaltung und der Euler-Lagrange-Gleichung wird die Falltiefe aus der gemessenen Fallzeit bestimmt.',
+                      12: 'Wie kleine Änderungen in chemischen Reaktionen komplexe, nichtlineare Dynamiken erzeugen können. Die Präsentation vergleicht deterministische Modelle mit Differentialgleichungen und stochastische Teilchenmodelle.',
+                      14: 'Ein Seminar für Data-Science-Studierende über universelle Approximation, Attention, Transformer und Sumformer. Es verbindet klassische Theorie mit modernen Deep-Learning-Architekturen.',
+                    } as Record<number, string>)[presentation.id] : presentation.description}
                   </p>
                   <div className="flex flex-wrap gap-1">
                     {presentation.tags.map((tag, tagIdx) => (
@@ -431,7 +447,7 @@ export default function ProjectsClient() {
                         }`}
                         style={{ transitionDelay: `${400 + (idx + projects.length) * 150 + tagIdx * 50}ms` }}
                       >
-                        {tag}
+                        {de ? ({ Mathematics: 'Mathematik', Physics: 'Physik', Experiments: 'Experimente', Education: 'Lehre', Astronomy: 'Astronomie', Presentation: 'Präsentation', Academic: 'Akademisch', 'Differential Equations': 'Differentialgleichungen', 'Advanced Analysis': 'Vertiefte Analysis', 'Applied Modeling': 'Angewandte Modellierung', 'Population Dynamics': 'Populationsdynamik', Mechanics: 'Mechanik', Chemistry: 'Chemie', 'Nonlinear Dynamics': 'Nichtlineare Dynamik', 'Data Science': 'Data Science', Transformers: 'Transformer', Seminar: 'Seminar' } as Record<string, string>)[tag] || tag : tag}
                       </span>
                     ))}
                   </div>
@@ -1715,7 +1731,7 @@ export default function ProjectsClient() {
                   </div>
                   <div className="space-y-3">
                     <p className="text-gray-300">
-                      An academic seminar for data science students (6th semester) exploring how neural networks approximate functions, how attention mechanisms work, and how transformer-style architectures—including sumformers—build on these ideas.
+                      An academic seminar for data science students (6th semester) exploring how neural networks approximate functions, how attention mechanisms work, and how transformer-style architectures, including sumformers, build on these ideas.
                     </p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Universal Approximation:</strong> Why neural networks can represent complex functions</li>

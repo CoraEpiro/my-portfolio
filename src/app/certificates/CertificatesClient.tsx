@@ -5,7 +5,7 @@ type Certificate = {
   id: number;
   title: string;
   issuer: string;
-  category: 'Professional Certificate' | 'Specialization Certificate' | 'Diploma' | 'Course Certificate';
+  category: string;
   issueDate: string;
   credentialId?: string;
   verifyUrl?: string;
@@ -18,22 +18,22 @@ const certificates: Certificate[] = [
     id: 2,
     title: 'IBM Deep Learning with PyTorch, Keras and Tensorflow',
     issuer: 'Coursera',
-    category: 'Specialization Certificate',
+    category: 'Spezialisierungszertifikat',
     issueDate: '4 May 2026',
     credentialId: '23WN50BTKV7Z',
     verifyUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z',
-    notes: 'Deep learning fundamentals, PyTorch, Keras, and TensorFlow workflows.',
+    notes: 'Grundlagen des Deep Learning sowie Workflows mit PyTorch, Keras und TensorFlow.',
     previewImage: '/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png',
   },
   {
     id: 1,
     title: 'Google Advanced Data Analytics',
     issuer: 'Coursera',
-    category: 'Professional Certificate',
+    category: 'Berufszertifikat',
     issueDate: '13 March 2026',
     credentialId: 'LGR9L7X7L5RL',
     verifyUrl: 'https://coursera.org/verify/professional-cert/LGR9L7X7L5RL',
-    notes: 'Advanced analytics, statistical methods, Python workflows, and practical business analysis.',
+    notes: 'Fortgeschrittene Analytik, statistische Methoden, Python-Workflows und praktische Geschäftsanalyse.',
     previewImage: '/certificates/google_advanced_data_analytics.png',
   },
 ];
@@ -74,7 +74,7 @@ export default function CertificatesClient() {
               )}
               <div className="mb-3 flex items-center justify-between gap-3">
                 <span className="inline-flex rounded-full bg-blue-900/50 text-blue-200 px-3 py-1 text-xs font-semibold">
-                  {certificate.category}
+                  {de ? certificate.category : certificate.category === 'Berufszertifikat' ? 'Professional Certificate' : 'Specialization Certificate'}
                 </span>
                 <span className="text-sm text-gray-400">{de ? 'Ausgestellt am' : 'Issued'} {de ? certificate.issueDate.replace('May', 'Mai').replace('March', 'März') : certificate.issueDate}</span>
               </div>
@@ -85,7 +85,7 @@ export default function CertificatesClient() {
                 <p className="text-sm text-gray-400 mb-4">{de ? 'Zertifikats-ID' : 'Credential ID'}: {certificate.credentialId}</p>
               )}
               {certificate.notes && (
-                <p className="text-sm text-gray-300 mb-6 leading-relaxed">{certificate.notes}</p>
+                <p className="text-sm text-gray-300 mb-6 leading-relaxed">{de ? certificate.notes : certificate.id === 2 ? 'Deep learning fundamentals, with practical workflows in PyTorch, Keras, and TensorFlow.' : 'Advanced analytics, statistical methods, Python workflows, and practical business analysis.'}</p>
               )}
 
               <div className="mt-auto flex flex-wrap gap-3">

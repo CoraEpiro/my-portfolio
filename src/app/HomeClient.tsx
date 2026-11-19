@@ -106,7 +106,7 @@ export default function HomeClient() {
         </h1>
         <p className="text-2xl text-blue-400 font-semibold mb-1 animate-slide-up"
            style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          {de ? "Data Science &amp; Risikomodellierung" : <>Data Science &amp; Risk Modelling</>}
+          {de ? "Data Science & Risikomodellierung" : <>Data Science &amp; Risk Modelling</>}
         </p>
         <p className="text-base text-gray-300 mb-4 animate-slide-up"
            style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
@@ -186,12 +186,12 @@ export default function HomeClient() {
             {[
               { title: "Salzburg Hackathon", subtitle: de ? "Gewonnen, 1.000 € Preisgeld" : "Winner, €1,000 prize", desc: de ? "Open-Source-Empfehlungssystem für den Tourismus" : "Smart tourism recommendation system (open-source)", date: "Nov 2024" },
               { title: "VGI Challenge", subtitle: de ? "2. Platz, 3.000 €" : "2nd place, €3,000", desc: de ? "Projekt zur Optimierung des Verkehrs in Ingolstadt" : "Transport optimization project in Ingolstadt", date: "Nov 2024" },
-              { title: "Würzburg Hackathon", subtitle: "1st Place", desc: "Qualified for the ConsulCon25 conference", date: "Nov 2024" },
+              { title: "Würzburg Hackathon", subtitle: de ? "1. Platz" : "1st place", desc: de ? "Für die Teilnahme an der ConsulCon25 ausgewählt" : "Qualified for the ConsulCon25 conference", date: "Nov 2024" },
               { title: "Data4Good Berlin", subtitle: de ? "1. Platz, 500 €" : "1st place, €500", desc: de ? "Kategorie beim Hackathon der Hertie School gewonnen" : "Won our category at the Hertie School hackathon", date: "Jan 2025" },
-              { title: "Hack4Good Den Haag", subtitle: "Category Winner", desc: "Won our category at Hack4Good", date: "Jan 2025" },
-              { title: "ConsulCon25", subtitle: "Conference Speaker", desc: "Presented the Consul Democracy Analytics Tool", date: "Feb 2025" },
-              { title: "European Healthcare Hackathon", subtitle: "Participant", desc: "Competed among international teams in Prague", date: "Mar 2025" },
-              { title: "Berlin Blockchain Hackathons", subtitle: "Two 24h Web3 Sprints", desc: "Built prototypes in two 24-hour blockchain hackathons", date: "Jun 2025" },
+              { title: "Hack4Good Den Haag", subtitle: de ? "Gewinner der Kategorie" : "Category winner", desc: de ? "Die eigene Kategorie bei Hack4Good gewonnen" : "Won our category at Hack4Good", date: "Jan 2025" },
+              { title: "ConsulCon25", subtitle: de ? "Konferenzvortrag" : "Conference speaker", desc: de ? "Das Consul Democracy Analytics Tool vorgestellt" : "Presented the Consul Democracy Analytics Tool", date: "Feb 2025" },
+              { title: "European Healthcare Hackathon", subtitle: de ? "Teilnehmer" : "Participant", desc: de ? "Mit internationalen Teams in Prag angetreten" : "Competed among international teams in Prague", date: "Mar 2025" },
+              { title: "Berlin Blockchain Hackathons", subtitle: de ? "Zwei 24-Stunden-Web3-Sprints" : "Two 24-hour Web3 sprints", desc: de ? "Prototypen bei zwei 24-Stunden-Blockchain-Hackathons entwickelt" : "Built prototypes in two 24-hour blockchain hackathons", date: "Jun 2025" },
               { title: "Data4Good Berlin", subtitle: de ? "1. Platz, 500 €" : "1st place, €500", desc: de ? "Titel verteidigt und zum zweiten Mal in Folge gewonnen" : "Defended the title and won first place for the second year running", date: "Jan 2026" },
               { title: "Hackathon@PMRExpo 2026", subtitle: de ? "Teilnahme geplant" : "Upcoming participation", desc: de ? "Dreitägiger Hackathon zu sicherer Kommunikation und kritischer Infrastruktur, gemeinsam mit Freunden" : "Three-day hackathon on secure communications and critical infrastructure, joining friends", date: de ? "Nov. 2026" : "Nov 2026" },
             ].map((event, idx) => {
@@ -344,7 +344,7 @@ export default function HomeClient() {
       <hr className="divider" />
       {/* Certifications Section */}
       <section className="container py-12 scroll-fade-in">
-        <h2 className="text-2xl font-bold text-center mb-3">Certifications</h2>
+        <h2 className="text-2xl font-bold text-center mb-3">{de ? "Zertifikate" : "Certifications"}</h2>
         <p className="text-center text-gray-300 mb-8">
           {de ? "Alle Zertifikate finden Sie hier:" : "A dedicated certificates archive is available here:"}
           <a href="/certificates" className="ml-2 text-blue-400 hover:underline font-semibold">{de ? "Alle Zertifikate ansehen" : "View All Certificates"}</a>
@@ -353,14 +353,14 @@ export default function HomeClient() {
           {[
             {
               title: 'Google Advanced Data Analytics',
-              category: 'Professional Certificate',
+              category: de ? 'Berufszertifikat' : 'Professional Certificate',
               issued: '13 March 2026',
               image: '/certificates/google_advanced_data_analytics.png',
               verifyUrl: 'https://coursera.org/verify/professional-cert/LGR9L7X7L5RL',
             },
             {
               title: 'IBM Deep Learning with PyTorch, Keras and Tensorflow',
-              category: 'Specialization Certificate',
+              category: de ? 'Spezialisierungszertifikat' : 'Specialization Certificate',
               issued: '4 May 2026',
               image: '/certificates/ibm_deep_learning_with_pytorch_keras_and_tensorflow.png',
               verifyUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/23WN50BTKV7Z',

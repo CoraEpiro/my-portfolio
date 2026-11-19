@@ -89,7 +89,7 @@ export default async function HonorsAwardsPage() {
             <HonorsAwardsHeading />
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The original award documents, collected in a portfolio you can flip through.
+            <HonorsAwardsHeading description />
           </p>
         </div>
 
