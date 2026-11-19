@@ -49,7 +49,7 @@ export default function HomeClient() {
             ],
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Ingolstadt",
+              "addressLocality": "Munich",
               "addressCountry": "Germany"
             },
             "alumniOf": [
@@ -114,7 +114,7 @@ export default function HomeClient() {
         </p>
         <p className="text-base text-gray-400 mb-2 animate-slide-up" 
            style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
-          Ingolstadt, Deutschland
+          München, Deutschland
         </p>
       </section>
       <hr className="divider" />
@@ -193,6 +193,7 @@ export default function HomeClient() {
               { title: "European Healthcare Hackathon", subtitle: "Participant", desc: "Competed among international teams in Prague", date: "Mar 2025" },
               { title: "Berlin Blockchain Hackathons", subtitle: "Two 24h Web3 Sprints", desc: "Built prototypes in two 24-hour blockchain hackathons", date: "Jun 2025" },
               { title: "Data4Good Berlin", subtitle: de ? "1. Platz, 500 €" : "1st place, €500", desc: de ? "Titel verteidigt und zum zweiten Mal in Folge gewonnen" : "Defended the title and won first place for the second year running", date: "Jan 2026" },
+              { title: "Hackathon@PMRExpo 2026", subtitle: de ? "Teilnahme geplant" : "Upcoming participation", desc: de ? "Dreitägiger Hackathon zu sicherer Kommunikation und kritischer Infrastruktur, gemeinsam mit Freunden" : "Three-day hackathon on secure communications and critical infrastructure, joining friends", date: de ? "24.–26. Nov. 2026" : "Nov 24–26, 2026" },
             ].map((event, idx) => {
               const flexDir = idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
               return (

@@ -90,7 +90,7 @@ export default function ContactClient() {
                       </div>
                       <div>
                         <p className="text-gray-300">{de ? 'Standort' : 'Location'}</p>
-                        <p className="text-white">Ingolstadt, Deutschland</p>
+                        <p className="text-white">München, Deutschland</p>
                       </div>
                     </div>
                   </div>
