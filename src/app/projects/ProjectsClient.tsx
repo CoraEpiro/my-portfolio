@@ -303,7 +303,7 @@ export default function ProjectsClient() {
                       }`}
                       style={{ transitionDelay: `${400 + idx * 150 + tagIdx * 50}ms` }}
                     >
-                      {tag}
+                      {de ? ({ 'Weather Data': 'Wetterdaten', 'Predictive Modelling': 'Prognosemodelle', Data: 'Daten', 'Data Science': 'Data Science', Transportation: 'Verkehr', 'Prediction Model': 'Prognosemodell', LLM: 'LLM', 'Legal Tech': 'Legal Tech', Bilingual: 'Zweisprachig', 'Data4Good': 'Data4Good', History: 'Geschichte', ML: 'ML', Hackathon: 'Hackathon', 'Social Cohesion': 'Gesellschaftlicher Zusammenhalt', 'Civic Tech': 'Civic Tech', Speaking: 'Vortrag', Robotics: 'Robotik', Automation: 'Automatisierung' } as Record<string, string>)[tag] || tag : tag}
                     </span>
                   ))}
                 </div>
@@ -333,7 +333,7 @@ export default function ProjectsClient() {
                       </div>
                     </div>
                     <div className="space-y-3">
-                      <p className="text-gray-300">This university project builds a smart AGV prototype for logistics use cases. The system follows a color-coded grid, responds to multilingual voice commands, and switches between real-time navigation, parking, and obstacle handling through a hybrid RoboPro and Python architecture.</p>
+                      <p className="text-gray-300">{de ? 'In diesem Universitätsprojekt entsteht ein AGV-Prototyp für die Logistik. Das Fahrzeug folgt einem farbcodierten Raster, reagiert auf mehrsprachige Sprachbefehle und übernimmt Navigation, Parken sowie Hindernisvermeidung mit RoboPro und Python.' : 'This university project builds a smart AGV prototype for logistics use cases. The system follows a color-coded grid, responds to multilingual voice commands, and switches between real-time navigation, parking, and obstacle handling through a hybrid RoboPro and Python architecture.'}</p>
                       <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                         <li><strong>Voice control:</strong> multilingual speech input interpreted with GPT and converted into structured actions</li>
                         <li><strong>Parking:</strong> OCR detects the letter “P” to locate and align with parking spots</li>
@@ -356,7 +356,7 @@ export default function ProjectsClient() {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                       </div>
                     </a>
                   </div>
@@ -466,7 +466,7 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">ChatVocate: Azerbaijani Legal AI Assistant</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'ChatVocate: Zweisprachiger Rechtsassistent für Aserbaidschan' : 'ChatVocate: Azerbaijani Legal AI Assistant'}</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img loading="lazy" decoding="async" 
                       src="/legal-project/legal-project-cover.png" 
@@ -479,32 +479,32 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">A sophisticated, bilingual legal assistant chatbot specifically designed for the Azerbaijani legal system, combining advanced AI technology with intuitive user experience.</p>
+                    <p className="text-gray-300">{de ? 'Ein zweisprachiger Rechtsassistent für das aserbaidschanische Rechtssystem. Er verbindet KI-gestützte Antworten mit einer klaren Bedienung.' : 'A sophisticated, bilingual legal assistant chatbot specifically designed for the Azerbaijani legal system, combining advanced AI technology with intuitive user experience.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>AI Integration:</strong> Powered by OpenAI GPT-4 for contextually accurate legal responses</li>
-                      <li><strong>Bilingual Support:</strong> Native Azerbaijani with real-time English translation</li>
-                      <li><strong>Enterprise Security:</strong> JWT authentication, user isolation, and secure session management</li>
-                      <li><strong>Modern Tech Stack:</strong> Next.js 14, TypeScript, Tailwind CSS, and serverless architecture</li>
-                      <li><strong>Chat Management:</strong> Multi-chat interface with conversation persistence and context memory</li>
+                      <li><strong>{de ? 'KI-Integration:' : 'AI Integration:'}</strong> {de ? 'OpenAI GPT-4 für kontextbezogene Antworten auf Rechtsfragen' : 'Powered by OpenAI GPT-4 for contextually accurate legal responses'}</li>
+                      <li><strong>{de ? 'Zweisprachigkeit:' : 'Bilingual Support:'}</strong> {de ? 'Aserbaidschanisch mit Echtzeitübersetzung ins Englische' : 'Native Azerbaijani with real-time English translation'}</li>
+                      <li><strong>{de ? 'Sicherheit:' : 'Enterprise Security:'}</strong> {de ? 'JWT-Authentifizierung, getrennte Nutzerkonten und sichere Sitzungen' : 'JWT authentication, user isolation, and secure session management'}</li>
+                      <li><strong>{de ? 'Technologien:' : 'Modern Tech Stack:'}</strong> Next.js 14, TypeScript, Tailwind CSS</li>
+                      <li><strong>{de ? 'Chatverwaltung:' : 'Chat Management:'}</strong> {de ? 'Mehrere Chats mit gespeicherten Gesprächen und Kontext' : 'Multi-chat interface with conversation persistence and context memory'}</li>
                     </ul>
                   </div>
                   <div className="pt-4 flex gap-4">
                     <a href="https://www.chatvocate.info" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">
-                      Visit Live Site
+                      {de ? 'Website besuchen' : 'Visit Live Site'}
                     </a>
                     <a href="https://github.com/CoraEpiro/Legal-Project" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center flex-1">
-                      View GitHub
+                      {de ? 'Auf GitHub ansehen' : 'View GitHub'}
                     </a>
                   </div>
                 </div>
 
                 {/* Right Column: Technical Details & Architecture */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Technical Architecture</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Technischer Aufbau' : 'Technical Architecture'}</h3>
                   
                   {/* Technology Stack */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Technology Stack</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Verwendete Technologien' : 'Technology Stack'}</h4>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-blue-400 font-semibold mb-2">Frontend</h5>
@@ -547,7 +547,7 @@ export default function ProjectsClient() {
 
                   {/* Target Users */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Target Users</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Zielgruppen' : 'Target Users'}</h4>
                     <div className="space-y-3">
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                         <h5 className="text-blue-400 font-semibold mb-2">Legal Professionals</h5>
@@ -566,7 +566,7 @@ export default function ProjectsClient() {
 
                   {/* Performance Metrics */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Performance Highlights</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Leistungsmerkmale' : 'Performance Highlights'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
@@ -603,7 +603,7 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Rain in Australia: A Predictive Analysis</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Regen in Australien: Eine Prognoseanalyse' : 'Rain in Australia: A Predictive Analysis'}</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img loading="lazy" decoding="async" 
                       src="/projects/rain-in-australia/rain-in-australia-cover.jpg" 
@@ -616,15 +616,15 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">This project dives into a large dataset of weather conditions in Australia to predict whether it will rain the next day.</p>
+                    <p className="text-gray-300">{de ? 'Dieses Projekt nutzt umfangreiche australische Wetterdaten, um vorherzusagen, ob es am nächsten Tag regnet.' : 'This project dives into a large dataset of weather conditions in Australia to predict whether it will rain the next day.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Data Processing:</strong> Handled missing values, feature scaling, and categorical data encoding.</li>
-                      <li><strong>Machine Learning:</strong> Implemented and evaluated a Logistic Regression model.</li>
-                      <li><strong>Technology:</strong> Utilized Python, Pandas, and Scikit-learn in a Jupyter Notebook.</li>
+                      <li><strong>{de ? 'Datenaufbereitung:' : 'Data Processing:'}</strong> {de ? 'Umgang mit fehlenden Werten, Skalierung und Kodierung kategorialer Merkmale.' : 'Handled missing values, feature scaling, and categorical data encoding.'}</li>
+                      <li><strong>{de ? 'Maschinelles Lernen:' : 'Machine Learning:'}</strong> {de ? 'Implementierung und Bewertung eines logistischen Regressionsmodells.' : 'Implemented and evaluated a Logistic Regression model.'}</li>
+                      <li><strong>{de ? 'Technologien:' : 'Technology:'}</strong> {de ? 'Python, Pandas und Scikit-learn in Jupyter Notebook.' : 'Utilized Python, Pandas, and Scikit-learn in a Jupyter Notebook.'}</li>
                     </ul>
                   </div>
                   <div className="space-y-3 pt-4 border-t border-gray-700">
-                    <h4 className="text-lg font-semibold text-white">Collaborator</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Mitwirkende' : 'Collaborator'}</h4>
                     <div className="flex flex-col gap-3">
                       <div className="flex items-center justify-between p-2 rounded-lg bg-gray-800 border border-gray-600">
                         <span className="font-medium text-white">Denis Hoti</span>
@@ -641,18 +641,18 @@ export default function ProjectsClient() {
                   </div>
                   <div className="pt-4 flex gap-4">
                     <a href="https://github.com/CoraEpiro/rain-in-australia-binder" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
-                      View on GitHub
+                      {de ? 'Auf GitHub ansehen' : 'View on GitHub'}
                     </a>
                   </div>
                 </div>
 
                 {/* Right Column: Notebook Preview */}
                 <div className="h-full flex flex-col">
-                  <h3 className="text-xl font-semibold text-white mb-3 mt-3">Notebook Preview</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3 mt-3">{de ? 'Notebook-Vorschau' : 'Notebook Preview'}</h3>
                   
                   {/* HTML Preview Section */}
                   <div className="space-y-3 mb-6">
-                    <h4 className="text-lg font-semibold text-white">HTML Report Preview</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'HTML-Berichtsvorschau' : 'HTML Report Preview'}</h4>
                     <div className="relative rounded-lg overflow-hidden border border-gray-700">
                       <iframe
                         src="/projects/rain-in-australia/RainInAustralia.html"
@@ -673,7 +673,7 @@ export default function ProjectsClient() {
                   
                   {/* PowerPoint Presentation Section */}
                   <div className="space-y-3 mb-6">
-                    <h4 className="text-lg font-semibold text-white">PowerPoint Presentation</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'PowerPoint-Präsentation' : 'PowerPoint Presentation'}</h4>
                     <a
                       href="https://kude-my.sharepoint.com/:p:/g/personal/ali_guliyev_stud_ku_de/EfCfWPZhgTpGo-svG7enMvoBrsg2OhPVhcyPrirNq3oyGg?e=GB6saq"
                       target="_blank"
@@ -686,7 +686,7 @@ export default function ProjectsClient() {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                       </div>
                     </a>
                   </div>
@@ -727,7 +727,7 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">ConsulCon25: From Würzburg to Gran Canaria</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'ConsulCon25: Von Würzburg nach Gran Canaria' : 'ConsulCon25: From Würzburg to Gran Canaria'}</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img loading="lazy" decoding="async" 
                       src="/projects/consulcon25/consulcon25-cover.png" 
@@ -740,15 +740,15 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">A comprehensive presentation project that showcases our work developed in Würzburg and presented at the prestigious ConsulCon25 conference in Gran Canaria, Spain.</p>
+                    <p className="text-gray-300">{de ? 'Das Projekt wurde beim Würzburger Hackathon entwickelt und anschließend auf der ConsulCon25 in Gran Canaria, Spanien, vorgestellt.' : 'A presentation project showcasing work developed in Würzburg and presented at the ConsulCon25 conference in Gran Canaria, Spain.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Development:</strong> Project conceptualization and development in Würzburg, Germany</li>
-                      <li><strong>Presentation:</strong> Live presentation at ConsulCon25 in Gran Canaria, Spain</li>
-                      <li><strong>Content:</strong> Video presentation, interactive website, and Canva slides</li>
-                      <li><strong>Technology:</strong> Modern web technologies and presentation tools</li>
+                      <li><strong>{de ? 'Entwicklung:' : 'Development:'}</strong> {de ? 'Konzeption und Umsetzung in Würzburg' : 'Project conceptualization and development in Würzburg, Germany'}</li>
+                      <li><strong>{de ? 'Vortrag:' : 'Presentation:'}</strong> {de ? 'Präsentation auf der ConsulCon25 in Gran Canaria' : 'Live presentation at ConsulCon25 in Gran Canaria, Spain'}</li>
+                      <li><strong>{de ? 'Inhalte:' : 'Content:'}</strong> {de ? 'Videovortrag, interaktive Website und Canva-Folien' : 'Video presentation, interactive website, and Canva slides'}</li>
+                      <li><strong>{de ? 'Technologien:' : 'Technology:'}</strong> {de ? 'Webtechnologien und Präsentationstools' : 'Modern web technologies and presentation tools'}</li>
                     </ul>
                     <div className="space-y-3 pt-4 border-t border-gray-700">
-                      <h4 className="text-lg font-semibold text-white">Collaborators</h4>
+                      <h4 className="text-lg font-semibold text-white">{de ? 'Mitwirkende' : 'Collaborators'}</h4>
                       <div className="flex flex-col gap-3">
                         {[
                           { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
@@ -770,20 +770,18 @@ export default function ProjectsClient() {
                       </div>
                     </div>
                     <div className="pt-4 flex gap-4">
-                      <a href="https://github.com/denishotii/ConsulAnalytics" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
-                        View on GitHub
-                      </a>
+                      <a href="https://github.com/denishotii/ConsulAnalytics" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">{de ? 'Auf GitHub ansehen' : 'View on GitHub'}</a>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Column: Video, Website, and Presentation */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Project Components</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Projektbestandteile' : 'Project Components'}</h3>
                   
                   {/* Website Section */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Projektwebsite' : 'Hosted Website'}</h4>
                     <a
                       href="https://consulanalytics.denishoti.dev"
                       target="_blank"
@@ -796,14 +794,14 @@ export default function ProjectsClient() {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Website besuchen' : 'Visit Website'}</span>
                       </div>
                     </a>
                   </div>
 
                   {/* Canva Presentation Section */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Canva Presentation</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Canva-Präsentation' : 'Canva Presentation'}</h4>
                     <a
                       href="https://www.canva.com/design/DAGdxuu9z08/ud-4yV5dVODq2phEJc7Ahg/view?utm_content=DAGdxuu9z08&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7d882f3544#1"
                       target="_blank"
@@ -816,7 +814,7 @@ export default function ProjectsClient() {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                       </div>
                     </a>
                   </div>
@@ -832,7 +830,7 @@ export default function ProjectsClient() {
             <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-6xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
               <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowVgiModal(false)}>&times;</button>
               
-              <h2 className="text-3xl font-bold text-white mb-6 px-8 pt-8">VGI-Flexi: Rural Transport Analytics</h2>
+                  <h2 className="text-3xl font-bold text-white mb-6 px-8 pt-8">{de ? 'VGI-Flexi: Analyse des ländlichen Verkehrs' : 'VGI-Flexi: Rural Transport Analytics'}</h2>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-8 pb-8">
                 {/* Left Column: Image & Details */}
@@ -849,9 +847,9 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">An analytics platform for optimizing rural public transportation. Using a logistic regression model, this project predicts passenger no-shows for the VGI-Flexi service, enabling data-driven adjustments for more reliable and sustainable operations.</p>
+                    <p className="text-gray-300">{de ? 'Eine Analyseplattform zur Verbesserung des öffentlichen Verkehrs im ländlichen Raum. Ein logistisches Regressionsmodell prognostiziert, welche Fahrgäste den VGI-Flexi-Service nicht nutzen, und unterstützt so eine verlässlichere Planung.' : 'An analytics platform for optimizing rural public transportation. Using a logistic regression model, this project predicts passenger no-shows for the VGI-Flexi service, enabling data-driven adjustments for more reliable and sustainable operations.'}</p>
                     <div className="space-y-3 pt-4 border-t border-gray-700">
-                      <h4 className="text-lg font-semibold text-white">Collaborators</h4>
+                      <h4 className="text-lg font-semibold text-white">{de ? 'Mitwirkende' : 'Collaborators'}</h4>
                       <div className="flex flex-col gap-3">
                         {[
                           { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
@@ -880,13 +878,11 @@ export default function ProjectsClient() {
                   <a href="https://8nxly8ub2.dora.run" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
                     <img loading="lazy" decoding="async" src="/projects/university/vgi-challenge/vgi-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
+                      <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Website besuchen' : 'Visit Website'}</span>
                     </div>
                   </a>
                   <div className="pt-4 flex gap-4">
-                    <a href="https://github.com/denishotii/ConsulAnalytics" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
-                      View on GitHub
-                    </a>
+                    <a href="https://github.com/denishotii/ConsulAnalytics" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">{de ? 'Auf GitHub ansehen' : 'View on GitHub'}</a>
                   </div>
                 </div>
               </div>
@@ -903,7 +899,7 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Silent Routes: Holocaust Remembrance</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Silent Routes: Erinnerung an den Holocaust' : 'Silent Routes: Holocaust Remembrance'}</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img loading="lazy" decoding="async" 
                       src="/projects/holocaust-remembrance/data4good-cover.png" 
@@ -916,9 +912,9 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">A data-driven project to visualize the forced journeys of Holocaust victims. Using data from the Arolsen Archives, this project sheds light on the harrowing statistical patterns of persecution, empowering exploration and remembrance.</p>
+                    <p className="text-gray-300">{de ? 'Ein datenbasiertes Projekt zur Visualisierung der Deportationswege von Holocaust-Opfern. Daten des Arolsen Archives machen historische Muster der Verfolgung sichtbar und laden zur Auseinandersetzung mit den Einzelschicksalen ein.' : 'A data-driven project to visualize the forced journeys of Holocaust victims. Using data from the Arolsen Archives, this project sheds light on the harrowing statistical patterns of persecution, empowering exploration and remembrance.'}</p>
                     <div className="space-y-3 pt-4 border-t border-gray-700">
-                      <h4 className="text-lg font-semibold text-white">Collaborators</h4>
+                      <h4 className="text-lg font-semibold text-white">{de ? 'Mitwirkende' : 'Collaborators'}</h4>
                       <div className="flex flex-col gap-3">
                         {[
                           { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
@@ -945,20 +941,18 @@ export default function ProjectsClient() {
 
                 {/* Right Column: Website */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white mt-3">Project Resources</h3>
+                  <h3 className="text-xl font-semibold text-white mt-3">{de ? 'Projektressourcen' : 'Project Resources'}</h3>
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Hosted Website</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Projektwebsite' : 'Hosted Website'}</h4>
                     <a href="https://iwv9pz9d.dora.run/" target="_blank" rel="noopener noreferrer" className="block relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
                       <img loading="lazy" decoding="async" src="/projects/holocaust-remembrance/data4good-cover.png" alt="Hosted Website Preview" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">Visit Website</span>
+                        <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Website besuchen' : 'Visit Website'}</span>
                       </div>
                     </a>
                   </div>
                   <div className="pt-4 flex gap-4">
-                    <a href="https://github.com/denishotii/Data4Good25" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
-                      View on GitHub
-                    </a>
+                    <a href="https://github.com/denishotii/Data4Good25" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">{de ? 'Auf GitHub ansehen' : 'View on GitHub'}</a>
                   </div>
                 </div>
               </div>
@@ -975,7 +969,7 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">coRELation: Religion, Diversity & Social Cohesion</h2>
+                  <h2 className="text-3xl font-bold text-white">coRELation: {de ? 'Religion, Vielfalt und gesellschaftlicher Zusammenhalt' : 'Religion, Diversity & Social Cohesion'}</h2>
                   <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                     <img loading="lazy" decoding="async" 
                       src="/projects/corel/corel-cover.jpg" 
@@ -988,7 +982,7 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">A Data4Good26 hackathon project that transforms complex survey data into meaningful insights on religious diversity, trust, and social cohesion. Discover how religious coexistence shapes solidarity and the future of pluralistic societies.</p>
+                    <p className="text-gray-300">{de ? 'Ein Hackathon-Projekt von Data4Good26, das Umfragedaten zu religiöser Vielfalt, Vertrauen und gesellschaftlichem Zusammenhalt auswertet. Es untersucht, wie das Zusammenleben verschiedener Religionen Solidarität und pluralistische Gesellschaften prägt.' : 'A Data4Good26 hackathon project that transforms complex survey data into meaningful insights on religious diversity, trust, and social cohesion. It explores how religious coexistence shapes solidarity and pluralistic societies.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Data-driven:</strong> ReligionMonitor survey data visualized for policymakers, educators, and civil society.</li>
                       <li><strong>Key themes:</strong> Fear and knowledge gaps, solidarity in crisis, and how contact improves perception.</li>
@@ -996,7 +990,7 @@ export default function ProjectsClient() {
                     </ul>
                   </div>
                   <div className="space-y-3 pt-4 border-t border-gray-700">
-                    <h4 className="text-lg font-semibold text-white">Collaborators</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Mitwirkende' : 'Collaborators'}</h4>
                     <div className="flex flex-col gap-3">
                       {[
                         { name: 'Denis Hoti', linkedInUrl: 'https://www.linkedin.com/in/denishoti/', websiteUrl: 'https://denishoti.dev' },
@@ -1023,9 +1017,9 @@ export default function ProjectsClient() {
 
                 {/* Right Column: single preview with hover links for Website & Canva */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Project Resources</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Projektressourcen' : 'Project Resources'}</h3>
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Website & Canva</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Website und Canva' : 'Website & Canva'}</h4>
                     <div className="relative group aspect-video rounded-lg overflow-hidden border border-gray-700">
                     <img loading="lazy" decoding="async"
                       src="/projects/corel/corel-cover.jpg"
@@ -1038,9 +1032,7 @@ export default function ProjectsClient() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-5 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors"
-                      >
-                        Visit Website
-                      </a>
+                      >{de ? 'Canva-Präsentation öffnen' : 'Open Canva Presentation'}</a>
                       <a
                         href="https://www.canva.com/design/DAG_V3nTRwg/LqzjoeOI0dX_0IokSNwIDQ/view?utm_content=DAG_V3nTRwg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he5c1a8d7a3"
                         target="_blank"
@@ -1052,9 +1044,7 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   </div>
-                  <a href="https://github.com/denishotii/Data4Good26" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">
-                    View on GitHub
-                  </a>
+                  <a href="https://github.com/denishotii/Data4Good26" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-gray-700 text-white font-bold rounded-lg shadow hover:bg-gray-600 transition-colors text-center w-full">{de ? 'Auf GitHub ansehen' : 'View on GitHub'}</a>
                 </div>
               </div>
             </div>
@@ -1070,11 +1060,11 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Newton's Law of Cooling (+experiment)</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Newtonsches Abkühlungsgesetz (mit Experiment)' : "Newton's Law of Cooling (+experiment)"}</h2>
                   
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsfolien' : 'Presentation Slides'}</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async" 
@@ -1083,7 +1073,7 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                         </div>
                       </a>
                     </div>
@@ -1091,7 +1081,7 @@ export default function ProjectsClient() {
 
                   {/* Embedded YouTube Video */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Experiment Video</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Experimentvideo' : 'Experiment video'}</h4>
                     <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-lg border border-gray-600">
                       <iframe
                         src="https://www.youtube.com/embed/6Sp1Di67pTI"
@@ -1103,7 +1093,7 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">An in-depth mathematical exploration of Newton's Law of Cooling through theoretical analysis and practical experimentation. This project demonstrates how differential equations model real-world temperature phenomena.</p>
+                    <p className="text-gray-300">{de ? 'Eine mathematische Untersuchung des Newtonschen Abkühlungsgesetzes mit theoretischer Herleitung und praktischem Experiment. Das Projekt zeigt, wie Differentialgleichungen reale Temperaturverläufe beschreiben.' : "An in-depth mathematical exploration of Newton's Law of Cooling through theoretical analysis and practical experimentation. This project demonstrates how differential equations model real-world temperature phenomena."}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Mathematical Theory:</strong> Derivation and analysis of the cooling differential equation</li>
                       <li><strong>Experimental Design:</strong> Temperature measurement setup and data collection</li>
@@ -1117,19 +1107,17 @@ export default function ProjectsClient() {
                     <a href={presentations.find(p => p.id === 7)?.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow hover:bg-red-700 transition-colors text-center flex-1">
                       Open in YouTube
                     </a>
-                    <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">
-                      View Presentation
-                    </a>
+                    <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">{de ? 'Canva-Präsentation öffnen' : 'Open Canva Presentation'}</a>
                   </div>
                 </div>
 
                 {/* Right Column: Mathematical Details */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Mathematisches Modell' : 'Mathematical Framework'}</h3>
                   
                   {/* Differential Equation */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Core Equation</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Kern-Gleichung' : 'Core Equation'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center">
                         <div className="text-2xl text-blue-400 mb-3 font-serif flex items-center justify-center" style={{fontFamily: 'Times, serif'}}>
@@ -1149,7 +1137,7 @@ export default function ProjectsClient() {
 
                   {/* Experimental Setup */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Experimental Components</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Bestandteile des Experiments' : 'Experimental Components'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-blue-400 font-semibold mb-2">Temperature Measurement</h5>
@@ -1180,7 +1168,7 @@ export default function ProjectsClient() {
 
                   {/* Solution & Results */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Analytical Solution</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Analytische Lösung' : 'Analytical Solution'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center">
                         <div className="text-xl text-green-400 mb-3 font-serif" style={{fontFamily: 'Times, serif'}}>
@@ -1207,10 +1195,10 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">1-D Presentation of 3-Body Problem</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Das Dreikörperproblem in einer Dimension' : '1-D Presentation of 3-Body Problem'}</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsfolien' : 'Presentation Slides'}</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/The-1D-Three-Body-Problem-A-Numerical-Approach-rr3lhiwd73g7j3s?mode=doc" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async" 
@@ -1219,14 +1207,14 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                         </div>
                       </a>
                     </div>
                   </div>
                   {/* Embedded YouTube Video */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Video</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsvideo' : 'Presentation video'}</h4>
                     <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-lg border border-gray-600">
                       <iframe
                         src="https://www.youtube.com/embed/j_LV2-FKD8I"
@@ -1238,7 +1226,7 @@ export default function ProjectsClient() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">A comprehensive mathematical presentation exploring the classical three-body problem through one-dimensional analysis. This work showcases the complexity and beauty of celestial mechanics using differential equations.</p>
+                    <p className="text-gray-300">{de ? 'Die Präsentation untersucht das klassische Dreikörperproblem anhand einer eindimensionalen Analyse. Sie veranschaulicht die Komplexität der Himmelsmechanik mit Differentialgleichungen.' : 'A mathematical presentation exploring the classical three-body problem through one-dimensional analysis and differential equations.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Classical Mechanics:</strong> Newton's laws applied to gravitational systems</li>
                       <li><strong>Differential Equations:</strong> Second-order nonlinear system analysis</li>
@@ -1251,11 +1239,11 @@ export default function ProjectsClient() {
 
                 {/* Right Column: Mathematical Details */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Mathematisches Modell' : 'Mathematical Framework'}</h3>
                   
                   {/* Core Equations */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">System of Equations</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Gleichungssystem' : 'System of Equations'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center space-y-3" style={{fontFamily: 'Times, serif'}}>
                         <div className="text-xl text-blue-400">
@@ -1276,7 +1264,7 @@ export default function ProjectsClient() {
 
                   {/* Problem Characteristics */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Problem Characteristics</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Eigenschaften des Problems' : 'Problem Characteristics'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-purple-400 font-semibold mb-2">Gravitational Forces</h5>
@@ -1307,7 +1295,7 @@ export default function ProjectsClient() {
 
                   {/* Historical Context */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Historical Significance</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Historische Bedeutung' : 'Historical Significance'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2">
                         <p className="text-gray-300 text-sm"><strong>Henri Poincaré (1889):</strong> Proved no general solution exists</p>
@@ -1331,10 +1319,10 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Differential Equations III: Advanced Mathematical Analysis</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Differentialgleichungen III: Vertiefte mathematische Analyse' : 'Differential Equations III: Advanced Mathematical Analysis'}</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsfolien' : 'Presentation Slides'}</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/pe8f0u9xf8gh5ls?following_id=lvwkfuullwkcsoq&follow_on_start=true" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async" 
@@ -1343,13 +1331,13 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">An advanced mathematical analysis presentation exploring complex differential equations and their applications in modern mathematics and physics.</p>
+                    <p className="text-gray-300">{de ? 'Eine Präsentation zu komplexen Differentialgleichungen und ihren Anwendungen in der modernen Mathematik und Physik.' : 'An advanced mathematical analysis presentation exploring complex differential equations and their applications in modern mathematics and physics.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Advanced Mathematics:</strong> Complex differential equation analysis</li>
                       <li><strong>Mathematical Theory:</strong> Theoretical foundations and proofs</li>
@@ -1365,7 +1353,7 @@ export default function ProjectsClient() {
                   
                   {/* Mathematical Concepts */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Core Mathematical Concepts</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Zentrale mathematische Konzepte' : 'Core Mathematical Concepts'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-3">
                         <div className="text-center">
@@ -1386,7 +1374,7 @@ export default function ProjectsClient() {
 
                   {/* Analysis Framework */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Analysis Framework</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Analysemethoden' : 'Analysis Framework'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-blue-400 font-semibold mb-2">Mathematical Methods</h5>
@@ -1417,7 +1405,7 @@ export default function ProjectsClient() {
 
                   {/* Academic Context */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Academic Context</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Akademischer Kontext' : 'Academic Context'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2">
                         <p className="text-gray-300 text-sm"><strong>Advanced Mathematics:</strong> Complex differential equation analysis</p>
@@ -1441,10 +1429,10 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Locusts vs. Crops: A Predator-Prey Model</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Heuschrecken und Nutzpflanzen: Ein Räuber-Beute-Modell' : 'Locusts vs. Crops: A Predator-Prey Model'}</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsfolien' : 'Presentation Slides'}</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Locusts-vs-Crops-A-Predator-Prey-Model-jexdfy88gxn63jt" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
@@ -1453,13 +1441,13 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">A comprehensive mathematical exploration of the dynamic interaction between locust populations and crop growth. This presentation models predator-prey relationships with realistic human intervention strategies for agricultural pest management.</p>
+                    <p className="text-gray-300">{de ? 'Die Präsentation modelliert das Zusammenspiel von Heuschreckenpopulationen und Pflanzenwachstum. Dazu gehören mögliche Eingriffe zur Schädlingsbekämpfung und deren Auswirkungen auf die Landwirtschaft.' : 'A mathematical exploration of the interaction between locust populations and crop growth, including intervention strategies for agricultural pest management.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Basic Dynamics:</strong> Exponential and logistic growth models for crops and locust populations</li>
                       <li><strong>Predator-Prey Interaction:</strong> Modeling crop consumption and locust reproduction based on food availability</li>
@@ -1472,11 +1460,11 @@ export default function ProjectsClient() {
 
                 {/* Right Column: Mathematical Details */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Mathematisches Modell' : 'Mathematical Framework'}</h3>
 
                   {/* Core Equations */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Dynamic Model Equations</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Gleichungen des dynamischen Modells' : 'Dynamic Model Equations'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center space-y-2" style={{fontFamily: 'Times, serif'}}>
                         <div className="text-sm text-gray-400 mb-2"><strong>Initial Model (without interaction):</strong></div>
@@ -1500,7 +1488,7 @@ export default function ProjectsClient() {
 
                   {/* Model Components */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Key Parameters</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Zentrale Parameter' : 'Key Parameters'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-green-400 font-semibold mb-2">Crop Dynamics</h5>
@@ -1531,7 +1519,7 @@ export default function ProjectsClient() {
 
                   {/* Applications */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Real-World Applications</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Anwendungen' : 'Real-World Applications'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2">
                         <p className="text-gray-300 text-sm"><strong>Agricultural Pest Management:</strong> Predicting locust swarms and optimizing spray schedules</p>
@@ -1555,10 +1543,10 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Lagrangian Modeling: Falling Rope & Mass</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Lagrange-Mechanik: Fallendes Seil mit Gewicht' : 'Lagrangian Modeling: Falling Rope & Mass'}</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsfolien' : 'Presentation Slides'}</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Lagrangian-Modeling-Falling-Rope-Mass-4bxdkfv0wgyghk9" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
@@ -1567,13 +1555,13 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">A comprehensive exploration of Lagrangian mechanics applied to a rope with an attached object falling into a deep hole. Using energy conservation and the Euler-Lagrange equation, the presentation demonstrates how to infer falling depth from measured fall time in a conservative system.</p>
+                    <p className="text-gray-300">{de ? 'Die Präsentation wendet die Lagrange-Mechanik auf ein Seil mit angehängter Masse an, das in die Tiefe fällt. Mit Energieerhaltung und der Euler-Lagrange-Gleichung wird aus der gemessenen Fallzeit die Falltiefe bestimmt.' : 'An exploration of Lagrangian mechanics applied to a rope with an attached object falling into a deep hole. Energy conservation and the Euler-Lagrange equation are used to infer falling depth from measured fall time.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Problem Setup:</strong> Rope with linear mass density falling with attached object</li>
                       <li><strong>System Variables:</strong> Total rope mass M, object mass m, rope length ℓ, and fallen distance x(t)</li>
@@ -1587,11 +1575,11 @@ export default function ProjectsClient() {
 
                 {/* Right Column: Mathematical Details */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Mathematisches Modell' : 'Mathematical Framework'}</h3>
 
                   {/* System Description */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">System Variables & Masses</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Systemvariablen und Massen' : 'System Variables & Masses'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2 font-mono">
                         <div><strong>M:</strong> Total rope mass</div>
@@ -1607,7 +1595,7 @@ export default function ProjectsClient() {
 
                   {/* Kinetic Energy */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Kinetic Energy (T)</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Kinetische Energie (T)' : 'Kinetic Energy (T)'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center space-y-2" style={{fontFamily: 'Times, serif'}}>
                         <div className="text-sm text-blue-400">
@@ -1622,7 +1610,7 @@ export default function ProjectsClient() {
 
                   {/* Potential Energy */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Potential Energy (V)</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Potenzielle Energie (V)' : 'Potential Energy (V)'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2 mb-3">
                         <div><strong>Object:</strong> V_obj = -mgx</div>
@@ -1636,7 +1624,7 @@ export default function ProjectsClient() {
 
                   {/* Lagrangian */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Lagrangian (L = T - V)</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Lagrange-Funktion (L = T - V)' : 'Lagrangian (L = T - V)'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center" style={{fontFamily: 'Times, serif'}}>
                         <div className="text-yellow-400 text-lg">
@@ -1648,7 +1636,7 @@ export default function ProjectsClient() {
 
                   {/* Equation of Motion */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Equation of Motion</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Bewegungsgleichung' : 'Equation of Motion'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 mb-3">
                         From Euler-Lagrange equation:
@@ -1661,7 +1649,7 @@ export default function ProjectsClient() {
 
                   {/* Energy Conservation */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Solution via Energy Conservation</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Lösung mit Energieerhaltung' : 'Solution via Energy Conservation'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2">
                         <div>Total energy E = T + V is conserved</div>
@@ -1675,7 +1663,7 @@ export default function ProjectsClient() {
 
                   {/* Quadrature Solution */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Solution by Quadrature</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Lösung durch Quadratur' : 'Solution by Quadrature'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 mb-3">
                         Separating variables and integrating:
@@ -1691,7 +1679,7 @@ export default function ProjectsClient() {
 
                   {/* Inverse Problem */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Inverse Problem</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Inverses Problem' : 'Inverse Problem'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-gray-300 text-sm space-y-2">
                         <p>The function t(x) creates a one-to-one mapping between falling depth and time. By measuring fall time experimentally, the hole depth can be determined through numerical inversion.</p>
@@ -1713,9 +1701,9 @@ export default function ProjectsClient() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Universal Approximation, Transformers & Sumformers</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Universelle Approximation, Transformer und Sumformer' : 'Universal Approximation, Transformers & Sumformers'}</h2>
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsfolien' : 'Presentation Slides'}</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://canva.link/09it528ra1p1miu" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
@@ -1724,14 +1712,14 @@ export default function ProjectsClient() {
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div className="space-y-3">
                     <p className="text-gray-300">
-                      An academic seminar for data science students (6th semester) exploring how neural networks approximate functions, how attention mechanisms work, and how transformer-style architectures, including sumformers, build on these ideas.
+                      {de ? 'Ein akademisches Seminar für Data-Science-Studierende im sechsten Semester. Es behandelt, wie neuronale Netze Funktionen approximieren, wie Attention funktioniert und wie Transformer sowie Sumformer auf diesen Grundlagen aufbauen.' : 'An academic seminar for data science students (6th semester) exploring how neural networks approximate functions, how attention mechanisms work, and how transformer-style architectures, including sumformers, build on these ideas.'}
                     </p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
                       <li><strong>Universal Approximation:</strong> Why neural networks can represent complex functions</li>
@@ -1746,22 +1734,18 @@ export default function ProjectsClient() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center"
-                    >
-                      Open Canva Presentation
-                    </a>
+                    >{de ? 'Canva-Präsentation öffnen' : 'Open Canva Presentation'}</a>
                     <button
                       onClick={() => setShowSeventhReport(!showSeventhReport)}
                       className={`inline-block px-6 py-3 font-bold rounded-lg shadow transition-colors text-center ${showSeventhReport ? 'bg-green-700 text-white hover:bg-green-800' : 'bg-green-600 text-white hover:bg-green-700'}`}
                     >
-                      {showSeventhReport ? 'Hide Report' : 'View Seminar Report'}
+                      {showSeventhReport ? (de ? 'Bericht ausblenden' : 'Hide Report') : (de ? 'Seminararbeit ansehen' : 'View Seminar Report')}
                     </button>
                     <a
                       href="/projects/university/universal-approximation-report.pdf"
                       download
                       className="inline-block px-6 py-3 bg-gray-600 text-white font-bold rounded-lg shadow hover:bg-gray-700 transition-colors text-center"
-                    >
-                      Download Report (PDF)
-                    </a>
+                    >{de ? 'Bericht herunterladen (PDF)' : 'Download Report (PDF)'}</a>
                   </div>
                   {showSeventhReport && (
                     <div className="mt-2 animate-fade-in">
@@ -1812,53 +1796,53 @@ export default function ProjectsClient() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start p-8">
                 {/* Left Column: Image & Details */}
                 <div className="flex flex-col gap-6">
-                  <h2 className="text-3xl font-bold text-white">Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics</h2>
+                  <h2 className="text-3xl font-bold text-white">{de ? 'Autokatalytische chemische Reaktionen: Von der Reaktionsstruktur zur Dynamik' : 'Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics'}</h2>
                   {/* Presentation Slide Preview */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Presentation Slides</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Präsentationsfolien' : 'Presentation Slides'}</h4>
                     <div className="relative group aspect-video w-full rounded-lg overflow-hidden border border-gray-600">
                       <a href="https://gamma.app/docs/Autocatalytic-Chemical-Reactions-From-Reaction-Structure-to-Emerg-3ffq619efwhr7p3" target="_blank" rel="noopener noreferrer" className="block w-full h-full">
                         <img loading="lazy" decoding="async"
                           src="/projects/university/sixth-presentation-slide-cover.png"
-                          alt="Autocatalytic Chemical Reactions Presentation Cover"
+                          alt={de ? 'Titelbild der Präsentation zu autokatalytischen chemischen Reaktionen' : 'Autocatalytic Chemical Reactions Presentation Cover'}
                           className="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">View Presentation</span>
+                          <span className="text-white text-xl font-bold px-4 py-2 rounded-lg bg-black/50">{de ? 'Präsentation ansehen' : 'View Presentation'}</span>
                         </div>
                       </a>
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <p className="text-gray-300">This presentation explores how seemingly simple changes in chemical reaction structures can lead to complex, nonlinear dynamics. It delves into autocatalytic reactions, examining both deterministic (ODE-based) and stochastic (particle-based) modeling approaches to understand their emergent behaviors and real-world implications.</p>
+                    <p className="text-gray-300">{de ? 'Diese Präsentation zeigt, wie kleine Änderungen in chemischen Reaktionsstrukturen zu komplexen, nichtlinearen Dynamiken führen können. Sie betrachtet autokatalytische Reaktionen mit deterministischen Modellen auf Basis gewöhnlicher Differentialgleichungen und stochastischen Teilchenmodellen.' : 'This presentation explores how seemingly simple changes in chemical reaction structures can lead to complex, nonlinear dynamics. It examines autocatalytic reactions using both deterministic (ODE-based) and stochastic (particle-based) models.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Foundational Concepts:</strong> Chemical chain reactions, biological growth, and spread of phenomena</li>
-                      <li><strong>Classical Mass Action:</strong> Stoichiometry, reaction rates, and predictable linear dynamics</li>
-                      <li><strong>Autocatalytic Twist:</strong> Self-promoting reactions with positive feedback loops</li>
-                      <li><strong>Deterministic Model:</strong> Deriving the logistic equation from reaction kinetics</li>
-                      <li><strong>Stochastic Simulation:</strong> Particle-based models with collision-based reactions</li>
-                      <li><strong>Reversible Reactions:</strong> Dynamic equilibrium and complex system behaviors</li>
+                      <li><strong>{de ? 'Grundlagen' : 'Foundational concepts'}:</strong> {de ? 'Chemische Kettenreaktionen, biologisches Wachstum und Ausbreitung' : 'Chemical chain reactions, biological growth, and spread of phenomena'}</li>
+                      <li><strong>{de ? 'Klassisches Massenwirkungsgesetz' : 'Classical mass action'}:</strong> {de ? 'Stöchiometrie, Reaktionsgeschwindigkeiten und vorhersehbare lineare Dynamik' : 'Stoichiometry, reaction rates, and predictable linear dynamics'}</li>
+                      <li><strong>{de ? 'Autokatalyse' : 'Autocatalytic reactions'}:</strong> {de ? 'Selbstverstärkende Reaktionen mit positiver Rückkopplung' : 'Self-promoting reactions with positive feedback loops'}</li>
+                      <li><strong>{de ? 'Deterministisches Modell' : 'Deterministic model'}:</strong> {de ? 'Herleitung der logistischen Gleichung aus der Reaktionskinetik' : 'Deriving the logistic equation from reaction kinetics'}</li>
+                      <li><strong>{de ? 'Stochastische Simulation' : 'Stochastic simulation'}:</strong> {de ? 'Teilchenmodelle mit kollisionsbasierten Reaktionen' : 'Particle-based models with collision-based reactions'}</li>
+                      <li><strong>{de ? 'Umkehrbare Reaktionen' : 'Reversible reactions'}:</strong> {de ? 'Dynamisches Gleichgewicht und komplexes Systemverhalten' : 'Dynamic equilibrium and complex system behaviors'}</li>
                     </ul>
                   </div>
                 </div>
 
                 {/* Right Column: Mathematical Details */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Mathematical Framework</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Mathematisches Modell' : 'Mathematical framework'}</h3>
 
                   {/* Reaction Scheme */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Chemical Reaction Structure</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Chemische Reaktionsstruktur' : 'Chemical reaction structure'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-3 font-mono">
                         <div className="text-center">
-                          <div className="text-green-400 mb-2"><strong>Forward Reaction (Autocatalytic):</strong></div>
+                          <div className="text-green-400 mb-2"><strong>{de ? 'Hinreaktion (autokatalytisch):' : 'Forward reaction (autocatalytic):'}</strong></div>
                           <div className="text-lg text-blue-400">A + B → 2B</div>
                         </div>
                         <div className="border-t border-gray-600 pt-3">
-                          <div className="text-yellow-400"><strong>Key Feature:</strong></div>
-                          <div className="text-gray-300 mt-1">Molecule B acts as a catalyst, accelerating its own formation</div>
-                          <div className="text-gray-300">Creates positive feedback: more B → faster B production</div>
+                          <div className="text-yellow-400"><strong>{de ? 'Besonderheit:' : 'Key feature:'}</strong></div>
+                          <div className="text-gray-300 mt-1">{de ? 'Molekül B wirkt als Katalysator und beschleunigt seine eigene Bildung.' : 'Molecule B acts as a catalyst, accelerating its own formation.'}</div>
+                          <div className="text-gray-300">{de ? 'Positive Rückkopplung: Mehr B führt zu einer schnelleren Bildung von B.' : 'Positive feedback: more B leads to faster B production.'}</div>
                         </div>
                       </div>
                     </div>
@@ -1866,54 +1850,54 @@ export default function ProjectsClient() {
 
                   {/* Deterministic Model */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Deterministic Model (ODEs)</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Deterministisches Modell (DGL)' : 'Deterministic model (ODEs)'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2 mb-3">
-                        <div>Mass Action equations:</div>
+                        <div>{de ? 'Gleichungen nach dem Massenwirkungsgesetz:' : 'Mass action equations:'}</div>
                       </div>
                       <div className="text-center space-y-2 font-mono mb-3">
                         <div className="text-blue-400">ȧ = -kab</div>
                         <div className="text-green-400">ḃ = kab</div>
                       </div>
                       <div className="border-t border-gray-600 pt-3 text-sm text-gray-300">
-                        <div className="mb-2"><strong>Conservation Law:</strong> a(t) + b(t) = C</div>
-                        <div className="text-yellow-400 text-center mt-2">In terms of b:</div>
+                        <div className="mb-2"><strong>{de ? 'Erhaltungssatz:' : 'Conservation law:'}</strong> a(t) + b(t) = C</div>
+                        <div className="text-yellow-400 text-center mt-2">{de ? 'Ausgedrückt durch b:' : 'In terms of b:'}</div>
                         <div className="text-center text-green-400 mt-1">ḃ = kb(C - b)</div>
-                        <div className="text-gray-400 text-center mt-2 text-xs italic">The Logistic Equation</div>
+                        <div className="text-gray-400 text-center mt-2 text-xs italic">{de ? 'Die logistische Gleichung' : 'The logistic equation'}</div>
                       </div>
                     </div>
                   </div>
 
                   {/* S-Shaped Growth */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">S-Shaped Growth Pattern</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'S-förmiges Wachstum' : 'S-shaped growth pattern'}</h4>
                     <div className="grid grid-cols-1 gap-2">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <div className="text-purple-400 font-semibold mb-1">① Slow Start</div>
-                        <div className="text-sm text-gray-300">B is rare, reaction rate is low</div>
+                        <div className="text-purple-400 font-semibold mb-1">{de ? '① Langsamer Beginn' : '① Slow start'}</div>
+                        <div className="text-sm text-gray-300">{de ? 'B ist zunächst selten, daher läuft die Reaktion langsam.' : 'B is rare, so the reaction rate is low.'}</div>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <div className="text-green-400 font-semibold mb-1">② Rapid Acceleration</div>
-                        <div className="text-sm text-gray-300">Positive feedback intensifies exponential growth</div>
+                        <div className="text-green-400 font-semibold mb-1">{de ? '② Schnelle Beschleunigung' : '② Rapid acceleration'}</div>
+                        <div className="text-sm text-gray-300">{de ? 'Die positive Rückkopplung verstärkt das exponentielle Wachstum.' : 'Positive feedback intensifies exponential growth.'}</div>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <div className="text-blue-400 font-semibold mb-1">③ Saturation</div>
-                        <div className="text-sm text-gray-300">A depletes, growth slows to equilibrium</div>
+                        <div className="text-blue-400 font-semibold mb-1">{de ? '③ Sättigung' : '③ Saturation'}</div>
+                        <div className="text-sm text-gray-300">{de ? 'A wird aufgebraucht, das Wachstum verlangsamt sich bis zum Gleichgewicht.' : 'A is depleted and growth slows towards equilibrium.'}</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Stochastic Model */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Stochastic Modeling</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Stochastische Modellierung' : 'Stochastic modeling'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2">
-                        <div className="font-semibold text-cyan-400 mb-2">Particle-Based Simulation:</div>
-                        <div><strong>1. Random Movement:</strong> Individual A & B particles move in space</div>
-                        <div><strong>2. Collision-Based:</strong> A + B collision → 2B with probability p</div>
-                        <div><strong>3. Discrete & Spatial:</strong> Individual particles, true molecular realism</div>
+                        <div className="font-semibold text-cyan-400 mb-2">{de ? 'Teilchenbasierte Simulation:' : 'Particle-based simulation:'}</div>
+                        <div><strong>{de ? '1. Zufällige Bewegung:' : '1. Random movement:'}</strong> {de ? 'Einzelne A- und B-Teilchen bewegen sich im Raum.' : 'Individual A and B particles move in space.'}</div>
+                        <div><strong>{de ? '2. Kollision:' : '2. Collision:'}</strong> A + B → 2B {de ? 'mit Wahrscheinlichkeit p' : 'with probability p'}</div>
+                        <div><strong>{de ? '3. Diskret und räumlich:' : '3. Discrete and spatial:'}</strong> {de ? 'Einzelne Teilchen bilden molekulare Prozesse direkt ab.' : 'Individual particles model molecular processes directly.'}</div>
                         <div className="border-t border-gray-600 mt-3 pt-3 text-gray-400">
-                          Key insight: macroscopic S-shaped growth emerges from microscopic collision rules
+                          {de ? 'Zentrale Erkenntnis: Das makroskopische S-förmige Wachstum entsteht aus mikroskopischen Kollisionsregeln.' : 'Key insight: macroscopic S-shaped growth emerges from microscopic collision rules.'}
                         </div>
                       </div>
                     </div>
@@ -1921,25 +1905,25 @@ export default function ProjectsClient() {
 
                   {/* Extensions */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Advanced Considerations</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Erweiterungen' : 'Advanced considerations'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2">
-                        <div><strong>Reversible Reactions:</strong></div>
-                        <div className="text-gray-400 ml-2">A + B → 2B (forward, rate k)</div>
-                        <div className="text-gray-400 ml-2">B → A (reverse, rate p<sub>back</sub>)</div>
-                        <div className="text-gray-400 mt-2">Leads to dynamic equilibrium instead of full conversion</div>
+                        <div><strong>{de ? 'Umkehrbare Reaktionen:' : 'Reversible reactions:'}</strong></div>
+                        <div className="text-gray-400 ml-2">A + B → 2B ({de ? 'Hinreaktion, Rate k' : 'forward, rate k'})</div>
+                        <div className="text-gray-400 ml-2">B → A ({de ? 'Rückreaktion, Rate p' : 'reverse, rate p'}<sub>back</sub>)</div>
+                        <div className="text-gray-400 mt-2">{de ? 'Es entsteht ein dynamisches Gleichgewicht statt einer vollständigen Umwandlung.' : 'This leads to dynamic equilibrium instead of full conversion.'}</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Applications */}
                   <div className="space-y-3">
-                    <h4 className="text-lg font-semibold text-white">Real-World Applications</h4>
+                    <h4 className="text-lg font-semibold text-white">{de ? 'Anwendungen' : 'Real-world applications'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2 text-sm">
-                        <p className="text-gray-300"><strong>Chemical Systems:</strong> Combustion, chain reactions, polymerization</p>
-                        <p className="text-gray-300"><strong>Biological Systems:</strong> Population growth, microbial dynamics, epidemiology</p>
-                        <p className="text-gray-300"><strong>Information Spread:</strong> Ideas, innovations, disease transmission networks</p>
+                        <p className="text-gray-300"><strong>{de ? 'Chemische Systeme:' : 'Chemical systems:'}</strong> {de ? 'Verbrennung, Kettenreaktionen und Polymerisation' : 'Combustion, chain reactions, and polymerization'}</p>
+                        <p className="text-gray-300"><strong>{de ? 'Biologische Systeme:' : 'Biological systems:'}</strong> {de ? 'Populationswachstum, mikrobielle Dynamik und Epidemiologie' : 'Population growth, microbial dynamics, and epidemiology'}</p>
+                        <p className="text-gray-300"><strong>{de ? 'Ausbreitung von Informationen:' : 'Information spread:'}</strong> {de ? 'Ideen, Innovationen und Krankheitsübertragung' : 'Ideas, innovations, and disease transmission networks'}</p>
                       </div>
                     </div>
                   </div>
