@@ -193,7 +193,7 @@ export default function HomeClient() {
               { title: "European Healthcare Hackathon", subtitle: "Participant", desc: "Competed among international teams in Prague", date: "Mar 2025" },
               { title: "Berlin Blockchain Hackathons", subtitle: "Two 24h Web3 Sprints", desc: "Built prototypes in two 24-hour blockchain hackathons", date: "Jun 2025" },
               { title: "Data4Good Berlin", subtitle: de ? "1. Platz, 500 €" : "1st place, €500", desc: de ? "Titel verteidigt und zum zweiten Mal in Folge gewonnen" : "Defended the title and won first place for the second year running", date: "Jan 2026" },
-              { title: "Hackathon@PMRExpo 2026", subtitle: de ? "Teilnahme geplant" : "Upcoming participation", desc: de ? "Dreitägiger Hackathon zu sicherer Kommunikation und kritischer Infrastruktur, gemeinsam mit Freunden" : "Three-day hackathon on secure communications and critical infrastructure, joining friends", date: de ? "24.–26. Nov. 2026" : "Nov 24–26, 2026" },
+              { title: "Hackathon@PMRExpo 2026", subtitle: de ? "Teilnahme geplant" : "Upcoming participation", desc: de ? "Dreitägiger Hackathon zu sicherer Kommunikation und kritischer Infrastruktur, gemeinsam mit Freunden" : "Three-day hackathon on secure communications and critical infrastructure, joining friends", date: de ? "Nov. 2026" : "Nov 2026" },
             ].map((event, idx) => {
               const flexDir = idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
               return (
@@ -241,13 +241,14 @@ export default function HomeClient() {
           {[
             {
               title: "M.Sc. Mathematics in Data Science",
-              logo: "",
+              logo: "/assets/tum_logo.svg",
               institution: "Technical University of Munich",
               institutionUrl: "https://www.tum.de/en/",
               location: "Munich, Germany",
               dates: de ? "2026 – heute" : "2026 – Present",
               details: [
-                "Master's studies in Mathematics in Data Science"
+                de ? "Masterstudium mit Schwerpunkt Mathematik und Data Science" : "Master's programme combining advanced mathematics with data science",
+                de ? "Technische Universität München, München" : "Technical University of Munich, Munich"
               ]
             },
             {
