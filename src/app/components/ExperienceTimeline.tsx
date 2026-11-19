@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useLanguage } from "@/lib/i18n";
 
 const experiences = [
   {
@@ -23,13 +24,13 @@ const experiences = [
     ]
   },
   {
-    title: "Teaching Assistant — Linear Algebra I & II",
+    title: "Teaching Assistant: Linear Algebra I & II",
     company: { name: "Catholic University of Eichstätt-Ingolstadt", url: "https://www.ku.de/en" },
     date: "10/2024 – 07/2026",
     location: "Ingolstadt, Germany",
     bullets: [
       "~200 hours across 4 semesters teaching Linear Algebra I & II to 120+ first-year students.",
-      "Explained abstract proofs — vector spaces, eigenstructure, linear maps — to students with no prior exposure, in their second language and mine.",
+      "Explained abstract proofs on vector spaces, eigenstructure, and linear maps to students with no prior exposure, in their second language and mine.",
       "Graded alongside a team of tutors, aligning on a shared standard so feedback stayed consistent across cohorts."
     ]
   },
@@ -47,15 +48,16 @@ const experiences = [
 ];
 
 export default function ExperienceTimeline() {
+  const de = useLanguage() === "de";
   return (
     <div className="w-full max-w-4xl mx-auto py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
       {experiences.map((exp, idx) => (
         <div key={idx} className="w-full bg-white/10 rounded-xl p-6 shadow-lg flex flex-col gap-2 max-w-full">
-          <h3 className="text-lg font-bold text-blue-300 mb-2">{exp.title}</h3>
+          <h3 className="text-lg font-bold text-blue-300 mb-2">{de && exp.title === "Student Assistant, Secure Cloud Computing" ? "Studentische Hilfskraft, Secure Cloud Computing" : exp.title}</h3>
           <a href={exp.company.url} target="_blank" rel="noopener noreferrer" className="text-blue-400 font-medium hover:underline">{exp.company.name}</a>
-          <div className="text-gray-400 text-sm mb-1">{exp.date} • {exp.location}</div>
+          <div className="text-gray-400 text-sm mb-1">{exp.date} • {de ? exp.location.replace("Germany", "Deutschland").replace("Munich", "München").replace("hours/week", "Std./Woche") : exp.location}</div>
           <ul className="text-gray-200 text-sm list-disc list-inside mt-2">
-            {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
+            {exp.bullets.map((b, i) => <li key={i}>{de && b.startsWith("Starting 16 November") ? "Offizieller Beginn: 16. November 2026. Aufgabenbeschreibung folgt zum Arbeitsbeginn." : b}</li>)}
           </ul>
         </div>
       ))}

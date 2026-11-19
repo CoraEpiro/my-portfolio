@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   },
   category: "Technology",
   // Set GOOGLE_SITE_VERIFICATION in the Vercel project env vars to verify
-  // ownership in Google Search Console — no code change needed.
+  // ownership in Google Search Console. No code change needed.
   verification: process.env.GOOGLE_SITE_VERIFICATION
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }
     : undefined,

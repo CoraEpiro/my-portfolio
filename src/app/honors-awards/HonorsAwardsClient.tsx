@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/lib/i18n";
 
 type AwardPdf = {
   fileName: string;
@@ -13,6 +14,7 @@ type AwardPdf = {
 const TURN_EASING = "cubic-bezier(0.645, 0.045, 0.355, 1)";
 
 export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
+  const de = useLanguage() === 'de';
   const [opened, setOpened] = useState(false);
   const [idx, setIdx] = useState(0); // current page; sheet j is turned iff j < idx
   const [pdfView, setPdfView] = useState<AwardPdf | null>(null);
@@ -104,7 +106,7 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
                     {award.previewSrc ? (
                       <img
                         src={award.previewSrc}
-                        alt={`${award.title} — award document`}
+                        alt={`${award.title}, ${de ? "Auszeichnungsdokument" : "award document"}`}
                         className="h-full w-full object-contain select-none"
                         loading={j === 0 ? "eager" : "lazy"}
                         decoding="async"
@@ -113,7 +115,7 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
                     ) : (
                       <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-slate-50 p-8 text-center">
                         <p className="text-lg font-bold text-slate-800">{award.title}</p>
-                        <p className="text-sm text-slate-500">PDF document — open below</p>
+                        <p className="text-sm text-slate-500">{de ? "PDF-Dokument, unten öffnen" : "PDF document, open below"}</p>
                       </div>
                     )}
                     {/* Spine shadow */}
@@ -152,7 +154,7 @@ export default function HonorsAwardsClient({ awards }: { awards: AwardPdf[] }) {
                 aria-label="Open the honors and awards portfolio"
               >
                 <span className="text-xs uppercase tracking-[0.3em] text-blue-300/80">Portfolio</span>
-                <span className="px-6 text-3xl font-bold text-white">Honors & Awards</span>
+                <span className="px-6 text-3xl font-bold text-white">{de ? 'Auszeichnungen & Ehrungen' : 'Honors & Awards'}</span>
                 <span className="h-1 w-16 rounded-full bg-blue-400/80" aria-hidden />
                 <span className="text-base text-slate-300">Ali Guliyev</span>
                 <span className="absolute bottom-6 text-sm text-slate-400">Click to open</span>

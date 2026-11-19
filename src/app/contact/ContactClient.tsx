@@ -1,10 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/lib/i18n';
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export default function ContactClient() {
+  const de = useLanguage() === 'de';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,10 +53,10 @@ export default function ContactClient() {
               visibleElements.has('header') ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
             }`}>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Get in Touch
+                {de ? 'Kontakt aufnehmen' : 'Get in Touch'}
               </h1>
               <p className="text-xl text-gray-300">
-                Have a question or want to work together? Feel free to reach out.
+                {de ? 'Sie haben eine Frage oder möchten zusammenarbeiten? Schreiben Sie mir gerne.' : 'Have a question or want to work together? Feel free to reach out.'}
               </p>
             </div>
 
@@ -64,7 +66,7 @@ export default function ContactClient() {
                 <div className={`bg-white/5 backdrop-blur-lg rounded-xl p-6 transition-all duration-700 ease-out ${
                   visibleElements.has('contact-info') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
                 }`}>
-                  <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">{de ? 'Kontaktinformationen' : 'Contact Information'}</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-4 group">
                       <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
@@ -87,8 +89,8 @@ export default function ContactClient() {
                         </svg>
                       </div>
                       <div>
-                        <p className="text-gray-300">Location</p>
-                        <p className="text-white">Ingolstadt, Germany</p>
+                        <p className="text-gray-300">{de ? 'Standort' : 'Location'}</p>
+                        <p className="text-white">Ingolstadt, Deutschland</p>
                       </div>
                     </div>
                   </div>
@@ -97,7 +99,7 @@ export default function ContactClient() {
                 <div className={`bg-white/5 backdrop-blur-lg rounded-xl p-6 transition-all duration-700 ease-out ${
                   visibleElements.has('social-links') ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
                 }`} style={{ transitionDelay: '200ms' }}>
-                  <h3 className="text-xl font-semibold text-white mb-4">Connect with Me</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">{de ? 'Vernetzen Sie sich mit mir' : 'Connect with Me'}</h3>
                   <div className="flex gap-4">
                     <a
                       href="https://github.com/CoraEpiro"
@@ -131,9 +133,9 @@ export default function ContactClient() {
               }`}>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {[
-                    { id: 'name', label: 'Name', type: 'text', placeholder: 'Your name' },
-                    { id: 'email', label: 'Email', type: 'email', placeholder: 'your.email@example.com' },
-                    { id: 'subject', label: 'Subject', type: 'text', placeholder: 'How can I help?' }
+                    { id: 'name', label: de ? 'Name' : 'Name', type: 'text', placeholder: de ? 'Ihr Name' : 'Your name' },
+                    { id: 'email', label: 'Email', type: 'email', placeholder: de ? 'ihre.email@beispiel.de' : 'your.email@example.com' },
+                    { id: 'subject', label: de ? 'Betreff' : 'Subject', type: 'text', placeholder: de ? 'Wie kann ich helfen?' : 'How can I help?' }
                   ].map((field, idx) => (
                     <div
                       key={field.id}
@@ -161,7 +163,7 @@ export default function ContactClient() {
                     visibleElements.has('form') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`} style={{ transitionDelay: '900ms' }}>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message
+                      {de ? 'Nachricht' : 'Message'}
                     </label>
                     <textarea
                       id="message"
@@ -169,7 +171,7 @@ export default function ContactClient() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={4}
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 resize-none"
-                      placeholder="Your message..."
+                      placeholder={de ? 'Ihre Nachricht …' : 'Your message...'}
                       required
                     />
                   </div>
@@ -182,18 +184,18 @@ export default function ContactClient() {
                       disabled={status === 'sending'}
                       className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-colors duration-300 text-lg font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      {status === 'sending' ? 'Sending…' : 'Send Message'}
+                      {status === 'sending' ? (de ? 'Wird gesendet …' : 'Sending…') : (de ? 'Nachricht senden' : 'Send Message')}
                     </button>
 
                     <div aria-live="polite">
                       {status === 'success' && (
                         <p className="mt-4 text-sm text-green-400">
-                          Thank you — your message has been sent. I&apos;ll get back to you soon.
+                          {de ? 'Vielen Dank. Ihre Nachricht wurde gesendet. Ich melde mich bald bei Ihnen.' : <>Thank you. Your message has been sent. I&apos;ll get back to you soon.</>}
                         </p>
                       )}
                       {status === 'error' && (
                         <p className="mt-4 text-sm text-red-400">
-                          Something went wrong sending your message. Please email me directly at{' '}
+                          {de ? 'Beim Senden ist ein Fehler aufgetreten. Schreiben Sie mir direkt an ' : 'Something went wrong sending your message. Please email me directly at '}
                           <a href="mailto:aguliyev45@gmail.com" className="underline hover:text-red-300">
                             aguliyev45@gmail.com
                           </a>.

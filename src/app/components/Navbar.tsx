@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useLanguage, setLanguage } from "@/lib/i18n";
 
 const links = [
   { href: '/', label: 'Home' },
@@ -13,6 +14,8 @@ const links = [
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
+  const language = useLanguage();
+  const labels = language === "de" ? ['Startseite', 'Projekte', 'Zertifikate', 'Auszeichnungen', 'Kontakt', 'Lebenslauf'] : ['Home', 'Projects', 'Certificates', 'Honors', 'Contact', 'CV'];
 
   return (
     <nav className="w-full bg-gray-950/80 backdrop-blur sticky top-0 z-50 shadow-md">
@@ -43,15 +46,22 @@ export default function Navbar() {
           } gap-6 text-lg`}
           onClick={() => setNavOpen(false)}
         >
-          {links.map((link) => (
+          {links.map((link, index) => (
             <Link
               key={link.href}
               href={link.href}
               className="hover:text-blue-400 transition-colors duration-300 px-4 py-2 md:p-0 relative group"
             >
-              {link.label}
+              {labels[index]}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
+          ))}
+        </div>
+        <div className="flex items-center gap-1 rounded-full border border-white/15 p-1 text-sm" aria-label="Sprache / Language">
+          {(['en', 'de'] as const).map((option) => (
+            <button key={option} type="button" onClick={() => setLanguage(option)} aria-pressed={language === option} className={`rounded-full px-3 py-1 transition-colors ${language === option ? 'bg-blue-500 text-white' : 'text-gray-300 hover:text-white'}`}>
+              {option.toUpperCase()}
+            </button>
           ))}
         </div>
       </div>

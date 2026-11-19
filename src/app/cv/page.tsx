@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import CvActions from './CvActions';
+import CvPageClientText from './CvPageClientText';
 
 export const metadata: Metadata = {
   title: 'CV',
-  description: 'CV of Ali Guliyev — M.Sc. Mathematics in Data Science student at TUM, B.Sc. Data Science graduate (1.9 average), and Student Assistant in Secure Cloud Computing at LRZ.',
+  description: 'CV of Ali Guliyev: M.Sc. Mathematics in Data Science student at TUM, B.Sc. Data Science graduate (1.9 average), and Student Assistant in Secure Cloud Computing at LRZ.',
   alternates: {
     canonical: '/cv',
   },
@@ -22,10 +23,10 @@ export default function CvPage() {
               Curriculum Vitae
             </span>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Ali Guliyev — CV
+              <CvPageClientText />
             </h1>
             <p className="text-lg md:text-xl text-slate-300 max-w-2xl">
-              Preview my CV below, or download a copy for your records.
+              <CvPageClientText description />
             </p>
             <CvActions />
           </div>

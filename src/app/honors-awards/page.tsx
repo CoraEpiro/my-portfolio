@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { readdir } from "node:fs/promises";
 import path from "node:path";
 import HonorsAwardsClient from "./HonorsAwardsClient";
+import HonorsAwardsHeading from "./HonorsAwardsHeading";
 
 type AwardPdf = {
   fileName: string;
@@ -85,7 +86,7 @@ export default async function HonorsAwardsPage() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Honors & Awards
+            <HonorsAwardsHeading />
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             The original award documents, collected in a portfolio you can flip through.

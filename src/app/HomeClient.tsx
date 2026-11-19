@@ -3,8 +3,11 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from 'next/link';
 import ExperienceTimeline from "./components/ExperienceTimeline";
+import { useLanguage } from "@/lib/i18n";
 
 export default function HomeClient() {
+  const language = useLanguage();
+  const de = language === "de";
   useEffect(() => {
     // Simple scroll-triggered animations
     const observerOptions = {
@@ -103,33 +106,33 @@ export default function HomeClient() {
         </h1>
         <p className="text-2xl text-blue-400 font-semibold mb-1 animate-slide-up"
            style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          Data Science &amp; Risk Modelling
+          {de ? "Data Science &amp; Risikomodellierung" : <>Data Science &amp; Risk Modelling</>}
         </p>
         <p className="text-base text-gray-300 mb-4 animate-slide-up"
            style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-          Mathematics + Data Science • Python • Probabilistic modelling
+          {de ? "Mathematik + Data Science • Python • Probabilistische Modellierung" : "Mathematics + Data Science • Python • Probabilistic modelling"}
         </p>
         <p className="text-base text-gray-400 mb-2 animate-slide-up" 
            style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
-          Ingolstadt, Germany
+          Ingolstadt, Deutschland
         </p>
       </section>
       <hr className="divider" />
       {/* About Section */}
       <section className="container text-center scroll-fade-in">
-        <h2 className="text-2xl font-bold mb-3">About Me</h2>
+        <h2 className="text-2xl font-bold mb-3">{de ? "Über mich" : "About Me"}</h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
-          I have completed my B.Sc. in Data Science at the Catholic University of Eichstätt-Ingolstadt with a 1.9 average, building on my B.Sc. in Mathematics from Baku State University. I am now pursuing an M.Sc. in Mathematics in Data Science at the Technical University of Munich. My mathematical background includes real analysis, probability and measure theory, alongside practical work in Python and SQL, teaching linear algebra, and building models in hackathons.
+          {de ? "Ich habe meinen B.Sc. in Data Science an der Katholischen Universität Eichstätt-Ingolstadt mit der Abschlussnote 1,9 abgeschlossen. Zuvor erwarb ich einen B.Sc. in Mathematik an der Staatlichen Universität Baku. Derzeit studiere ich Mathematik in Data Science im Master an der Technischen Universität München. Mein mathematischer Hintergrund umfasst reelle Analysis, Wahrscheinlichkeitstheorie und Maßtheorie sowie praktische Erfahrung mit Python und SQL, in der Lehre der Linearen Algebra und bei Hackathon-Projekten." : "I have completed my B.Sc. in Data Science at the Catholic University of Eichstätt-Ingolstadt with a 1.9 average, building on my B.Sc. in Mathematics from Baku State University. I am now pursuing an M.Sc. in Mathematics in Data Science at the Technical University of Munich. My mathematical background includes real analysis, probability and measure theory, alongside practical work in Python and SQL, teaching linear algebra, and building models in hackathons."}
         </p>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
-          I want to work in catastrophe and climate risk modelling — where the probability theory I was trained in is the job, not a prerequisite.
+          {de ? "Ich möchte Naturkatastrophen- und Klimarisiken modellieren und Wahrscheinlichkeitstheorie direkt auf reale Risiken anwenden." : "I want to work in catastrophe and climate risk modelling, applying probability theory directly to real-world risks."}
         </p>
-        <a href="/contact" className="button mt-2 hover-lift">Contact Me</a>
+        <a href="/contact" className="button mt-2 hover-lift">{de ? "Kontakt" : "Contact Me"}</a>
       </section>
       <hr className="divider" />
       {/* Skills Section */}
       <section className="container scroll-fade-in">
-        <h2 className="text-2xl font-bold text-center mb-8">Skills</h2>
+        <h2 className="text-2xl font-bold text-center mb-8">{de ? "Kenntnisse" : "Skills"}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
@@ -153,7 +156,7 @@ export default function HomeClient() {
               skills: [
                 "Agile, JIRA, Confluence",
                 "Azerbaijani, Turkish (native), English (proficient)",
-                "German B1 — targeting B2 by end of 2026"
+                de ? "Deutsch B1, Ziel: B2 bis Ende 2026" : "German B1, aiming for B2 by the end of 2026"
               ]
             }
           ].map((skillGroup, idx) => (
@@ -175,21 +178,21 @@ export default function HomeClient() {
       <hr className="divider" />
       {/* My Journey Section */}
       <section className="container scroll-fade-in">
-        <h2 className="text-2xl font-bold text-center mb-8">My Journey</h2>
+        <h2 className="text-2xl font-bold text-center mb-8">{de ? "Mein Werdegang" : "My Journey"}</h2>
         <div className="relative w-full max-w-3xl mx-auto py-8">
           {/* Central vertical line */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gradient-to-b from-blue-500/60 via-blue-400/30 to-transparent z-0" style={{ transform: 'translateX(-50%)' }} />
           <div className="flex flex-col gap-16 relative z-10">
             {[
-              { title: "Salzburg Hackathon", subtitle: "Winner — €1,000 Prize", desc: "Smart tourism recommendation system (open-source)", date: "Nov 2024" },
-              { title: "VGI Challenge", subtitle: "2nd Place — €3,000", desc: "Transport optimization project in Ingolstadt", date: "Nov 2024" },
+              { title: "Salzburg Hackathon", subtitle: de ? "Gewonnen, 1.000 € Preisgeld" : "Winner, €1,000 prize", desc: de ? "Open-Source-Empfehlungssystem für den Tourismus" : "Smart tourism recommendation system (open-source)", date: "Nov 2024" },
+              { title: "VGI Challenge", subtitle: de ? "2. Platz, 3.000 €" : "2nd place, €3,000", desc: de ? "Projekt zur Optimierung des Verkehrs in Ingolstadt" : "Transport optimization project in Ingolstadt", date: "Nov 2024" },
               { title: "Würzburg Hackathon", subtitle: "1st Place", desc: "Qualified for the ConsulCon25 conference", date: "Nov 2024" },
-              { title: "Data4Good Berlin", subtitle: "1st Place — €500", desc: "Won our category at the Hertie School hackathon", date: "Jan 2025" },
+              { title: "Data4Good Berlin", subtitle: de ? "1. Platz, 500 €" : "1st place, €500", desc: de ? "Kategorie beim Hackathon der Hertie School gewonnen" : "Won our category at the Hertie School hackathon", date: "Jan 2025" },
               { title: "Hack4Good Den Haag", subtitle: "Category Winner", desc: "Won our category at Hack4Good", date: "Jan 2025" },
               { title: "ConsulCon25", subtitle: "Conference Speaker", desc: "Presented the Consul Democracy Analytics Tool", date: "Feb 2025" },
               { title: "European Healthcare Hackathon", subtitle: "Participant", desc: "Competed among international teams in Prague", date: "Mar 2025" },
               { title: "Berlin Blockchain Hackathons", subtitle: "Two 24h Web3 Sprints", desc: "Built prototypes in two 24-hour blockchain hackathons", date: "Jun 2025" },
-              { title: "Data4Good Berlin", subtitle: "1st Place — €500", desc: "Defended the title: first place for the second year running", date: "Jan 2026" },
+              { title: "Data4Good Berlin", subtitle: de ? "1. Platz, 500 €" : "1st place, €500", desc: de ? "Titel verteidigt und zum zweiten Mal in Folge gewonnen" : "Defended the title and won first place for the second year running", date: "Jan 2026" },
             ].map((event, idx) => {
               const flexDir = idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
               return (
@@ -226,22 +229,22 @@ export default function HomeClient() {
       <hr className="divider" />
       {/* Experience Section */}
       <section className="container scroll-fade-in">
-        <h2 className="text-2xl font-bold text-center mb-8">Experience</h2>
+        <h2 className="text-2xl font-bold text-center mb-8">{de ? "Berufserfahrung" : "Experience"}</h2>
         <ExperienceTimeline />
       </section>
       <hr className="divider" />
       {/* Education Section */}
       <section className="container py-12 scroll-fade-in">
-        <h2 className="text-2xl font-bold text-center mb-8">Education</h2>
+        <h2 className="text-2xl font-bold text-center mb-8">{de ? "Ausbildung" : "Education"}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
               title: "M.Sc. Mathematics in Data Science",
-              logo: "/assets/ku_logo.png",
+              logo: "",
               institution: "Technical University of Munich",
               institutionUrl: "https://www.tum.de/en/",
               location: "Munich, Germany",
-              dates: "2026 – Present",
+              dates: de ? "2026 – heute" : "2026 – Present",
               details: [
                 "Master's studies in Mathematics in Data Science"
               ]
@@ -252,12 +255,12 @@ export default function HomeClient() {
               institution: "Catholic University of Eichstätt-Ingolstadt",
               institutionUrl: "https://www.ku.de/en",
               location: "Ingolstadt, Germany",
-              dates: "10/2023 – 2026",
+              dates: de ? "10/2023 – 2026" : "10/2023 – 2026",
               details: [
-                "Final average 1.9 — German scale, where 1.0 is the best possible grade",
+                de ? "Abschlussnote 1,9 auf der deutschen Notenskala" : "Final average 1.9 on the German grading scale",
                 "Specialization in Applied Mathematics",
                 "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science, Probability Theory, Stochastics",
-                "Teaching Assistant for Linear Algebra I & II — ~200 hours, 120+ students"
+                de ? "Tutorium für Lineare Algebra I und II, rund 200 Stunden für über 120 Studierende" : "Teaching assistant for Linear Algebra I and II, about 200 hours with 120+ students"
               ]
             },
             {
@@ -270,7 +273,7 @@ export default function HomeClient() {
               details: [
                 "Final grade 83 / 100 (top quintile)",
                 "Advanced coursework: Real Analysis, Abstract Algebra, Differential Equations",
-                "A full mathematics degree before the data science one — the reason probabilistic modelling reads as native rather than acquired",
+                de ? "Ein vollständiges Mathematikstudium vor dem Data-Science-Studium" : "Completed a full mathematics degree before studying data science",
                 "Transferred to Germany for a more research-oriented data-science track"
               ]
             },
@@ -322,7 +325,7 @@ export default function HomeClient() {
                     <a href={edu.institutionUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline font-semibold hover:text-blue-300 transition-colors">
                       {edu.institution}
                     </a>
-                    <span className="text-gray-400 text-sm">— {edu.location}</span>
+                    <span className="text-gray-400 text-sm">{de ? " · " : " · "}{de ? edu.location.replace("Germany", "Deutschland").replace("Baku, Azerbaijan", "Baku, Aserbaidschan") : edu.location}</span>
                     <span className="text-gray-500 text-xs">({edu.dates})</span>
                   </div>
                   <ul className="list-disc list-outside text-sm leading-relaxed">
@@ -341,8 +344,8 @@ export default function HomeClient() {
       <section className="container py-12 scroll-fade-in">
         <h2 className="text-2xl font-bold text-center mb-3">Certifications</h2>
         <p className="text-center text-gray-300 mb-8">
-          A dedicated certificates archive is available here:
-          <a href="/certificates" className="ml-2 text-blue-400 hover:underline font-semibold">View All Certificates</a>
+          {de ? "Alle Zertifikate finden Sie hier:" : "A dedicated certificates archive is available here:"}
+          <a href="/certificates" className="ml-2 text-blue-400 hover:underline font-semibold">{de ? "Alle Zertifikate ansehen" : "View All Certificates"}</a>
         </p>
         <div className="max-w-4xl mx-auto grid gap-6 md:grid-cols-2">
           {[
@@ -378,14 +381,14 @@ export default function HomeClient() {
               </a>
               <p className="text-xs uppercase tracking-[0.18em] text-blue-300 mb-1">{cert.category} · Coursera</p>
               <h3 className="text-lg font-bold text-white mb-1">{cert.title}</h3>
-              <p className="text-sm text-gray-400 mb-4">Issued {cert.issued}</p>
+              <p className="text-sm text-gray-400 mb-4">{de ? "Ausgestellt am" : "Issued"} {de ? cert.issued.replace("March", "März").replace("May", "Mai") : cert.issued}</p>
               <a
                 href={cert.verifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-flex w-fit items-center justify-center rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:bg-blue-400"
               >
-                Verify
+                {de ? "Verifizieren" : "Verify"}
               </a>
             </div>
           ))}
@@ -395,11 +398,11 @@ export default function HomeClient() {
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-2 scroll-fade-in">
         <h2 className="text-3xl font-bold text-center mb-12 text-white">
-          Get in Touch
+          {de ? "Kontakt aufnehmen" : "Get in Touch"}
         </h2>
         <div className="max-w-2xl mx-auto">
           <p className="text-center text-gray-300 mb-8">
-            I'm always open to new opportunities and collaborations.
+            {de ? "Ich freue mich über neue Möglichkeiten und Kooperationen." : "I'm always open to new opportunities and collaborations."}
           </p>
           <div className="flex justify-center gap-6">
             {[

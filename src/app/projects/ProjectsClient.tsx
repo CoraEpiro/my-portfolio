@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/lib/i18n';
 
 // Define the Collaborator type
 type Collaborator = {
@@ -193,6 +194,7 @@ const presentations: Project[] = [
 ];
 
 export default function ProjectsClient() {
+  const de = useLanguage() === 'de';
   const [showLegalModal, setShowLegalModal] = useState(false);
   const [showRainModal, setShowRainModal] = useState(false);
   const [showConsulConModal, setShowConsulConModal] = useState(false);
@@ -234,10 +236,10 @@ export default function ProjectsClient() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
         }`}>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My Projects
+            {de ? 'Meine Projekte' : 'My Projects'}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            A collection of my recent work and personal projects. Each project represents a unique challenge and learning experience.
+            {de ? 'Eine Auswahl aktueller Arbeiten und persönlicher Projekte. Jedes Projekt steht für eine eigene Herausforderung und Lernerfahrung.' : 'A collection of my recent work and personal projects. Each project represents a unique challenge and learning experience.'}
           </p>
         </div>
 
@@ -282,7 +284,15 @@ export default function ProjectsClient() {
                   {project.title}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
-                  {project.description}
+                  {de ? ({
+                    'Rain in Australia': 'Binäre Wettervorhersage auf Basis von zehn Jahren australischer Wetterdaten: Vorhersage von Niederschlag am Folgetag anhand atmosphärischer Variablen.',
+                    'VGI-Flexi: Rural Transport Analytics': 'Zweiter Platz beim VGI Challenge (3.000 €). Ein logistisches Regressionsmodell prognostiziert Nichterscheinen bei bedarfsgesteuertem ländlichem Verkehr.',
+                    'ChatVocate: Azerbaijani Legal AI': 'Zweisprachiger Rechtsassistent für das aserbaidschanische Rechtssystem mit Suche in Gesetzestexten und einer bereitgestellten Weboberfläche.',
+                    'Silent Routes: Holocaust Remembrance': 'Datenprojekt zur Visualisierung der Deportationswege von Holocaust-Opfern anhand von Daten des Arolsen Archives.',
+                    'coRELation: Religion, Diversity & Social Cohesion': 'Hackathon-Projekt, das Umfragedaten zu religiöser Vielfalt, Vertrauen und gesellschaftlichem Zusammenhalt auswertet.',
+                    'ConsulCon25 Presentation': 'Vortrag auf der ConsulCon25 über das Consul Democracy Analytics Tool nach dem ersten Platz beim Würzburger Hackathon.',
+                    'Intelligent Multilingual AGV': 'Universitätsprojekt mit RoboPro, Python-Diensten, MQTT, mehrsprachiger Sprachsteuerung, OCR-Parken und Raster-Navigation.'
+                  } as Record<string, string>)[project.title] || project.description : project.description}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {project.tags.map((tag, tagIdx) => (

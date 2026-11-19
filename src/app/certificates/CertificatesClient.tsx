@@ -1,4 +1,5 @@
 "use client";
+import { useLanguage } from '@/lib/i18n';
 
 type Certificate = {
   id: number;
@@ -38,15 +39,16 @@ const certificates: Certificate[] = [
 ];
 
 export default function CertificatesClient() {
+  const de = useLanguage() === 'de';
   return (
     <main className="min-h-screen bg-gray-900 py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Certificates
+            {de ? 'Zertifikate' : 'Certificates'}
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Verified professional certificates and academic credentials. This section is structured to grow as new achievements are added.
+            {de ? 'Verifizierte berufliche Zertifikate und akademische Nachweise.' : 'Verified professional certificates and academic credentials. This section is structured to grow as new achievements are added.'}
           </p>
         </div>
 
@@ -74,13 +76,13 @@ export default function CertificatesClient() {
                 <span className="inline-flex rounded-full bg-blue-900/50 text-blue-200 px-3 py-1 text-xs font-semibold">
                   {certificate.category}
                 </span>
-                <span className="text-sm text-gray-400">Issued {certificate.issueDate}</span>
+                <span className="text-sm text-gray-400">{de ? 'Ausgestellt am' : 'Issued'} {de ? certificate.issueDate.replace('May', 'Mai').replace('March', 'März') : certificate.issueDate}</span>
               </div>
 
               <h2 className="text-2xl font-bold text-white mb-1">{certificate.title}</h2>
               <p className="text-gray-300 mb-2">{certificate.issuer}</p>
               {certificate.credentialId && (
-                <p className="text-sm text-gray-400 mb-4">Credential ID: {certificate.credentialId}</p>
+                <p className="text-sm text-gray-400 mb-4">{de ? 'Zertifikats-ID' : 'Credential ID'}: {certificate.credentialId}</p>
               )}
               {certificate.notes && (
                 <p className="text-sm text-gray-300 mb-6 leading-relaxed">{certificate.notes}</p>
@@ -94,7 +96,7 @@ export default function CertificatesClient() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-full bg-blue-600 text-white px-5 py-2.5 font-semibold hover:bg-blue-700 transition-colors"
                   >
-                    Verify
+                    {de ? 'Verifizieren' : 'Verify'}
                   </a>
                 )}
               </div>
