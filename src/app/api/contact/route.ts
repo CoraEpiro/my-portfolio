@@ -21,8 +21,8 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: `Portfolio Contact <Ali.Guliyev@stud.ku.de>`,
-      to: 'Ali.Guliyev@stud.ku.de',
+      from: `Portfolio Contact <aguliyev45@gmail.com>`,
+      to: 'aguliyev45@gmail.com',
       subject: `[Portfolio] ${subject}`,
       replyTo: email,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`,

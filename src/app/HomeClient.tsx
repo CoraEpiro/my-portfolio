@@ -36,7 +36,7 @@ export default function HomeClient() {
             "@type": "Person",
             "name": "Ali Guliyev",
             "jobTitle": "Data Science & Risk Modelling",
-            "description": "B.Sc. Data Science and B.Sc. Mathematics, based near Munich. Probabilistic and statistical modelling in Python, five-time hackathon winner, working toward catastrophe and climate risk modelling.",
+            "description": "M.Sc. Mathematics in Data Science student at TUM, with a B.Sc. in Data Science (1.9 average) and a B.Sc. in Mathematics. Student Assistant in Secure Cloud Computing at LRZ.",
             "url": "https://www.aliguliyev.com",
             "image": "https://www.aliguliyev.com/assets/profile.jpg",
             "sameAs": [
@@ -80,7 +80,7 @@ export default function HomeClient() {
               "Risk Analytics",
               "Catastrophe Modelling"
             ],
-            "email": "Ali.Guliyev@stud.ku.de"
+            "email": "aguliyev45@gmail.com"
           })
         }}
       />
@@ -119,7 +119,7 @@ export default function HomeClient() {
       <section className="container text-center scroll-fade-in">
         <h2 className="text-2xl font-bold mb-3">About Me</h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
-          I am finishing a B.Sc. in Data Science at the Catholic University of Eichstätt-Ingolstadt, on top of a B.Sc. in Mathematics from Baku State University. Two degrees in the quantitative core: real analysis, probability and measure theory underneath the machine learning, rather than beside it. I work in Python and SQL, teach linear algebra to 120+ first-year students, and have won five hackathons — placing second in a sixth — building working models under a deadline.
+          I have completed my B.Sc. in Data Science at the Catholic University of Eichstätt-Ingolstadt with a 1.9 average, building on my B.Sc. in Mathematics from Baku State University. I am now pursuing an M.Sc. in Mathematics in Data Science at the Technical University of Munich. My mathematical background includes real analysis, probability and measure theory, alongside practical work in Python and SQL, teaching linear algebra, and building models in hackathons.
         </p>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-4">
           I want to work in catastrophe and climate risk modelling — where the probability theory I was trained in is the job, not a prerequisite.
@@ -236,14 +236,25 @@ export default function HomeClient() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
+              title: "M.Sc. Mathematics in Data Science",
+              logo: "/assets/ku_logo.png",
+              institution: "Technical University of Munich",
+              institutionUrl: "https://www.tum.de/en/",
+              location: "Munich, Germany",
+              dates: "2026 – Present",
+              details: [
+                "Master's studies in Mathematics in Data Science"
+              ]
+            },
+            {
               title: "B.Sc. Data Science",
               logo: "/assets/ku_logo.png",
               institution: "Catholic University of Eichstätt-Ingolstadt",
               institutionUrl: "https://www.ku.de/en",
               location: "Ingolstadt, Germany",
-              dates: "10/2023 – 09/2026 (expected)",
+              dates: "10/2023 – 2026",
               details: [
-                "GPA 1.77 / 1.0 — German scale, where 1.0 is the best possible grade",
+                "Final average 1.9 — German scale, where 1.0 is the best possible grade",
                 "Specialization in Applied Mathematics",
                 "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science, Probability Theory, Stochastics",
                 "Teaching Assistant for Linear Algebra I & II — ~200 hours, 120+ students"
@@ -394,7 +405,7 @@ export default function HomeClient() {
             {[
               { name: "GitHub", url: "https://github.com/CoraEpiro" },
               { name: "LinkedIn", url: "https://www.linkedin.com/in/ali-guliyev-389837238/" },
-              { name: "Email", url: "mailto:Ali.Guliyev@stud.ku.de" }
+              { name: "Email", url: "mailto:aguliyev45@gmail.com" }
             ].map((link, idx) => (
               <a
                 key={idx}

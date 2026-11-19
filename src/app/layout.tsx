@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Ali Guliyev - Data Science & Risk Modelling",
     template: "%s | Ali Guliyev",
   },
-  description: "B.Sc. Data Science and B.Sc. Mathematics, based near Munich. Probabilistic and statistical modelling in Python, five-time hackathon winner, working toward catastrophe and climate risk modelling.",
+  description: "M.Sc. Mathematics in Data Science student at TUM, B.Sc. Data Science graduate with a 1.9 average, and Student Assistant in Secure Cloud Computing at LRZ.",
   alternates: {
     canonical: "/",
   },
@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     "Ingolstadt",
     "Germany",
     "Catholic University of Eichstätt-Ingolstadt",
+    "Technical University of Munich",
+    "Leibniz Supercomputing Centre",
     "Portfolio"
   ],
   authors: [{ name: "Ali Guliyev" }],
@@ -62,7 +64,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.aliguliyev.com",
     title: "Ali Guliyev - Data Science & Risk Modelling",
-    description: "B.Sc. Data Science and B.Sc. Mathematics, based near Munich. Probabilistic and statistical modelling in Python, five-time hackathon winner, working toward catastrophe and climate risk modelling.",
+    description: "M.Sc. Mathematics in Data Science student at TUM, B.Sc. Data Science graduate with a 1.9 average, and Student Assistant in Secure Cloud Computing at LRZ.",
     siteName: "Ali Guliyev Portfolio",
     images: [
       {
@@ -76,7 +78,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ali Guliyev - Data Science & Risk Modelling",
-    description: "B.Sc. Data Science and B.Sc. Mathematics, based near Munich. Probabilistic and statistical modelling in Python, five-time hackathon winner, working toward catastrophe and climate risk modelling.",
+    description: "M.Sc. Mathematics in Data Science student at TUM, B.Sc. Data Science graduate with a 1.9 average, and Student Assistant in Secure Cloud Computing at LRZ.",
     images: ["/assets/og-banner.jpg"],
   },
   category: "Technology",

@@ -3,6 +3,15 @@ import React from "react";
 
 const experiences = [
   {
+    title: "Student Assistant, Secure Cloud Computing",
+    company: { name: "Leibniz Supercomputing Centre (LRZ)", url: "https://www.lrz.de/" },
+    date: "11/2026 – Present",
+    location: "Munich, Germany · 15 hours/week",
+    bullets: [
+      "Starting 16 November 2026. Role details to be added as work begins."
+    ]
+  },
+  {
     title: "Marketing Analytics & Insights Working Student",
     company: { name: "MediaMarktSaturn", url: "https://www.mediamarktsaturn.com" },
     date: "02/2026 – 07/2026",

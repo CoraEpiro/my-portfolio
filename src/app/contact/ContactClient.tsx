@@ -74,8 +74,8 @@ export default function ContactClient() {
                       </div>
                       <div>
                         <p className="text-gray-300">Email</p>
-                        <a href="mailto:Ali.Guliyev@stud.ku.de" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:underline">
-                          Ali.Guliyev@stud.ku.de
+                        <a href="mailto:aguliyev45@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 hover:underline">
+                          aguliyev45@gmail.com
                         </a>
                       </div>
                     </div>
@@ -194,8 +194,8 @@ export default function ContactClient() {
                       {status === 'error' && (
                         <p className="mt-4 text-sm text-red-400">
                           Something went wrong sending your message. Please email me directly at{' '}
-                          <a href="mailto:Ali.Guliyev@stud.ku.de" className="underline hover:text-red-300">
-                            Ali.Guliyev@stud.ku.de
+                          <a href="mailto:aguliyev45@gmail.com" className="underline hover:text-red-300">
+                            aguliyev45@gmail.com
                           </a>.
                         </p>
                       )}
