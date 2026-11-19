@@ -136,26 +136,26 @@ export default function HomeClient() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             {
-              title: "Modelling & Statistics",
+              title: de ? "Modellierung und Statistik" : "Modelling & Statistics",
               skills: [
-                "Probability, stochastic processes, measure theory",
-                "Regression, classification, time-series, model validation",
+                de ? "Wahrscheinlichkeit, stochastische Prozesse, Maßtheorie" : "Probability, stochastic processes, measure theory",
+                de ? "Regression, Klassifikation, Zeitreihen, Modellvalidierung" : "Regression, classification, time-series, model validation",
                 "Scikit-Learn, TensorFlow, PyTorch, statsmodels"
               ]
             },
             {
-              title: "Programming & Data",
+              title: de ? "Programmierung und Daten" : "Programming & Data",
               skills: [
-                "Python (advanced), SQL, Java, C/C++",
+                de ? "Python (fortgeschritten), SQL, Java, C/C++" : "Python (advanced), SQL, Java, C/C++",
                 "Pandas, NumPy, Matplotlib, Seaborn",
                 "Docker, Git, ETL/EDA, Power BI, Tableau"
               ]
             },
             {
-              title: "Working & Languages",
+              title: de ? "Arbeitsweise und Sprachen" : "Working & Languages",
               skills: [
-                "Agile, JIRA, Confluence",
-                "Azerbaijani, Turkish (native), English (proficient)",
+                de ? "Agile, JIRA, Confluence" : "Agile, JIRA, Confluence",
+                de ? "Aserbaidschanisch, Türkisch (Muttersprache), Englisch (sehr gut)" : "Azerbaijani, Turkish (native), English (proficient)",
                 de ? "Deutsch B1, Ziel: B2 bis Ende 2026" : "German B1, aiming for B2 by the end of 2026"
               ]
             }
@@ -260,8 +260,8 @@ export default function HomeClient() {
               dates: de ? "10/2023 – 2026" : "10/2023 – 2026",
               details: [
                 de ? "Abschlussnote 1,9 auf der deutschen Notenskala" : "Final average 1.9 on the German grading scale",
-                "Specialization in Applied Mathematics",
-                "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science, Probability Theory, Stochastics",
+                de ? "Schwerpunkt Angewandte Mathematik" : "Specialization in Applied Mathematics",
+                de ? "Wichtige Fächer: Maschinelles Lernen, Deep Learning, Maßtheorie für Data Science, Wahrscheinlichkeitstheorie und Stochastik" : "Key courses: Machine Learning, Deep Learning, Measure Theory for Data Science, Probability Theory, Stochastics",
                 de ? "Tutorium für Lineare Algebra I und II, rund 200 Stunden für über 120 Studierende" : "Teaching assistant for Linear Algebra I and II, about 200 hours with 120+ students"
               ]
             },
@@ -273,10 +273,10 @@ export default function HomeClient() {
               location: "Baku, Azerbaijan",
               dates: "09/2021 – 06/2023",
               details: [
-                "Final grade 83 / 100 (top quintile)",
-                "Advanced coursework: Real Analysis, Abstract Algebra, Differential Equations",
+                de ? "Abschlussnote 83 von 100 (oberstes Fünftel)" : "Final grade 83 / 100 (top quintile)",
+                de ? "Vertiefte Kurse: Reelle Analysis, Abstrakte Algebra, Differentialgleichungen" : "Advanced coursework: Real Analysis, Abstract Algebra, Differential Equations",
                 de ? "Ein vollständiges Mathematikstudium vor dem Data-Science-Studium" : "Completed a full mathematics degree before studying data science",
-                "Transferred to Germany for a more research-oriented data-science track"
+                de ? "Wechsel nach Deutschland für einen stärker forschungsorientierten Data-Science-Schwerpunkt" : "Transferred to Germany for a more research-oriented data-science track"
               ]
             },
             {
@@ -287,9 +287,9 @@ export default function HomeClient() {
               location: "Baku, Azerbaijan",
               dates: "10/2021 – 04/2024",
               details: [
-                "2.5-year intensive .NET & Python program (GPA 11.3 / 12.0)",
-                "Capstone: full-stack web app with JWT auth & Dockerized deployment",
-                "Agile & CI/CD best-practices training"
+                de ? "2,5-jähriges Intensivprogramm für .NET und Python (Durchschnitt 11,3 von 12,0)" : "2.5-year intensive .NET & Python program (GPA 11.3 / 12.0)",
+                de ? "Abschlussprojekt: Full-Stack-Webanwendung mit JWT-Authentifizierung und Docker-Deployment" : "Capstone: full-stack web app with JWT auth & Dockerized deployment",
+                de ? "Schulung zu Agile und bewährten CI/CD-Verfahren" : "Agile & CI/CD best-practices training"
               ]
             },
             {
@@ -300,8 +300,8 @@ export default function HomeClient() {
               location: "Baku, Azerbaijan",
               dates: "09/2020 – 06/2021",
               details: [
-                "1-year robotics and Construct 2 game-development track",
-                "Introduced to Python, sensors, and basic algorithmic thinking"
+                de ? "Einjähriger Schwerpunkt Robotik und Spieleentwicklung mit Construct 2" : "1-year robotics and Construct 2 game-development track",
+                de ? "Einführung in Python, Sensoren und algorithmisches Denken" : "Introduced to Python, sensors, and basic algorithmic thinking"
               ]
             }
           ].map((edu, idx) => (

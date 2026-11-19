@@ -281,7 +281,21 @@ export default function ProjectsClient() {
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                  {project.title}
+                  {de ? ({
+                    'VGI-Flexi: Rural Transport Analytics': 'VGI-Flexi: Analyse des ländlichen Verkehrs',
+                    'ChatVocate: Azerbaijani Legal AI': 'ChatVocate: Juristische KI für Aserbaidschan',
+                    'Silent Routes: Holocaust Remembrance': 'Silent Routes: Erinnerung an den Holocaust',
+                    'coRELation: Religion, Diversity & Social Cohesion': 'coRELation: Religion, Vielfalt und gesellschaftlicher Zusammenhalt',
+                    'ConsulCon25 Presentation': 'ConsulCon25-Präsentation',
+                    'Intelligent Multilingual AGV': 'Intelligentes mehrsprachiges AGV',
+                    "Differential Equations l: Newton's Law of Cooling (+experiment)": 'Differentialgleichungen I: Newtons Abkühlungsgesetz (mit Experiment)',
+                    'Differential Equations l: 1-D Presentation of 3-Body Problem': 'Differentialgleichungen I: Das Dreikörperproblem in einer Dimension',
+                    'Differential Equations III: Advanced Mathematical Analysis': 'Differentialgleichungen III: Vertiefte mathematische Analyse',
+                    'Locusts vs. Crops: A Predator-Prey Model': 'Heuschrecken und Nutzpflanzen: Ein Räuber-Beute-Modell',
+                    'Lagrangian Modeling: Falling Rope & Mass': 'Lagrange-Mechanik: Fallendes Seil mit Gewicht',
+                    'Autocatalytic Chemical Reactions: From Reaction Structure to Emergent Dynamics': 'Autokatalytische chemische Reaktionen: Von der Reaktionsstruktur zur Dynamik',
+                    'Universal Approximation, Transformers & Sumformers': 'Universelle Approximation, Transformer und Sumformer'
+                  } as Record<string, string>)[project.title] || project.title : project.title}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-3 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                   {de ? ({
@@ -317,7 +331,7 @@ export default function ProjectsClient() {
               <div className="bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl w-full relative m-4 my-8 max-w-5xl max-h-[90vh] overflow-y-auto transform transition-all duration-500 ease-out animate-scale-in" onClick={e => e.stopPropagation()}>
                 <button className="absolute top-4 right-4 text-4xl font-light text-gray-400 hover:text-white transition-colors z-10" onClick={() => setShowAgvModal(false)}>&times;</button>
 
-                <h2 className="text-3xl font-bold text-white mb-6 px-8 pt-8">Intelligent Multilingual AGV for Grid Navigation and Parking via OCR</h2>
+                <h2 className="text-3xl font-bold text-white mb-6 px-8 pt-8">{de ? 'Intelligentes mehrsprachiges AGV für Raster-Navigation und Parken per OCR' : 'Intelligent Multilingual AGV for Grid Navigation and Parking via OCR'}</h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start px-8 pb-8">
                   <div className="flex flex-col gap-6">
@@ -335,10 +349,10 @@ export default function ProjectsClient() {
                     <div className="space-y-3">
                       <p className="text-gray-300">{de ? 'In diesem Universitätsprojekt entsteht ein AGV-Prototyp für die Logistik. Das Fahrzeug folgt einem farbcodierten Raster, reagiert auf mehrsprachige Sprachbefehle und übernimmt Navigation, Parken sowie Hindernisvermeidung mit RoboPro und Python.' : 'This university project builds a smart AGV prototype for logistics use cases. The system follows a color-coded grid, responds to multilingual voice commands, and switches between real-time navigation, parking, and obstacle handling through a hybrid RoboPro and Python architecture.'}</p>
                       <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                        <li><strong>Voice control:</strong> multilingual speech input interpreted with GPT and converted into structured actions</li>
-                        <li><strong>Parking:</strong> OCR detects the letter “P” to locate and align with parking spots</li>
-                        <li><strong>Control loop:</strong> RoboPro manages line following and state switching while Python handles higher-level logic over MQTT</li>
-                        <li><strong>Testing:</strong> integrated and validated across line following, parking, obstacle avoidance, and rapid command switching</li>
+                        <li><strong>{de ? 'Sprachsteuerung:' : 'Voice control:'}</strong> {de ? 'GPT interpretiert mehrsprachige Spracheingaben und wandelt sie in strukturierte Aktionen um.' : 'multilingual speech input interpreted with GPT and converted into structured actions'}</li>
+                        <li><strong>{de ? 'Parken:' : 'Parking:'}</strong> {de ? 'OCR erkennt den Buchstaben „P“, um Parkplätze zu finden und das Fahrzeug auszurichten.' : 'OCR detects the letter “P” to locate and align with parking spots'}</li>
+                        <li><strong>{de ? 'Steuerung:' : 'Control loop:'}</strong> {de ? 'RoboPro steuert Linienverfolgung und Zustandswechsel; Python übernimmt über MQTT die übergeordnete Logik.' : 'RoboPro manages line following and state switching while Python handles higher-level logic over MQTT'}</li>
+                        <li><strong>{de ? 'Tests:' : 'Testing:'}</strong> {de ? 'Linienverfolgung, Parken, Hindernisvermeidung und schnelle Befehlswechsel wurden integriert und geprüft.' : 'integrated and validated across line following, parking, obstacle avoidance, and rapid command switching'}</li>
                       </ul>
                     </div>
                   </div>
@@ -507,7 +521,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Verwendete Technologien' : 'Technology Stack'}</h4>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">Frontend</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Frontend' : 'Frontend'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Next.js 14 (App Router)</li>
                           <li>• TypeScript</li>
@@ -516,7 +530,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">Backend</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">{de ? 'Backend' : 'Backend'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Next.js API Routes</li>
                           <li>• JWT Authentication</li>
@@ -525,7 +539,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">AI & Services</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">{de ? 'KI und Dienste' : 'AI & Services'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• OpenAI GPT-4</li>
                           <li>• Real-time Translation</li>
@@ -534,7 +548,7 @@ export default function ProjectsClient() {
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-orange-400 font-semibold mb-2">Deployment</h5>
+                        <h5 className="text-orange-400 font-semibold mb-2">{de ? 'Bereitstellung' : 'Deployment'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Vercel Hosting</li>
                           <li>• Serverless Functions</li>
@@ -550,16 +564,16 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Zielgruppen' : 'Target Users'}</h4>
                     <div className="space-y-3">
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">Legal Professionals</h5>
-                        <p className="text-gray-400 text-sm">Quick legal research, case law references, document drafting assistance, and regulatory compliance guidance.</p>
+                        <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Juristische Fachkräfte' : 'Legal Professionals'}</h5>
+                        <p className="text-gray-400 text-sm">{de ? 'Schnelle Rechtsrecherche, Hinweise auf Rechtsprechung, Unterstützung bei Dokumenten und Orientierung zu Vorschriften.' : 'Quick legal research, case law references, document drafting assistance, and regulatory compliance guidance.'}</p>
                       </div>
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">Citizens & Businesses</h5>
-                        <p className="text-gray-400 text-sm">Understanding legal rights, contract review, legal procedure explanations, and basic legal guidance.</p>
+                        <h5 className="text-green-400 font-semibold mb-2">{de ? 'Privatpersonen und Unternehmen' : 'Citizens & Businesses'}</h5>
+                        <p className="text-gray-400 text-sm">{de ? 'Informationen zu Rechten, Prüfung von Verträgen, Erklärungen zu Verfahren und erste rechtliche Orientierung.' : 'Understanding legal rights, contract review, legal procedure explanations, and basic legal guidance.'}</p>
                       </div>
                       <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">Educational Institutions</h5>
-                        <p className="text-gray-400 text-sm">Law student research tool, legal concept explanations, practice scenarios, and multilingual legal education support.</p>
+                        <h5 className="text-purple-400 font-semibold mb-2">{de ? 'Bildungseinrichtungen' : 'Educational Institutions'}</h5>
+                        <p className="text-gray-400 text-sm">{de ? 'Recherche für Jurastudierende, Erklärungen rechtlicher Konzepte, Übungsfälle und mehrsprachige Lernangebote.' : 'Law student research tool, legal concept explanations, practice scenarios, and multilingual legal education support.'}</p>
                       </div>
                     </div>
                   </div>
@@ -570,20 +584,20 @@ export default function ProjectsClient() {
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <span className="text-blue-400 font-semibold">Response Time:</span>
-                          <p className="text-gray-400">3 seconds</p>
+                          <span className="text-blue-400 font-semibold">{de ? 'Antwortzeit:' : 'Response Time:'}</span>
+                          <p className="text-gray-400">{de ? '3 Sekunden' : '3 seconds'}</p>
                         </div>
                         <div>
-                          <span className="text-green-400 font-semibold">Uptime:</span>
-                          <p className="text-gray-400">99.9% availability</p>
+                          <span className="text-green-400 font-semibold">{de ? 'Verfügbarkeit:' : 'Uptime:'}</span>
+                          <p className="text-gray-400">{de ? '99,9 % Verfügbarkeit' : '99.9% availability'}</p>
                         </div>
                         <div>
-                          <span className="text-purple-400 font-semibold">Security:</span>
-                          <p className="text-gray-400">Zero vulnerabilities</p>
+                          <span className="text-purple-400 font-semibold">{de ? 'Sicherheit:' : 'Security:'}</span>
+                          <p className="text-gray-400">{de ? 'Keine bekannten Sicherheitslücken' : 'Zero vulnerabilities'}</p>
                         </div>
                         <div>
-                          <span className="text-orange-400 font-semibold">Design:</span>
-                          <p className="text-gray-400">Mobile-first responsive</p>
+                          <span className="text-orange-400 font-semibold">{de ? 'Design:' : 'Design:'}</span>
+                          <p className="text-gray-400">{de ? 'Für Mobilgeräte optimiert und responsiv' : 'Mobile-first responsive'}</p>
                         </div>
                       </div>
                     </div>
@@ -699,17 +713,17 @@ export default function ProjectsClient() {
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-lg shadow hover:bg-green-700 transition-colors"
                     >
-                      Launch Interactive Version in Binder
+                      {de ? 'Interaktive Version in Binder starten' : 'Launch Interactive Version in Binder'}
                     </a>
                   </div>
                   
                   {/* Download Files Section */}
                   <div className="text-sm text-gray-400 p-3 bg-gray-800 rounded-lg border border-gray-700 mt-4">
-                    <h4 className="font-bold text-white mb-2">Download Files</h4>
+                    <h4 className="font-bold text-white mb-2">{de ? 'Dateien herunterladen' : 'Download Files'}</h4>
                     <ul className="list-disc list-inside space-y-2">
-                      <li><a href="/projects/rain-in-australia/RainInAustralia.html" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">HTML Report (.html)</a></li>
-                      <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/Rain%20in%20Australia.ipynb" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Jupyter Notebook (.ipynb)</a></li>
-                      <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/weatherAUS.csv" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Dataset (.csv)</a></li>
+                      <li><a href="/projects/rain-in-australia/RainInAustralia.html" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">{de ? 'HTML-Bericht (.html)' : 'HTML Report (.html)'}</a></li>
+                      <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/Rain%20in%20Australia.ipynb" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">{de ? 'Jupyter-Notebook (.ipynb)' : 'Jupyter Notebook (.ipynb)'}</a></li>
+                      <li><a href="https://github.com/CoraEpiro/rain-in-australia-binder/blob/main/weatherAUS.csv" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">{de ? 'Datensatz (.csv)' : 'Dataset (.csv)'}</a></li>
                     </ul>
                   </div>
                 </div>
@@ -984,9 +998,9 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <p className="text-gray-300">{de ? 'Ein Hackathon-Projekt von Data4Good26, das Umfragedaten zu religiöser Vielfalt, Vertrauen und gesellschaftlichem Zusammenhalt auswertet. Es untersucht, wie das Zusammenleben verschiedener Religionen Solidarität und pluralistische Gesellschaften prägt.' : 'A Data4Good26 hackathon project that transforms complex survey data into meaningful insights on religious diversity, trust, and social cohesion. It explores how religious coexistence shapes solidarity and pluralistic societies.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Data-driven:</strong> ReligionMonitor survey data visualized for policymakers, educators, and civil society.</li>
-                      <li><strong>Key themes:</strong> Fear and knowledge gaps, solidarity in crisis, and how contact improves perception.</li>
-                      <li><strong>Live platform:</strong> Explore insights, read stories, and compare diversity metrics across countries.</li>
+                      <li><strong>{de ? 'Datenbasiert:' : 'Data-driven:'}</strong> {de ? 'Umfragedaten des ReligionMonitor werden für Politik, Bildung und Zivilgesellschaft visualisiert.' : 'ReligionMonitor survey data visualized for policymakers, educators, and civil society.'}</li>
+                      <li><strong>{de ? 'Zentrale Themen:' : 'Key themes:'}</strong> {de ? 'Ängste und Wissenslücken, Solidarität in Krisen und der Einfluss persönlicher Begegnungen.' : 'Fear and knowledge gaps, solidarity in crisis, and how contact improves perception.'}</li>
+                      <li><strong>{de ? 'Live-Plattform:' : 'Live platform:'}</strong> {de ? 'Erkenntnisse erkunden, Geschichten lesen und Kennzahlen zur Vielfalt zwischen Ländern vergleichen.' : 'Explore insights, read stories, and compare diversity metrics across countries.'}</li>
                     </ul>
                   </div>
                   <div className="space-y-3 pt-4 border-t border-gray-700">
@@ -1095,11 +1109,11 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <p className="text-gray-300">{de ? 'Eine mathematische Untersuchung des Newtonschen Abkühlungsgesetzes mit theoretischer Herleitung und praktischem Experiment. Das Projekt zeigt, wie Differentialgleichungen reale Temperaturverläufe beschreiben.' : "An in-depth mathematical exploration of Newton's Law of Cooling through theoretical analysis and practical experimentation. This project demonstrates how differential equations model real-world temperature phenomena."}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Mathematical Theory:</strong> Derivation and analysis of the cooling differential equation</li>
-                      <li><strong>Experimental Design:</strong> Temperature measurement setup and data collection</li>
-                      <li><strong>Data Analysis:</strong> Curve fitting and parameter estimation</li>
-                      <li><strong>Real-world Applications:</strong> Forensic science, food safety, and engineering</li>
-                      <li><strong>Educational Value:</strong> Bridge between theory and practical application</li>
+                      <li><strong>{de ? 'Mathematische Herleitung:' : 'Mathematical Theory:'}</strong> {de ? 'Herleitung und Analyse der Abkühlungsgleichung' : 'Derivation and analysis of the cooling differential equation'}</li>
+                      <li><strong>{de ? 'Versuchsaufbau:' : 'Experimental Design:'}</strong> {de ? 'Temperaturmessung und Datenerhebung' : 'Temperature measurement setup and data collection'}</li>
+                      <li><strong>{de ? 'Datenauswertung:' : 'Data Analysis:'}</strong> {de ? 'Kurvenanpassung und Parameterschätzung' : 'Curve fitting and parameter estimation'}</li>
+                      <li><strong>{de ? 'Anwendungen:' : 'Real-world Applications:'}</strong> {de ? 'Forensik, Lebensmittelsicherheit und Ingenieurwesen' : 'Forensic science, food safety, and engineering'}</li>
+                      <li><strong>{de ? 'Lernziel:' : 'Educational Value:'}</strong> {de ? 'Verbindung von Theorie und praktischer Anwendung' : 'Bridge between theory and practical application'}</li>
                     </ul>
                   </div>
 
@@ -1129,7 +1143,7 @@ export default function ProjectsClient() {
                           <span className="text-2xl">−<span className="italic">k</span>(<span className="italic">T</span> − <span className="italic">T</span><sub className="text-lg">env</sub>)</span>
                         </div>
                         <p className="text-sm text-gray-400">
-                          where <span className="italic text-blue-300">T</span> is temperature, <span className="italic text-blue-300">t</span> is time, <span className="italic text-blue-300">k</span> is cooling constant, <span className="italic text-blue-300">T<sub>env</sub></span> is environmental temperature
+                          {de ? 'Dabei steht ' : 'where '}<span className="italic text-blue-300">T</span>{de ? ' für die Temperatur, ' : ' is temperature, '}<span className="italic text-blue-300">t</span>{de ? ' für die Zeit, ' : ' is time, '}<span className="italic text-blue-300">k</span>{de ? ' für die Abkühlungskonstante und ' : ' is cooling constant, '}<span className="italic text-blue-300">T<sub>env</sub></span>{de ? ' für die Umgebungstemperatur.' : ' is environmental temperature'}
                         </p>
                       </div>
                     </div>
@@ -1140,27 +1154,27 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Bestandteile des Experiments' : 'Experimental Components'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">Temperature Measurement</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Temperaturmessung' : 'Temperature Measurement'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Digital thermometer setup</li>
-                          <li>• Time-series data collection</li>
-                          <li>• Environmental control</li>
+                          <li>• {de ? 'Digitales Thermometer' : 'Digital thermometer setup'}</li>
+                          <li>• {de ? 'Zeitreihenmessung' : 'Time-series data collection'}</li>
+                          <li>• {de ? 'Kontrolle der Umgebungsbedingungen' : 'Environmental control'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">Data Analysis</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">{de ? 'Datenanalyse' : 'Data Analysis'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Exponential curve fitting</li>
-                          <li>• Parameter estimation</li>
-                          <li>• Error analysis</li>
+                          <li>• {de ? 'Anpassung einer Exponentialkurve' : 'Exponential curve fitting'}</li>
+                          <li>• {de ? 'Parameterschätzung' : 'Parameter estimation'}</li>
+                          <li>• {de ? 'Fehleranalyse' : 'Error analysis'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">Applications</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">{de ? 'Anwendungen' : 'Applications'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Forensic time of death</li>
-                          <li>• Food safety protocols</li>
-                          <li>• Engineering heat transfer</li>
+                          <li>• {de ? 'Forensische Bestimmung des Todeszeitpunkts' : 'Forensic time of death'}</li>
+                          <li>• {de ? 'Lebensmittelsicherheit' : 'Food safety protocols'}</li>
+                          <li>• {de ? 'Wärmeübertragung in der Technik' : 'Engineering heat transfer'}</li>
                         </ul>
                       </div>
                     </div>
@@ -1175,7 +1189,7 @@ export default function ProjectsClient() {
                           <span className="italic">T</span>(<span className="italic">t</span>) = <span className="italic">T</span><sub className="text-sm">env</sub> + (<span className="italic">T</span><sub className="text-sm">₀</sub> − <span className="italic">T</span><sub className="text-sm">env</sub>)<span className="italic">e</span><sup className="text-sm">−<span className="italic">kt</span></sup>
                         </div>
                         <p className="text-sm text-gray-400">
-                          Exponential decay solution with initial condition <span className="italic text-green-300">T<sub>₀</sub></span>
+                          {de ? 'Exponentielle Abkühlung mit der Anfangstemperatur ' : 'Exponential decay solution with initial condition '}<span className="italic text-green-300">T<sub>₀</sub></span>
                         </p>
                       </div>
                     </div>
@@ -1228,11 +1242,11 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <p className="text-gray-300">{de ? 'Die Präsentation untersucht das klassische Dreikörperproblem anhand einer eindimensionalen Analyse. Sie veranschaulicht die Komplexität der Himmelsmechanik mit Differentialgleichungen.' : 'A mathematical presentation exploring the classical three-body problem through one-dimensional analysis and differential equations.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Classical Mechanics:</strong> Newton's laws applied to gravitational systems</li>
-                      <li><strong>Differential Equations:</strong> Second-order nonlinear system analysis</li>
-                      <li><strong>Mathematical Complexity:</strong> Chaos theory and sensitive dependence</li>
-                      <li><strong>Historical Context:</strong> Poincaré's contributions and modern developments</li>
-                      <li><strong>Astronomical Applications:</strong> Planetary motion and orbital mechanics</li>
+                      <li><strong>{de ? 'Klassische Mechanik:' : 'Classical Mechanics:'}</strong> {de ? 'Anwendung der Newtonschen Gesetze auf Gravitationssysteme' : "Newton's laws applied to gravitational systems"}</li>
+                      <li><strong>{de ? 'Differentialgleichungen:' : 'Differential Equations:'}</strong> {de ? 'Analyse eines nichtlinearen Systems zweiter Ordnung' : 'Second-order nonlinear system analysis'}</li>
+                      <li><strong>{de ? 'Mathematische Komplexität:' : 'Mathematical Complexity:'}</strong> {de ? 'Chaostheorie und empfindliche Abhängigkeit von Anfangsbedingungen' : 'Chaos theory and sensitive dependence'}</li>
+                      <li><strong>{de ? 'Historischer Kontext:' : 'Historical Context:'}</strong> {de ? 'Poincarés Beiträge und neuere Entwicklungen' : "Poincaré's contributions and modern developments"}</li>
+                      <li><strong>{de ? 'Astronomische Anwendungen:' : 'Astronomical Applications:'}</strong> {de ? 'Planetenbewegungen und Orbitalmechanik' : 'Planetary motion and orbital mechanics'}</li>
                     </ul>
                   </div>
                 </div>
@@ -1256,7 +1270,7 @@ export default function ProjectsClient() {
                           <span className="italic">m</span><sub className="text-sm">₃</sub><span className="italic">r̈</span><sub className="text-sm">₃</sub> = Σ <span className="italic">F</span><sub className="text-sm">₃ⱼ</sub>
                         </div>
                         <p className="text-sm text-gray-400 pt-2">
-                          Coupled second-order differential equations for three gravitating bodies
+                          {de ? 'Gekoppelte Differentialgleichungen zweiter Ordnung für drei gravitativ wechselwirkende Körper.' : 'Coupled second-order differential equations for three gravitating bodies'}
                         </p>
                       </div>
                     </div>
@@ -1267,27 +1281,27 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Eigenschaften des Problems' : 'Problem Characteristics'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">Gravitational Forces</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">{de ? 'Gravitationskräfte' : 'Gravitational Forces'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Inverse square law interactions</li>
-                          <li>• Conservation of energy</li>
-                          <li>• Conservation of momentum</li>
+                          <li>• {de ? 'Wechselwirkung nach dem inversen Quadratgesetz' : 'Inverse square law interactions'}</li>
+                          <li>• {de ? 'Energieerhaltung' : 'Conservation of energy'}</li>
+                          <li>• {de ? 'Impulserhaltung' : 'Conservation of momentum'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-orange-400 font-semibold mb-2">Dynamical Behavior</h5>
+                        <h5 className="text-orange-400 font-semibold mb-2">{de ? 'Dynamisches Verhalten' : 'Dynamical Behavior'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Chaotic trajectories</li>
-                          <li>• Sensitive initial conditions</li>
-                          <li>• No general analytical solution</li>
+                          <li>• {de ? 'Chaotische Bahnen' : 'Chaotic trajectories'}</li>
+                          <li>• {de ? 'Empfindlichkeit gegenüber Anfangsbedingungen' : 'Sensitive initial conditions'}</li>
+                          <li>• {de ? 'Keine allgemeine analytische Lösung' : 'No general analytical solution'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">Numerical Methods</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">{de ? 'Numerische Methoden' : 'Numerical Methods'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Runge-Kutta integration</li>
-                          <li>• Symplectic algorithms</li>
-                          <li>• Phase space analysis</li>
+                          <li>• {de ? 'Runge-Kutta-Integration' : 'Runge-Kutta integration'}</li>
+                          <li>• {de ? 'Symplektische Algorithmen' : 'Symplectic algorithms'}</li>
+                          <li>• {de ? 'Phasenraumanalyse' : 'Phase space analysis'}</li>
                         </ul>
                       </div>
                     </div>
@@ -1298,9 +1312,9 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Historische Bedeutung' : 'Historical Significance'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2">
-                        <p className="text-gray-300 text-sm"><strong>Henri Poincaré (1889):</strong> Proved no general solution exists</p>
-                        <p className="text-gray-300 text-sm"><strong>Modern Era:</strong> Computer simulations reveal chaotic nature</p>
-                        <p className="text-gray-300 text-sm"><strong>Applications:</strong> Spacecraft trajectories, asteroid dynamics</p>
+                        <p className="text-gray-300 text-sm"><strong>Henri Poincaré (1889):</strong> {de ? 'Zeigte, dass keine allgemeine Lösung existiert.' : 'Proved no general solution exists'}</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Moderne:' : 'Modern Era:'}</strong> {de ? 'Computersimulationen machen das chaotische Verhalten sichtbar.' : 'Computer simulations reveal chaotic nature'}</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Anwendungen:' : 'Applications:'}</strong> {de ? 'Raumflugbahnen und Asteroidendynamik.' : 'Spacecraft trajectories, asteroid dynamics'}</p>
                       </div>
                     </div>
                   </div>
@@ -1339,17 +1353,17 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <p className="text-gray-300">{de ? 'Eine Präsentation zu komplexen Differentialgleichungen und ihren Anwendungen in der modernen Mathematik und Physik.' : 'An advanced mathematical analysis presentation exploring complex differential equations and their applications in modern mathematics and physics.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Advanced Mathematics:</strong> Complex differential equation analysis</li>
-                      <li><strong>Mathematical Theory:</strong> Theoretical foundations and proofs</li>
-                      <li><strong>Practical Applications:</strong> Real-world mathematical applications</li>
-                      <li><strong>Academic Research:</strong> Cutting-edge mathematical concepts</li>
+                      <li><strong>{de ? 'Vertiefte Mathematik:' : 'Advanced Mathematics:'}</strong> {de ? 'Analyse komplexer Differentialgleichungen' : 'Complex differential equation analysis'}</li>
+                      <li><strong>{de ? 'Mathematische Theorie:' : 'Mathematical Theory:'}</strong> {de ? 'Theoretische Grundlagen und Beweise' : 'Theoretical foundations and proofs'}</li>
+                      <li><strong>{de ? 'Anwendungen:' : 'Practical Applications:'}</strong> {de ? 'Mathematische Methoden in realen Fragestellungen' : 'Real-world mathematical applications'}</li>
+                      <li><strong>{de ? 'Forschung:' : 'Academic Research:'}</strong> {de ? 'Aktuelle mathematische Konzepte' : 'Cutting-edge mathematical concepts'}</li>
                     </ul>
                   </div>
                 </div>
 
                 {/* Right Column: Mathematical Analysis Details */}
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Advanced Mathematical Analysis</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Vertiefte mathematische Analyse' : 'Advanced Mathematical Analysis'}</h3>
                   
                   {/* Mathematical Concepts */}
                   <div className="space-y-3">
@@ -1357,16 +1371,16 @@ export default function ProjectsClient() {
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-3">
                         <div className="text-center">
-                          <p className="text-blue-400 font-semibold">Advanced Differential Equations</p>
-                          <p className="text-sm text-gray-400">Complex mathematical analysis and theoretical foundations</p>
+                          <p className="text-blue-400 font-semibold">{de ? 'Vertiefte Differentialgleichungen' : 'Advanced Differential Equations'}</p>
+                          <p className="text-sm text-gray-400">{de ? 'Komplexe mathematische Analyse und theoretische Grundlagen' : 'Complex mathematical analysis and theoretical foundations'}</p>
                         </div>
                         <div className="text-center">
-                          <p className="text-purple-400 font-semibold">Mathematical Theory</p>
-                          <p className="text-sm text-gray-400">Theoretical proofs and mathematical rigor</p>
+                          <p className="text-purple-400 font-semibold">{de ? 'Mathematische Theorie' : 'Mathematical Theory'}</p>
+                          <p className="text-sm text-gray-400">{de ? 'Theoretische Beweise und mathematische Strenge' : 'Theoretical proofs and mathematical rigor'}</p>
                         </div>
                         <div className="text-center">
-                          <p className="text-green-400 font-semibold">Practical Applications</p>
-                          <p className="text-sm text-gray-400">Real-world applications of advanced mathematics</p>
+                          <p className="text-green-400 font-semibold">{de ? 'Praktische Anwendungen' : 'Practical Applications'}</p>
+                          <p className="text-sm text-gray-400">{de ? 'Anwendungen vertiefter Mathematik in realen Fragestellungen' : 'Real-world applications of advanced mathematics'}</p>
                         </div>
                       </div>
                     </div>
@@ -1377,27 +1391,27 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Analysemethoden' : 'Analysis Framework'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">Mathematical Methods</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Mathematische Methoden' : 'Mathematical Methods'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Advanced differential equations</li>
-                          <li>• Complex mathematical analysis</li>
-                          <li>• Theoretical foundations</li>
+                          <li>• {de ? 'Vertiefte Differentialgleichungen' : 'Advanced differential equations'}</li>
+                          <li>• {de ? 'Komplexe mathematische Analyse' : 'Complex mathematical analysis'}</li>
+                          <li>• {de ? 'Theoretische Grundlagen' : 'Theoretical foundations'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-purple-400 font-semibold mb-2">Analytical Techniques</h5>
+                        <h5 className="text-purple-400 font-semibold mb-2">{de ? 'Analytische Verfahren' : 'Analytical Techniques'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Mathematical proofs</li>
-                          <li>• Theoretical analysis</li>
-                          <li>• Advanced concepts</li>
+                          <li>• {de ? 'Mathematische Beweise' : 'Mathematical proofs'}</li>
+                          <li>• {de ? 'Theoretische Analyse' : 'Theoretical analysis'}</li>
+                          <li>• {de ? 'Vertiefte Konzepte' : 'Advanced concepts'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">Research Applications</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">{de ? 'Forschungsanwendungen' : 'Research Applications'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Academic research</li>
-                          <li>• Mathematical modeling</li>
-                          <li>• Scientific applications</li>
+                          <li>• {de ? 'Akademische Forschung' : 'Academic research'}</li>
+                          <li>• {de ? 'Mathematische Modellierung' : 'Mathematical modeling'}</li>
+                          <li>• {de ? 'Wissenschaftliche Anwendungen' : 'Scientific applications'}</li>
                         </ul>
                       </div>
                     </div>
@@ -1408,9 +1422,9 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Akademischer Kontext' : 'Academic Context'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2">
-                        <p className="text-gray-300 text-sm"><strong>Advanced Mathematics:</strong> Complex differential equation analysis</p>
-                        <p className="text-gray-300 text-sm"><strong>Academic Research:</strong> Cutting-edge mathematical concepts</p>
-                        <p className="text-gray-300 text-sm"><strong>Applications:</strong> Real-world mathematical applications</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Vertiefte Mathematik:' : 'Advanced Mathematics:'}</strong> {de ? 'Analyse komplexer Differentialgleichungen' : 'Complex differential equation analysis'}</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Akademische Forschung:' : 'Academic Research:'}</strong> {de ? 'Aktuelle mathematische Konzepte' : 'Cutting-edge mathematical concepts'}</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Anwendungen:' : 'Applications:'}</strong> {de ? 'Mathematische Anwendungen in der Praxis' : 'Real-world mathematical applications'}</p>
                       </div>
                     </div>
                   </div>
@@ -1449,11 +1463,11 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <p className="text-gray-300">{de ? 'Die Präsentation modelliert das Zusammenspiel von Heuschreckenpopulationen und Pflanzenwachstum. Dazu gehören mögliche Eingriffe zur Schädlingsbekämpfung und deren Auswirkungen auf die Landwirtschaft.' : 'A mathematical exploration of the interaction between locust populations and crop growth, including intervention strategies for agricultural pest management.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Basic Dynamics:</strong> Exponential and logistic growth models for crops and locust populations</li>
-                      <li><strong>Predator-Prey Interaction:</strong> Modeling crop consumption and locust reproduction based on food availability</li>
-                      <li><strong>Human Intervention:</strong> Threshold-based spraying function with cost-benefit analysis</li>
-                      <li><strong>Optimization:</strong> Finding optimal intervention strategies for sustainable agriculture</li>
-                      <li><strong>Real-world Applications:</strong> Agricultural pest management and biological control strategies</li>
+                      <li><strong>{de ? 'Grunddynamik:' : 'Basic Dynamics:'}</strong> {de ? 'Exponentielles und logistisches Wachstum von Nutzpflanzen und Heuschrecken' : 'Exponential and logistic growth models for crops and locust populations'}</li>
+                      <li><strong>{de ? 'Räuber-Beute-Beziehung:' : 'Predator-Prey Interaction:'}</strong> {de ? 'Pflanzenverbrauch und Fortpflanzung der Heuschrecken in Abhängigkeit vom Nahrungsangebot' : 'Modeling crop consumption and locust reproduction based on food availability'}</li>
+                      <li><strong>{de ? 'Eingriffe:' : 'Human Intervention:'}</strong> {de ? 'Schwellenwertbasierte Sprühmaßnahmen mit Kosten-Nutzen-Abwägung' : 'Threshold-based spraying function with cost-benefit analysis'}</li>
+                      <li><strong>{de ? 'Optimierung:' : 'Optimization:'}</strong> {de ? 'Suche nach passenden Maßnahmen für eine nachhaltige Landwirtschaft' : 'Finding optimal intervention strategies for sustainable agriculture'}</li>
+                      <li><strong>{de ? 'Anwendungen:' : 'Real-world Applications:'}</strong> {de ? 'Schädlingsbekämpfung und biologische Kontrollstrategien' : 'Agricultural pest management and biological control strategies'}</li>
                     </ul>
                   </div>
                 </div>
@@ -1467,17 +1481,17 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Gleichungen des dynamischen Modells' : 'Dynamic Model Equations'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center space-y-2" style={{fontFamily: 'Times, serif'}}>
-                        <div className="text-sm text-gray-400 mb-2"><strong>Initial Model (without interaction):</strong></div>
+                        <div className="text-sm text-gray-400 mb-2"><strong>{de ? 'Ausgangsmodell (ohne Wechselwirkung):' : 'Initial Model (without interaction):'}</strong></div>
                         <div className="text-sm text-blue-400 mb-4">
-                          C'(t) = <span className="italic">r</span>C (Exponential)<br/>
-                          L'(t) = −<span className="italic">d</span>L (Decay without crops)
+                          C'(t) = <span className="italic">r</span>C ({de ? 'exponentiell' : 'Exponential'})<br/>
+                          L'(t) = −<span className="italic">d</span>L ({de ? 'Abnahme ohne Nutzpflanzen' : 'Decay without crops'})
                         </div>
-                        <div className="text-sm text-gray-400 mb-2"><strong>With Interaction:</strong></div>
+                        <div className="text-sm text-gray-400 mb-2"><strong>{de ? 'Mit Wechselwirkung:' : 'With Interaction:'}</strong></div>
                         <div className="text-sm text-green-400 mb-4">
                           C'(t) = <span className="italic">r</span>C(1 − C/K) − <span className="italic">aCL</span><br/>
                           L'(t) = −<span className="italic">d</span>L + <span className="italic">bCL</span>
                         </div>
-                        <div className="text-sm text-gray-400 mb-2"><strong>With Spraying Intervention:</strong></div>
+                        <div className="text-sm text-gray-400 mb-2"><strong>{de ? 'Mit Sprühmaßnahme:' : 'With Spraying Intervention:'}</strong></div>
                         <div className="text-sm text-purple-400">
                           C'(t) = <span className="italic">r</span>C(1 − C/K) − <span className="italic">aCL</span><br/>
                           L'(t) = <span className="italic">b</span>CL − (<span className="italic">d</span> + u(t))L
@@ -1491,27 +1505,27 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Zentrale Parameter' : 'Key Parameters'}</h4>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-green-400 font-semibold mb-2">Crop Dynamics</h5>
+                        <h5 className="text-green-400 font-semibold mb-2">{de ? 'Nutzpflanzendynamik' : 'Crop Dynamics'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• <span className="italic">r</span>: Growth rate</li>
-                          <li>• <span className="italic">K</span>: Carrying capacity</li>
-                          <li>• <span className="italic">a</span>: Consumption rate</li>
+                          <li>• <span className="italic">r</span>: {de ? 'Wachstumsrate' : 'Growth rate'}</li>
+                          <li>• <span className="italic">K</span>: {de ? 'Umweltkapazität' : 'Carrying capacity'}</li>
+                          <li>• <span className="italic">a</span>: {de ? 'Fraßrate' : 'Consumption rate'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-yellow-400 font-semibold mb-2">Locust Dynamics</h5>
+                        <h5 className="text-yellow-400 font-semibold mb-2">{de ? 'Heuschreckendynamik' : 'Locust Dynamics'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• <span className="italic">d</span>: Natural death rate</li>
-                          <li>• <span className="italic">b</span>: Conversion efficiency</li>
-                          <li>• <span className="italic">u(t)</span>: Control intervention</li>
+                          <li>• <span className="italic">d</span>: {de ? 'Natürliche Sterberate' : 'Natural death rate'}</li>
+                          <li>• <span className="italic">b</span>: {de ? 'Umwandlungseffizienz' : 'Conversion efficiency'}</li>
+                          <li>• <span className="italic">u(t)</span>: {de ? 'Eingriffsmaßnahme' : 'Control intervention'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">Intervention Strategy</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Eingriffsstrategie' : 'Intervention Strategy'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Threshold-based spraying</li>
-                          <li>• Cost-benefit optimization</li>
-                          <li>• Equilibrium analysis</li>
+                          <li>• {de ? 'Schwellenwertbasierte Sprühmaßnahmen' : 'Threshold-based spraying'}</li>
+                          <li>• {de ? 'Kosten-Nutzen-Optimierung' : 'Cost-benefit optimization'}</li>
+                          <li>• {de ? 'Gleichgewichtsanalyse' : 'Equilibrium analysis'}</li>
                         </ul>
                       </div>
                     </div>
@@ -1522,9 +1536,9 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Anwendungen' : 'Real-World Applications'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="space-y-2">
-                        <p className="text-gray-300 text-sm"><strong>Agricultural Pest Management:</strong> Predicting locust swarms and optimizing spray schedules</p>
-                        <p className="text-gray-300 text-sm"><strong>Economic Optimization:</strong> Balancing spray costs against crop damage losses</p>
-                        <p className="text-gray-300 text-sm"><strong>Sustainable Solutions:</strong> Minimizing pesticide use while protecting crops</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Landwirtschaftlicher Pflanzenschutz:' : 'Agricultural Pest Management:'}</strong> {de ? 'Heuschreckenschwärme vorhersagen und Sprühzeitpunkte optimieren.' : 'Predicting locust swarms and optimizing spray schedules'}</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Wirtschaftliche Optimierung:' : 'Economic Optimization:'}</strong> {de ? 'Kosten der Maßnahmen gegen Ernteverluste abwägen.' : 'Balancing spray costs against crop damage losses'}</p>
+                        <p className="text-gray-300 text-sm"><strong>{de ? 'Nachhaltige Lösungen:' : 'Sustainable Solutions:'}</strong> {de ? 'Pestizideinsatz verringern und Nutzpflanzen schützen.' : 'Minimizing pesticide use while protecting crops'}</p>
                       </div>
                     </div>
                   </div>
@@ -1563,12 +1577,12 @@ export default function ProjectsClient() {
                   <div className="space-y-3">
                     <p className="text-gray-300">{de ? 'Die Präsentation wendet die Lagrange-Mechanik auf ein Seil mit angehängter Masse an, das in die Tiefe fällt. Mit Energieerhaltung und der Euler-Lagrange-Gleichung wird aus der gemessenen Fallzeit die Falltiefe bestimmt.' : 'An exploration of Lagrangian mechanics applied to a rope with an attached object falling into a deep hole. Energy conservation and the Euler-Lagrange equation are used to infer falling depth from measured fall time.'}</p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Problem Setup:</strong> Rope with linear mass density falling with attached object</li>
-                      <li><strong>System Variables:</strong> Total rope mass M, object mass m, rope length ℓ, and fallen distance x(t)</li>
-                      <li><strong>Energy Analysis:</strong> Kinetic and potential energy of rope and mass system</li>
-                      <li><strong>Lagrangian Mechanics:</strong> Constructing L = T - V and applying Euler-Lagrange equation</li>
-                      <li><strong>Energy Conservation:</strong> Using conserved energy to derive velocity relations</li>
-                      <li><strong>Solution by Quadrature:</strong> Numerical integration to solve the inverse problem</li>
+                      <li><strong>{de ? 'Aufbau:' : 'Problem setup:'}</strong> {de ? 'Ein Seil mit gleichmäßiger linearer Massendichte fällt zusammen mit einem angehängten Körper.' : 'Rope with linear mass density falling with attached object'}</li>
+                      <li><strong>{de ? 'Systemvariablen:' : 'System variables:'}</strong> {de ? 'Gesamtmasse M des Seils, Masse m des Körpers, Seillänge ℓ und Fallstrecke x(t).' : 'Total rope mass M, object mass m, rope length ℓ, and fallen distance x(t)'}</li>
+                      <li><strong>{de ? 'Energieanalyse:' : 'Energy analysis:'}</strong> {de ? 'Kinetische und potenzielle Energie des Seils und des Körpers.' : 'Kinetic and potential energy of rope and mass system'}</li>
+                      <li><strong>{de ? 'Lagrange-Mechanik:' : 'Lagrangian mechanics:'}</strong> {de ? 'Aufstellung von L = T - V und Anwendung der Euler-Lagrange-Gleichung.' : 'Constructing L = T - V and applying Euler-Lagrange equation'}</li>
+                      <li><strong>{de ? 'Energieerhaltung:' : 'Energy conservation:'}</strong> {de ? 'Herleitung der Geschwindigkeitsbeziehung aus der erhaltenen Energie.' : 'Using conserved energy to derive velocity relations'}</li>
+                      <li><strong>{de ? 'Quadratur:' : 'Solution by quadrature:'}</strong> {de ? 'Numerische Integration zur Lösung des inversen Problems.' : 'Numerical integration to solve the inverse problem'}</li>
                     </ul>
                   </div>
                 </div>
@@ -1582,13 +1596,13 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Systemvariablen und Massen' : 'System Variables & Masses'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2 font-mono">
-                        <div><strong>M:</strong> Total rope mass</div>
-                        <div><strong>m:</strong> Attached object mass</div>
-                        <div><strong>ℓ:</strong> Total rope length</div>
-                        <div><strong>λ:</strong> Linear mass density = M/ℓ</div>
-                        <div><strong>x(t):</strong> Fallen rope length at time t</div>
-                        <div><strong>g:</strong> Gravitational acceleration</div>
-                        <div className="pt-2 border-t border-gray-600 mt-2"><strong>Effective mass:</strong> m_eff(t) = m + λx(t)</div>
+                        <div><strong>M:</strong> {de ? 'Gesamtmasse des Seils' : 'Total rope mass'}</div>
+                        <div><strong>m:</strong> {de ? 'Masse des angehängten Körpers' : 'Attached object mass'}</div>
+                        <div><strong>ℓ:</strong> {de ? 'Gesamtlänge des Seils' : 'Total rope length'}</div>
+                        <div><strong>λ:</strong> {de ? 'Lineare Massendichte = M/ℓ' : 'Linear mass density = M/ℓ'}</div>
+                        <div><strong>x(t):</strong> {de ? 'Gefallene Seillänge zum Zeitpunkt t' : 'Fallen rope length at time t'}</div>
+                        <div><strong>g:</strong> {de ? 'Erdbeschleunigung' : 'Gravitational acceleration'}</div>
+                        <div className="pt-2 border-t border-gray-600 mt-2"><strong>{de ? 'Effektive Masse:' : 'Effective mass:'}</strong> m_eff(t) = m + λx(t)</div>
                       </div>
                     </div>
                   </div>
@@ -1599,7 +1613,7 @@ export default function ProjectsClient() {
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-center space-y-2" style={{fontFamily: 'Times, serif'}}>
                         <div className="text-sm text-blue-400">
-                          All moving parts share velocity ẋ(t)
+                          {de ? 'Alle bewegten Teile haben dieselbe Geschwindigkeit ẋ(t).' : 'All moving parts share velocity ẋ(t)'}
                         </div>
                         <div className="text-lg text-green-400 mt-3">
                           T = ½(m + λx)ẋ²
@@ -1613,8 +1627,8 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Potenzielle Energie (V)' : 'Potential Energy (V)'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2 mb-3">
-                        <div><strong>Object:</strong> V_obj = -mgx</div>
-                        <div><strong>Rope:</strong> V_rope = -½λgx²</div>
+                        <div><strong>{de ? 'Körper:' : 'Object:'}</strong> V_obj = -mgx</div>
+                        <div><strong>{de ? 'Seil:' : 'Rope:'}</strong> V_rope = -½λgx²</div>
                       </div>
                       <div className="text-center text-green-400" style={{fontFamily: 'Times, serif'}}>
                         V = -mgx - ½λgx²
@@ -1639,7 +1653,7 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Bewegungsgleichung' : 'Equation of Motion'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 mb-3">
-                        From Euler-Lagrange equation:
+                        {de ? 'Aus der Euler-Lagrange-Gleichung:' : 'From the Euler-Lagrange equation:'}
                       </div>
                       <div className="text-center text-purple-400" style={{fontFamily: 'Times, serif'}}>
                         ẍ = g - (½λẋ²)/(m + λx)
@@ -1652,8 +1666,8 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Lösung mit Energieerhaltung' : 'Solution via Energy Conservation'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 space-y-2">
-                        <div>Total energy E = T + V is conserved</div>
-                        <div className="pt-2 border-t border-gray-600">Initial condition: x(0) = 0, E = 0</div>
+                        <div>{de ? 'Die Gesamtenergie E = T + V bleibt erhalten.' : 'Total energy E = T + V is conserved'}</div>
+                        <div className="pt-2 border-t border-gray-600">{de ? 'Anfangsbedingung: x(0) = 0, E = 0' : 'Initial condition: x(0) = 0, E = 0'}</div>
                         <div className="text-center text-green-400 mt-3" style={{fontFamily: 'Times, serif'}}>
                           ẋ = √(2gx(m + ½λx)/(m + λx))
                         </div>
@@ -1666,13 +1680,13 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Lösung durch Quadratur' : 'Solution by Quadrature'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-sm text-gray-300 mb-3">
-                        Separating variables and integrating:
+                        {de ? 'Trennung der Variablen und anschließende Integration:' : 'Separating variables and integrating:'}
                       </div>
                       <div className="text-center text-blue-400 text-sm" style={{fontFamily: 'Times, serif'}}>
                         t(x) = ∫₀ˣ √[(m + λx')/(2gx'(m + ½λx'))] dx'
                       </div>
                       <div className="text-gray-400 text-sm mt-3">
-                        This integral provides an implicit solution, solvable numerically
+                        {de ? 'Das Integral ergibt eine implizite Lösung, die numerisch berechnet werden kann.' : 'This integral provides an implicit solution, solvable numerically'}
                       </div>
                     </div>
                   </div>
@@ -1682,8 +1696,8 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Inverses Problem' : 'Inverse Problem'}</h4>
                     <div className="bg-gray-800 p-4 rounded-lg border border-gray-600">
                       <div className="text-gray-300 text-sm space-y-2">
-                        <p>The function t(x) creates a one-to-one mapping between falling depth and time. By measuring fall time experimentally, the hole depth can be determined through numerical inversion.</p>
-                        <p className="italic text-gray-400">This demonstrates how Lagrangian mechanics and energy conservation solve realistic inverse problems.</p>
+                        <p>{de ? 'Die Funktion t(x) ordnet jeder Falltiefe eine Fallzeit zu. Wird die Fallzeit experimentell gemessen, lässt sich die Tiefe durch numerische Umkehrung bestimmen.' : 'The function t(x) maps falling depth to time. Measuring the fall time makes it possible to determine the depth through numerical inversion.'}</p>
+                        <p className="italic text-gray-400">{de ? 'Das Beispiel zeigt, wie sich mit Lagrange-Mechanik und Energieerhaltung ein praktisches inverses Problem lösen lässt.' : 'This demonstrates how Lagrangian mechanics and energy conservation can solve a practical inverse problem.'}</p>
                       </div>
                     </div>
                   </div>
@@ -1722,10 +1736,10 @@ export default function ProjectsClient() {
                       {de ? 'Ein akademisches Seminar für Data-Science-Studierende im sechsten Semester. Es behandelt, wie neuronale Netze Funktionen approximieren, wie Attention funktioniert und wie Transformer sowie Sumformer auf diesen Grundlagen aufbauen.' : 'An academic seminar for data science students (6th semester) exploring how neural networks approximate functions, how attention mechanisms work, and how transformer-style architectures, including sumformers, build on these ideas.'}
                     </p>
                     <ul className="list-disc list-inside text-gray-400 space-y-2 pl-2">
-                      <li><strong>Universal Approximation:</strong> Why neural networks can represent complex functions</li>
-                      <li><strong>Attention Layers:</strong> Query-key-value intuition and sequence modeling</li>
-                      <li><strong>Transformers:</strong> Self-attention, depth, and scalable language modeling</li>
-                      <li><strong>Sumformers:</strong> Structured alternatives and architectural trade-offs</li>
+                      <li><strong>{de ? 'Universelle Approximation:' : 'Universal Approximation:'}</strong> {de ? 'Warum neuronale Netze komplexe Funktionen darstellen können.' : 'Why neural networks can represent complex functions'}</li>
+                      <li><strong>{de ? 'Attention-Schichten:' : 'Attention Layers:'}</strong> {de ? 'Query-Key-Value-Prinzip und Sequenzmodellierung.' : 'Query-key-value intuition and sequence modeling'}</li>
+                      <li><strong>{de ? 'Transformer:' : 'Transformers:'}</strong> {de ? 'Self-Attention, Netzwerktiefe und skalierbare Sprachmodellierung.' : 'Self-attention, depth, and scalable language modeling'}</li>
+                      <li><strong>{de ? 'Sumformer:' : 'Sumformers:'}</strong> {de ? 'Strukturierte Alternativen und architektonische Abwägungen.' : 'Structured alternatives and architectural trade-offs'}</li>
                     </ul>
                   </div>
                   <div className="flex flex-wrap gap-3">
@@ -1749,7 +1763,7 @@ export default function ProjectsClient() {
                   </div>
                   {showSeventhReport && (
                     <div className="mt-2 animate-fade-in">
-                      <h4 className="text-lg font-semibold text-white mb-3">Seminar Report</h4>
+                      <h4 className="text-lg font-semibold text-white mb-3">{de ? 'Seminararbeit' : 'Seminar Report'}</h4>
                       <div className="rounded-lg overflow-hidden border border-gray-600" style={{ height: '500px' }}>
                         <iframe
                           src="/projects/university/universal-approximation-report.pdf"
@@ -1762,23 +1776,23 @@ export default function ProjectsClient() {
                 </div>
 
                 <div className="flex flex-col gap-6">
-                  <h3 className="text-xl font-semibold text-white">Seminar Topics</h3>
+                  <h3 className="text-xl font-semibold text-white">{de ? 'Seminarthemen' : 'Seminar Topics'}</h3>
                   <div className="grid grid-cols-1 gap-3">
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-blue-400 font-semibold mb-2">Universal Approximation</h5>
-                      <p className="text-sm text-gray-400">Foundations of what multilayer networks can represent and why depth matters.</p>
+                      <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Universelle Approximation' : 'Universal Approximation'}</h5>
+                      <p className="text-sm text-gray-400">{de ? 'Grundlagen dazu, welche Funktionen mehrschichtige Netze darstellen können und warum Tiefe eine Rolle spielt.' : 'Foundations of what multilayer networks can represent and why depth matters.'}</p>
                     </div>
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-purple-400 font-semibold mb-2">Attention</h5>
-                      <p className="text-sm text-gray-400">How models weigh inputs dynamically instead of using fixed windows.</p>
+                      <h5 className="text-purple-400 font-semibold mb-2">{de ? 'Attention-Mechanismus' : 'Attention'}</h5>
+                      <p className="text-sm text-gray-400">{de ? 'Wie Modelle Eingaben dynamisch gewichten, statt feste Fenster zu verwenden.' : 'How models weigh inputs dynamically instead of using fixed windows.'}</p>
                     </div>
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-green-400 font-semibold mb-2">Transformers</h5>
-                      <p className="text-sm text-gray-400">Parallel sequence processing and the architecture behind modern LLMs.</p>
+                      <h5 className="text-green-400 font-semibold mb-2">Transformer</h5>
+                      <p className="text-sm text-gray-400">{de ? 'Parallele Sequenzverarbeitung und die Architektur moderner Sprachmodelle.' : 'Parallel sequence processing and the architecture behind modern LLMs.'}</p>
                     </div>
                     <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                      <h5 className="text-orange-400 font-semibold mb-2">Sumformers</h5>
-                      <p className="text-sm text-gray-400">Alternative structured designs and when they can be more efficient.</p>
+                      <h5 className="text-orange-400 font-semibold mb-2">Sumformer</h5>
+                      <p className="text-sm text-gray-400">{de ? 'Alternative strukturierte Ansätze und mögliche Effizienzvorteile.' : 'Alternative structured designs and when they can be more efficient.'}</p>
                     </div>
                   </div>
                 </div>

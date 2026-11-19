@@ -20,7 +20,7 @@ export default function CvPage() {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-3xl space-y-6">
             <span className="inline-flex items-center rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-1 text-sm font-medium text-blue-200">
-              Curriculum Vitae
+              <CvPageClientText label />
             </span>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               <CvPageClientText />
@@ -36,7 +36,7 @@ export default function CvPage() {
       <section className="container mx-auto px-4 py-10">
         <div className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/20 backdrop-blur">
           <div className="flex items-center justify-between px-4 py-3 text-sm text-slate-300">
-            <span>PDF preview</span>
+            <span><CvPageClientText previewLabel /></span>
             <span>{cvHref.split('/').pop()}</span>
           </div>
           <div className="overflow-hidden rounded-2xl bg-black">

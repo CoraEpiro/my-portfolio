@@ -90,7 +90,7 @@ export default function ContactClient() {
                       </div>
                       <div>
                         <p className="text-gray-300">{de ? 'Standort' : 'Location'}</p>
-                        <p className="text-white">München, Deutschland</p>
+                        <p className="text-white">{de ? 'München, Deutschland' : 'Munich, Germany'}</p>
                       </div>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export default function ContactClient() {
                       href="https://github.com/CoraEpiro"
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="GitHub profile"
+                      aria-label={de ? 'GitHub-Profil' : 'GitHub profile'}
                       className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/15 transition-colors duration-300 group"
                     >
                       <svg className="w-5 h-5 text-white group-hover:text-blue-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -116,7 +116,7 @@ export default function ContactClient() {
                       href="https://www.linkedin.com/in/ali-guliyev-389837238/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="LinkedIn profile"
+                      aria-label={de ? 'LinkedIn-Profil' : 'LinkedIn profile'}
                       className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/15 transition-colors duration-300 group"
                     >
                       <svg className="w-5 h-5 text-white group-hover:text-blue-400 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
