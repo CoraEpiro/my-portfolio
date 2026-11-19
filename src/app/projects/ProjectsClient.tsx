@@ -521,39 +521,39 @@ export default function ProjectsClient() {
                     <h4 className="text-lg font-semibold text-white">{de ? 'Verwendete Technologien' : 'Technology Stack'}</h4>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
-                        <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Frontend' : 'Frontend'}</h5>
+                        <h5 className="text-blue-400 font-semibold mb-2">{de ? 'Benutzeroberfläche' : 'Frontend'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Next.js 14 (App Router)</li>
+                          <li>• Next.js 14 ({de ? 'App-Router' : 'App Router'})</li>
                           <li>• TypeScript</li>
                           <li>• Tailwind CSS</li>
-                          <li>• React Hooks</li>
+                          <li>• {de ? 'React-Hooks' : 'React Hooks'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-green-400 font-semibold mb-2">{de ? 'Backend' : 'Backend'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• Next.js API Routes</li>
-                          <li>• JWT Authentication</li>
-                          <li>• bcryptjs Encryption</li>
-                          <li>• RESTful APIs</li>
+                          <li>• {de ? 'JWT-Authentifizierung' : 'JWT Authentication'}</li>
+                          <li>• {de ? 'bcryptjs-Verschlüsselung' : 'bcryptjs Encryption'}</li>
+                          <li>• {de ? 'REST-APIs' : 'RESTful APIs'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-purple-400 font-semibold mb-2">{de ? 'KI und Dienste' : 'AI & Services'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
                           <li>• OpenAI GPT-4</li>
-                          <li>• Real-time Translation</li>
-                          <li>• Streaming Responses</li>
-                          <li>• Context Memory</li>
+                          <li>• {de ? 'Echtzeitübersetzung' : 'Real-time Translation'}</li>
+                          <li>• {de ? 'Antworten im Streaming' : 'Streaming Responses'}</li>
+                          <li>• {de ? 'Kontextgedächtnis' : 'Context Memory'}</li>
                         </ul>
                       </div>
                       <div className="bg-gray-800 p-3 rounded-lg border border-gray-600">
                         <h5 className="text-orange-400 font-semibold mb-2">{de ? 'Bereitstellung' : 'Deployment'}</h5>
                         <ul className="text-sm text-gray-400 space-y-1">
-                          <li>• Vercel Hosting</li>
-                          <li>• Serverless Functions</li>
-                          <li>• Edge Computing</li>
-                          <li>• Auto-scaling</li>
+                          <li>• {de ? 'Hosting mit Vercel' : 'Vercel Hosting'}</li>
+                          <li>• {de ? 'Serverlose Funktionen' : 'Serverless Functions'}</li>
+                          <li>• {de ? 'Edge-Computing' : 'Edge Computing'}</li>
+                          <li>• {de ? 'Automatische Skalierung' : 'Auto-scaling'}</li>
                         </ul>
                       </div>
                     </div>
@@ -1119,7 +1119,7 @@ export default function ProjectsClient() {
 
                   <div className="pt-4 flex gap-4">
                     <a href={presentations.find(p => p.id === 7)?.liveUrl || "#"} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-red-600 text-white font-bold rounded-lg shadow hover:bg-red-700 transition-colors text-center flex-1">
-                      Open in YouTube
+                      {de ? 'Auf YouTube ansehen' : 'Open in YouTube'}
                     </a>
                     <a href="https://docs.google.com/presentation/d/1xk0J1aK9BfF4BHXvrGLYMr8QyUF7GW2TfDVLwmbsvxU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow hover:bg-blue-700 transition-colors text-center flex-1">{de ? 'Canva-Präsentation öffnen' : 'Open Canva Presentation'}</a>
                   </div>
